@@ -53,18 +53,6 @@
       es: "Muebles de jardín y lounge con un diseño contemporáneo, para terraza, jardín y piscina. Combinaciones de materiales y colores para cada estilo.",
       en: "Garden and lounge furniture with a contemporary design, for terrace, garden and pool. Combinations of materials and colours for every style.",
       nl: "Tuin- en loungemeubelen met een eigentijds design, voor terras, tuin en zwembad. Combinaties van materialen en kleuren voor elke stijl."
-    },
-    bge: {
-      name: "Big Green Egg", logo: "assets/img/brands/big-green-egg.png", type: "kamado",
-      es: "El kamado de cerámica por excelencia. Con una sola barbacoa puede asar, ahumar y hornear, todo el año.",
-      en: "The original ceramic kamado. One barbecue to grill, smoke and bake, all year round.",
-      nl: "Dé keramische kamado. Met één barbecue grillt, rookt en bakt u, het hele jaar door."
-    },
-    sumo: {
-      name: "Kamado Sumo", logo: "assets/img/brands/kamado-sumo.png", type: "kamado",
-      es: "Kamados de cerámica robustos y versátiles. La cerámica retiene bien el calor para asar, ahumar y hornear al aire libre.",
-      en: "Sturdy, versatile ceramic kamados. The ceramic holds its heat well for grilling, smoking and baking outdoors.",
-      nl: "Stevige, veelzijdige keramische kamado's. Het keramiek houdt de warmte goed vast om buiten te grillen, roken en bakken."
     }
   };
   var POINTS = {
@@ -72,11 +60,6 @@
       es: ["Pruebe la comodidad de los asientos en persona", "Vea y toque los materiales y colores", "Le aconsejamos sobre medidas y combinaciones para su terraza"],
       en: ["Try the seating comfort in person", "See and feel the materials and colours", "We advise you on sizes and combinations for your terrace"],
       nl: ["Test het zitcomfort in het echt", "Bekijk en voel de materialen en kleuren", "We adviseren u over maten en combinaties voor uw terras"]
-    },
-    kamado: {
-      es: ["Vea los diferentes tamaños uno al lado del otro", "Le explicamos las posibilidades: asar, ahumar y hornear", "Pregúntenos por accesorios y entrega a domicilio"],
-      en: ["Compare the different sizes side by side", "We explain what you can do: grill, smoke and bake", "Ask us about accessories and home delivery"],
-      nl: ["Vergelijk de verschillende maten naast elkaar", "We leggen uit wat u ermee kunt: grillen, roken en bakken", "Vraag ons naar accessoires en thuisbezorging"]
     }
   };
 

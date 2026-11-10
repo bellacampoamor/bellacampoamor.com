@@ -389,7 +389,7 @@ p { margin: 0 0 1em; }
 }
 .brands-head { max-width: 760px; }
 .brands-head .prose { margin-bottom: 0; }
-.brands { list-style: none; padding: 0; margin: 2.4rem 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.brands { list-style: none; padding: 0; margin: 2.4rem 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; max-width: 760px; }
 .brand-card {
   display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0; position: relative;
   background: #fff; border-radius: var(--radius); border-top: 4px solid var(--terra);
@@ -409,7 +409,6 @@ p { margin: 0 0 1em; }
   margin: 2rem 0 0; padding-left: .9rem; border-left: 3px solid var(--terra);
   font-weight: 500; max-width: 60ch;
 }
-@media (max-width: 1000px) { .brands { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) {
   .brands { gap: .8rem; }
   .brand-card { padding: 1.1rem 1rem 1.2rem; }
