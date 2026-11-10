@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 
     <script type="application/ld+json">
@@ -86,6 +87,7 @@
           <a class="btn btn-dark" href="#visitenos" data-i18n="hero.cta1">Visite la tienda</a>
           <a class="btn btn-ghost" href="#contacto" data-i18n="hero.cta2">Contacte con nosotros</a>
         </div>
+        <p class="open-status" data-open-status hidden><span class="os-dot" aria-hidden="true"></span><span class="os-text"></span></p>
         </div>
         <div class="hero-visual">
         <figure class="photo-card hero-photo">
@@ -173,21 +175,25 @@
             <span class="brand-logo"><img src="assets/img/brands/life.png" width="212" height="170" loading="lazy" decoding="async" alt="Life Outdoor Living"></span>
             <h3>Life Outdoor Living</h3>
             <p data-i18n="brands.life">Conjuntos lounge y de comedor para exterior, con líneas limpias y materiales resistentes.</p>
+            <button type="button" class="brand-more" data-brand="life"><span data-i18n="brands.more">Más información</span> <span aria-hidden="true">→</span></button>
           </li>
           <li class="brand-card">
             <span class="brand-logo"><img src="assets/img/brands/suns.png" width="400" height="150" loading="lazy" decoding="async" alt="SUNS"></span>
             <h3>SUNS</h3>
             <p data-i18n="brands.suns">Muebles de jardín y lounge con un diseño contemporáneo, para terraza, jardín y piscina.</p>
+            <button type="button" class="brand-more" data-brand="suns"><span data-i18n="brands.more">Más información</span> <span aria-hidden="true">→</span></button>
           </li>
           <li class="brand-card">
             <span class="brand-logo"><img src="assets/img/brands/big-green-egg.png" width="376" height="300" loading="lazy" decoding="async" alt="Big Green Egg"></span>
             <h3>Big Green Egg</h3>
             <p data-i18n="brands.bge">El kamado de cerámica por excelencia: asar, ahumar y hornear en una sola barbacoa.</p>
+            <button type="button" class="brand-more" data-brand="bge"><span data-i18n="brands.more">Más información</span> <span aria-hidden="true">→</span></button>
           </li>
           <li class="brand-card">
             <span class="brand-logo"><img src="assets/img/brands/kamado-sumo.png" width="301" height="300" loading="lazy" decoding="async" alt="Kamado Sumo"></span>
             <h3>Kamado Sumo</h3>
             <p data-i18n="brands.sumo">Kamados de cerámica robustos y versátiles para cocinar al aire libre todo el año.</p>
+            <button type="button" class="brand-more" data-brand="sumo"><span data-i18n="brands.more">Más información</span> <span aria-hidden="true">→</span></button>
           </li>
         </ul>
         <p class="brands-note" data-i18n="brands.note">Venga a verlas en nuestra exposición de 1.400 m² en Dehesa de Campoamor. Le asesoramos con mucho gusto.</p>
@@ -206,6 +212,24 @@
           <a class="btn btn-dark" href="bali.html" data-i18n="bali.cta">Descubra la colección Bali</a>
         </div>
         <div class="pgrid" id="hdb-home" aria-busy="true" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS: losse quotes uit assets/js/reviews.js; verborgen zolang er geen zijn -->
+    <section id="opiniones" class="section section-reviews" aria-labelledby="rv-title" hidden>
+      <div class="wrap">
+        <div class="rv-head">
+          <div>
+            <p class="eyebrow" data-i18n="reviews.eyebrow">Opiniones</p>
+            <h2 id="rv-title" data-i18n="reviews.title">Lo que dicen nuestros clientes</h2>
+          </div>
+          <div class="rv-nav">
+            <button type="button" class="rv-prev" aria-label="Anterior"><span aria-hidden="true">←</span></button>
+            <button type="button" class="rv-next" aria-label="Siguiente"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <div class="rv-track" tabindex="0" role="region" aria-labelledby="rv-title"></div>
+        <div class="rv-dots"></div>
       </div>
     </section>
 
@@ -236,6 +260,7 @@
           <div>
             <dt data-i18n="visit.hours">Horario</dt>
             <dd>
+              <p class="open-status" data-open-status hidden><span class="os-dot" aria-hidden="true"></span><span class="os-text"></span></p>
               <table class="hours">
                 <tr><th data-i18n="hours.mf">Lunes a viernes</th><td>10:00 – 18:00</td></tr>
                 <tr><th data-i18n="hours.sat">Sábado</th><td>10:00 – 14:00</td></tr>
@@ -278,11 +303,14 @@
   </main>
 
   <!-- Productaanvraag (HDB): geen online verkoop, alleen vragen -->
-  <dialog id="enquiry" class="enquiry" aria-labelledby="enq-title">
+  <dialog id="enquiry" class="enquiry quick" aria-labelledby="enq-title">
     <button type="button" class="enq-close" aria-label="Cerrar">×</button>
+    <div class="enq-media"></div>
+    <div class="enq-side">
     <h2 class="enq-title" id="enq-title">Consulta sobre este producto</h2>
-    <p class="enq-intro"></p>
     <div class="enq-product"></div>
+    <div class="enq-desc"></div>
+    <p class="enq-intro"></p>
     <form class="form enq-form" novalidate>
       <label><span data-i18n="form.name">Nombre</span><input name="name" required autocomplete="name"></label>
       <label><span data-i18n="form.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
@@ -294,6 +322,22 @@
       <button class="btn btn-dark" type="submit" data-i18n="form.send">Enviar</button>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
+    </div>
+  </dialog>
+
+  <!-- Merk-pop-up -->
+  <dialog id="brand-dlg" class="enquiry brand-dlg" aria-labelledby="bd-name">
+    <button type="button" class="enq-close" aria-label="Cerrar">×</button>
+    <div class="bd-logo"></div>
+    <p class="eyebrow" data-i18n="brands.eyebrow">Nuestras marcas</p>
+    <h2 class="bd-name" id="bd-name"></h2>
+    <p class="bd-text"></p>
+    <p class="bd-sub" data-i18n="brands.inStore">En nuestra exposición de 1.400 m²:</p>
+    <ul class="bd-points"></ul>
+    <div class="cta-row">
+      <a class="btn btn-dark bd-visit" href="#visitenos" data-i18n="brands.plan">Planifique su visita</a>
+      <a class="btn btn-ghost bd-advice" href="#contacto" data-i18n="brands.advice">Pida asesoramiento</a>
+    </div>
   </dialog>
 
   <!-- FOOTER: geen Bella-logo; BellaFlow-beeldmerk alleen hier -->
@@ -325,6 +369,14 @@
     </div>
   </footer>
 
+  <!-- Sticky knop (alleen mobiel) -->
+  <div class="sticky-cta" hidden>
+    <a class="btn btn-dark" href="#contacto" data-i18n="sticky.quote">Pedir presupuesto</a>
+    <a class="sticky-call" href="tel:+34865776925" data-i18n-aria="sticky.call" aria-label="Llamar a la tienda">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+    </a>
+  </div>
+
   <a class="to-top" href="#top" data-i18n-aria="totop" data-i18n-title="totop" aria-label="Volver arriba" title="Volver arriba" hidden>
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
@@ -335,5 +387,7 @@
   </script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/hdb.js" defer></script>
+  <script src="assets/js/reviews.js" defer></script>
+  <script src="assets/js/extras.js" defer></script>
 </body>
 </html>

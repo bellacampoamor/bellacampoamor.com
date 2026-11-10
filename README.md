@@ -34,3 +34,13 @@ Optioneel: secrets `WEBSITE_FROM` (afzender) en `WEBSITE_TO` (ontvanger).
   Er gaan geen inkoopprijzen, voorraadaantallen of ruwe data naar de website.
 - Front-end: `assets/js/hdb.js`. Pre-orderproducten krijgen een duidelijk "Pre-order"-label met de verwachte maand.
 - Klik op een product opent een aanvraagformulier; dat post naar `website-contact` met `product_id`. De functie haalt naam, ref., prijs en pre-orderstatus zelf uit de database en mailt via Resend naar info@bellacampoamor.com. Opgeslagen in `website_messages` (kolommen `product_id`, `product_label`).
+
+## Interactieve onderdelen (`assets/js/extras.js`)
+- **Open/gesloten-badge** in de hero en bij "Bezoek ons": live op basis van de openingstijden (tijdzone Europe/Madrid), markeert ook de dag van vandaag in de tabel. Openingstijden aanpassen: `HOURS` bovenin `extras.js` (en de tabel + JSON-LD in `index.html`). Feestdagen worden niet meegenomen.
+- **Merk-pop-ups**: "Meer informatie" op elke merkkaart opent een pop-up met korte tekst, wat je in de showroom ziet, en de knoppen "Plan uw bezoek" / "Vraag advies" (vult het contactformulier voor met het merk). Teksten: `BRANDS` en `POINTS` in `extras.js`.
+- **Reviews**: carrousel met losse quotes uit `assets/js/reviews.js`. Zolang die lijst leeg is, is de sectie onzichtbaar. Alleen echte quotes toevoegen.
+- **Sticky knop "Offerte aanvragen"** + belknop op mobiel (≤ 760 px); verdwijnt zodra het contactformulier of de footer in beeld is.
+- **Scroll-animaties**: subtiele fade-ins; staan uit bij "verminderde beweging" in het besturingssysteem.
+
+## Quick view producten (`assets/js/hdb.js`)
+Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschrijving, materiaal/maten en het aanvraagformulier. Bij hover toont de kaart de tweede foto. De feed `website-hdb-products` levert hiervoor `images` en `description`.

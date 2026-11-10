@@ -1,7 +1,7 @@
 /* Bella × HomeDecoBali – productkaarten en productaanvraag
    Data: Supabase edge function website-hdb-products (BellaFlow).
    Aanvraag: Supabase edge function website-contact (met product_id) -> Resend -> info@bellacampoamor.com
-   Geen online verkoop: elke kaart opent het aanvraagformulier. */
+   Geen online verkoop: elke kaart opent een quick view (foto's, omschrijving) met het aanvraagformulier. */
 (function () {
   "use strict";
 
@@ -23,6 +23,8 @@
       size: "cm",
       error: "La colección no se puede mostrar en este momento. Contáctenos para más información.",
       dTitle: "Consulta sobre este producto",
+      photo: "Foto {n}",
+      more: "Ver detalles",
       dIntro: "No vendemos online. Envíenos su pregunta y le responderemos con información, disponibilidad y entrega.",
       dMsg: "Hola, me interesa este producto. ¿Podrían darme más información?",
       dPreMsg: "Hola, me interesa este producto (pre-order). ¿Podrían darme más información sobre la entrega?",
@@ -38,6 +40,8 @@
       size: "cm",
       error: "The collection cannot be shown right now. Please contact us for more information.",
       dTitle: "Ask about this product",
+      photo: "Photo {n}",
+      more: "View details",
       dIntro: "We do not sell online. Send us your question and we will reply with information, availability and delivery.",
       dMsg: "Hello, I am interested in this product. Could you send me more information?",
       dPreMsg: "Hello, I am interested in this product (pre-order). Could you tell me more about delivery?",
@@ -53,6 +57,8 @@
       size: "cm",
       error: "De collectie kan nu niet worden getoond. Neem contact met ons op voor meer informatie.",
       dTitle: "Vraag over dit product",
+      photo: "Foto {n}",
+      more: "Bekijk details",
       dIntro: "We verkopen niet online. Stuur ons uw vraag en we antwoorden met informatie, beschikbaarheid en levering.",
       dMsg: "Hallo, ik heb interesse in dit product. Kunt u mij meer informatie sturen?",
       dPreMsg: "Hallo, ik heb interesse in dit product (pre-order). Kunt u mij meer vertellen over de levering?",
@@ -66,6 +72,9 @@
   function s(k, v) { var x = S[lang()][k] || S.es[k]; return v ? x.replace(/\{(\w)\}/, function (_, n) { return v[n] || ""; }) : x; }
   function esc(v) { return String(v == null ? "" : v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function img(u, w) { if (!u) return ""; return u + (u.indexOf("?") > -1 ? "&" : "?") + "width=" + w; }
+  function srcset(u) { return [300, 600, 900].map(function (w) { return img(u, w) + " " + w + "w"; }).join(", "); }
+  var SIZES = "(max-width: 1000px) 50vw, 280px";
+  function pics(p) { var a = (p.images && p.images.length) ? p.images.slice() : []; if (p.image && a.indexOf(p.image) < 0) a.unshift(p.image); return a; }
   function money(n) {
     if (n == null) return "";
     var loc = { es: "es-ES", en: "en-IE", nl: "nl-NL" }[lang()];
@@ -84,9 +93,11 @@
     byId[p.id] = p;
     var meta = [p.material, p.dimensions_cm ? p.dimensions_cm + " " + s("size") : ""].filter(Boolean).join(" · ");
     var name = p.name + (p.variant ? " – " + p.variant : "");
+    var alt = pics(p)[1] || "";
     return '<article class="pcard' + (p.preorder ? " is-pre" : "") + '">' +
       '<button type="button" class="pcard-btn" data-id="' + esc(p.id) + '" aria-label="' + esc(s("askAria", { n: name })) + '">' +
-        '<span class="pcard-img"><img src="' + esc(img(p.image, 600)) + '" alt="' + esc(name) + '" width="600" height="600" loading="lazy" decoding="async">' +
+        '<span class="pcard-img' + (alt ? " has-alt" : "") + '"><img src="' + esc(img(p.image, 600)) + '" srcset="' + esc(srcset(p.image)) + '" sizes="' + SIZES + '" alt="' + esc(name) + '" width="600" height="600" loading="lazy" decoding="async">' +
+          (alt ? '<img class="pcard-alt" src="' + esc(img(alt, 600)) + '" srcset="' + esc(srcset(alt)) + '" sizes="' + SIZES + '" alt="" width="600" height="600" loading="lazy" decoding="async">' : "") +
           (p.preorder ? '<span class="badge-pre">' + esc(s("preorder")) + '</span>' : "") +
         '</span>' +
         '<span class="pcard-body">' +
@@ -98,7 +109,7 @@
               (p.compare_at_price && p.compare_at_price > p.price ? '<s>' + esc(money(p.compare_at_price)) + '</s> ' : "") +
               esc(money(p.price)) +
             '</span>' +
-            '<span class="pcard-ask">' + esc(s("ask")) + ' <span aria-hidden="true">→</span></span>' +
+            '<span class="pcard-ask">' + esc(s("more")) + ' <span aria-hidden="true">→</span></span>' +
           '</span>' +
         '</span>' +
       '</button></article>';
@@ -153,8 +164,24 @@
     dlg.querySelector(".enq-title").textContent = s("dTitle");
     dlg.querySelector(".enq-intro").textContent = s("dIntro");
     dlg.querySelector(".enq-close").setAttribute("aria-label", s("close"));
+    var all = pics(p);
+    var media = dlg.querySelector(".enq-media");
+    if (media) {
+      media.innerHTML =
+        '<div class="enq-main"><img src="' + esc(img(all[0], 900)) + '" alt="' + esc(name) + '" width="900" height="900" decoding="async"></div>' +
+        (all.length > 1 ? '<div class="enq-thumbs">' + all.map(function (u, i) {
+          return '<button type="button" class="enq-thumb" data-src="' + esc(u) + '" aria-label="' + esc(s("photo", { n: i + 1 })) + '" aria-pressed="' + (i === 0) + '">' +
+            '<img src="' + esc(img(u, 160)) + '" alt="" width="80" height="80" loading="lazy" decoding="async"></button>';
+        }).join("") + "</div>" : "");
+    }
+    var desc = dlg.querySelector(".enq-desc");
+    if (desc) {
+      var meta = [p.material, p.dimensions_cm ? p.dimensions_cm + " " + s("size") : ""].filter(Boolean).join(" · ");
+      desc.innerHTML = (meta ? '<p class="enq-meta">' + esc(meta) + "</p>" : "") + (p.description ? "<p>" + esc(p.description) + "</p>" : "");
+      desc.hidden = !meta && !p.description;
+    }
     dlg.querySelector(".enq-product").innerHTML =
-      '<img src="' + esc(img(p.image, 240)) + '" alt="" width="96" height="96">' +
+      (media ? "" : '<img src="' + esc(img(p.image, 240)) + '" alt="" width="96" height="96">') +
       '<div><p class="enq-pname">' + esc(name) + '</p>' +
       '<p class="enq-pprice">' + esc(money(p.price)) + (p.preorder ? ' <span class="badge-pre inline">' + esc(s("preorder")) + '</span>' : "") + '</p>' +
       '<p class="enq-pavail">' + esc(p.preorder ? eta(p) : s("stock")) + (p.sku ? " · Ref. " + esc(p.sku) : "") + '</p></div>';
@@ -163,7 +190,8 @@
     form.elements.language.value = lang();
     var st = form.querySelector(".form-status"); st.textContent = ""; st.className = "form-status";
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
-    setTimeout(function () { form.elements.name.focus(); }, 30);
+    dlg.scrollTop = 0;
+    setTimeout(function () { dlg.querySelector(".enq-close").focus(); }, 30);
   }
   function closeEnquiry() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); }
 
@@ -174,7 +202,14 @@
 
   if (dlg) {
     dlg.querySelector(".enq-close").addEventListener("click", closeEnquiry);
-    dlg.addEventListener("click", function (e) { if (e.target === dlg) closeEnquiry(); });
+    dlg.addEventListener("click", function (e) {
+      if (e.target === dlg) return closeEnquiry();
+      var th = e.target.closest && e.target.closest(".enq-thumb");
+      if (!th) return;
+      var main = dlg.querySelector(".enq-main img");
+      if (main) main.src = img(th.getAttribute("data-src"), 900);
+      dlg.querySelectorAll(".enq-thumb").forEach(function (b) { b.setAttribute("aria-pressed", String(b === th)); });
+    });
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();

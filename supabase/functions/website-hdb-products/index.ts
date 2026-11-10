@@ -3,6 +3,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 // Publieke, read-only feed voor bellacampoamor.com
 // GET ?mode=home&lang=es|en  -> 4 willekeurige producten
 // GET ?mode=bali&lang=es|en  -> per categorie 4 willekeurige producten
+// Velden: o.a. images (max 6 foto-URL's) en description (ingekort) voor de quick view.
 // Geeft GEEN inkoopprijs, voorraad of ruwe data door.
 
 const CORS = {
@@ -42,6 +43,22 @@ function tr(v: any, lang: string): string {
   return v[lang] || v.en || "";
 }
 
+function gallery(r: any): string[] {
+  const list = Array.isArray(r.images) ? r.images.slice() : [];
+  list.sort((a: any, b: any) => (a?.position ?? 99) - (b?.position ?? 99));
+  const urls = list.map((x: any) => (typeof x === "string" ? x : x?.url)).filter(Boolean);
+  if (r.image_url && !urls.includes(r.image_url)) urls.unshift(r.image_url);
+  return urls.slice(0, 6);
+}
+
+function summary(v: any, lang: string): string {
+  const t = tr(v, lang).replace(/\s+/g, " ").trim();
+  if (t.length <= 700) return t;
+  const cut = t.slice(0, 700);
+  const end = cut.lastIndexOf(". ");
+  return (end > 300 ? cut.slice(0, end + 1) : cut.replace(/\s+\S*$/, "") + "…");
+}
+
 function shape(r: any, lang: string) {
   const a = r.attributes || {};
   const d = a.dimensions_cm || {};
@@ -54,6 +71,8 @@ function shape(r: any, lang: string) {
     name: tr(r.title, lang) || r.name,
     variant: r.variant_title || "",
     image: r.image_url,
+    images: gallery(r),
+    description: summary(r.description_text, lang),
     material: tr(a.material, lang),
     colors: a.colors || "",
     dimensions_cm: dims,
@@ -74,7 +93,7 @@ Deno.serve(async (req) => {
   const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
   const { data, error } = await sb
     .from("supplier_hdb_items")
-    .select("id,supplier_sku,name,variant_title,title,image_url,attributes,price,compare_at_price,currency,is_preorder,preorder_eta,collections")
+    .select("id,supplier_sku,name,variant_title,title,description_text,image_url,images,attributes,price,compare_at_price,currency,is_preorder,preorder_eta,collections")
     .eq("active", true)
     .is("removed_at", null)
     .not("image_url", "is", null)
