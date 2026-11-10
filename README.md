@@ -66,7 +66,7 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Openingstijden wijzigen: `HOURS` in de edge function (en in `extras.js` / `index.html`).
 
 ## Bella-medewerker (decoratieve foto's, `assets/img/team/`)
-- Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in acht poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
-- Poses: brochure, koffie, duim, verbaasd, presenteert, wijst-links, wijst-rechts, basis.
+- Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in tien poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
+- Poses: brochure, koffie, duim, tweeduims, verbaasd, presenteert, wijst-links, wijst-rechts, basis, ligt (liggend, wijst omhoog; liggend formaat 1100 px breed).
 - Gebruik: `<img class="bella-gal bg-…">`, puur decoratief (`alt=""`, `aria-hidden`). Plaatsing per sectie staat onderaan `styles.css` (blok "Bella-medewerker"). Klasse `fade` laat haar onderaan vervagen waar ze niet op een rand staat.
-- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), Contacto (wijst-rechts), bali.html (basis), cita.html (koffie). Op mobiel zijn een paar verborgen of kleiner.
+- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html (basis), cita.html (koffie). Op mobiel zijn een paar verborgen of kleiner.
