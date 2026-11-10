@@ -62,6 +62,7 @@
       </button>
       <nav id="nav" class="nav" aria-label="Principal">
         <a href="#nosotros" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="#exposicion" data-i18n="nav.showroom">Exposición</a>
         <a href="#ofrecemos" data-i18n="nav.offer">Qué ofrecemos</a>
         <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
         <a href="#visitenos" data-i18n="nav.visit">Visítenos</a>
@@ -136,6 +137,126 @@
       </div>
     </section>
 
+    <!-- SHOWROOM: echte foto's van de winkel in Campoamor -->
+    <section id="exposicion" class="section section-showroom">
+      <div class="wrap">
+        <div class="sg-head">
+          <div>
+            <p class="eyebrow" data-i18n="show.eyebrow">Nuestra exposición</p>
+            <h2 data-i18n="show.title">1.400 m² de inspiración</h2>
+            <p class="prose" data-i18n="show.lead">Pasee por salones, comedores y dormitorios completamente montados. Siéntese, toque los tejidos y descubra cómo queda cada pieza en un ambiente real.</p>
+          </div>
+          <div class="sg-filters" role="group" data-i18n-aria="show.filter" aria-label="Filtrar fotos">
+            <button type="button" data-filter="all" aria-pressed="true" data-i18n="show.all">Todo</button>
+            <button type="button" data-filter="salon" aria-pressed="false" data-i18n="show.f.salon">Salones</button>
+            <button type="button" data-filter="comedor" aria-pressed="false" data-i18n="show.f.comedor">Comedores</button>
+            <button type="button" data-filter="dormitorio" aria-pressed="false" data-i18n="show.f.dormitorio">Dormitorios</button>
+          </div>
+        </div>
+        <ul class="sg" role="list">
+          <li class="sg-item sg-wide" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-flow-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-flow.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-flow.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Salón con sofá curvo en tono camel y mesas de centro de madera en la exposición de Bella" data-i18n-alt="show.s1">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item sg-tall" data-cat="comedor">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/comedor-rosa-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/comedor-rosa.webp" type="image/webp">
+                <img src="assets/img/showroom/comedor-rosa.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Mesa de comedor de madera con sillas rosas y pared vegetal" data-i18n-alt="show.s2">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.comedor">Comedor</span>
+            </button>
+          </li>
+          <li class="sg-item" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-boucle-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-boucle.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-boucle.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Sofá y sillón de bouclé blanco con mesas de mármol y cabeza de Buda dorada" data-i18n-alt="show.s3">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item sg-tall" data-cat="dormitorio">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/dormitorio-capitone-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/dormitorio-capitone.webp" type="image/webp">
+                <img src="assets/img/showroom/dormitorio-capitone.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Cama tapizada capitoné en tonos arena" data-i18n-alt="show.s4">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.dormitorio">Dormitorio</span>
+            </button>
+          </li>
+          <li class="sg-item" data-cat="comedor">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/comedor-raiz-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/comedor-raiz.webp" type="image/webp">
+                <img src="assets/img/showroom/comedor-raiz.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Mesa y banco de madera de raíz maciza" data-i18n-alt="show.s5">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.comedor">Comedor</span>
+            </button>
+          </li>
+          <li class="sg-item" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-oliva-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-oliva.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-oliva.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Rincón de salón en verde oliva con lámparas de fibra natural y mesa redonda" data-i18n-alt="show.s6">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item sg-tall" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-ratan-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-ratan.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-ratan.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Salón con lámparas de ratán, espejos de madera y sofá rinconera" data-i18n-alt="show.s7">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item sg-wide" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-brexit-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-brexit.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-brexit.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Gran sofá rinconera de bouclé con butacas giratorias" data-i18n-alt="show.s8">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item" data-cat="dormitorio">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/dormitorio-camas-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/dormitorio-camas.webp" type="image/webp">
+                <img src="assets/img/showroom/dormitorio-camas.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Camas con canapé abatible, espejos de madera y alfombras de yute" data-i18n-alt="show.s9">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.dormitorio">Dormitorio</span>
+            </button>
+          </li>
+          <li class="sg-item sg-wide" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-ventanal-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-ventanal.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-ventanal.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Sofá modular junto al ventanal, con plumas de pampa y lámpara de madera" data-i18n-alt="show.s10">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+          <li class="sg-item sg-wide" data-cat="salon">
+            <button type="button" class="sg-open" data-full="assets/img/showroom/salon-noche-xl.webp" data-i18n-aria="show.open" aria-label="Ampliar foto">
+              <picture>
+                <source srcset="assets/img/showroom/salon-noche.webp" type="image/webp">
+                <img src="assets/img/showroom/salon-noche.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Salón con sofá blanco, mesa de centro de madera y comedor redondo bajo lámparas de cristal" data-i18n-alt="show.s11">
+              </picture>
+              <span class="sg-tag" data-i18n="show.cat.salon">Salón</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- WAT WE BIEDEN (informatief, geen artikelen) -->
     <section id="ofrecemos" class="section section-sand">
       <div class="wrap">
@@ -158,6 +279,23 @@
             <h3 data-i18n="offer.c4.t">Asesoramiento</h3>
             <p data-i18n="offer.c4.p">Le ayudamos a elegir lo que encaja con su espacio, su estilo y su presupuesto.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SFEERBAND -->
+    <section class="photo-band" aria-labelledby="band-title">
+      <picture>
+        <source srcset="assets/img/showroom/exposicion-xl.webp" type="image/webp" media="(min-width: 900px)">
+        <source srcset="assets/img/showroom/exposicion.webp" type="image/webp">
+        <img src="assets/img/showroom/exposicion.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Vista de la exposición de Bella con salones montados e iluminación cálida" data-i18n-alt="band.alt">
+      </picture>
+      <div class="wrap band-inner">
+        <p class="eyebrow" data-i18n="band.eyebrow">Dos plantas · 1.400 m²</p>
+        <p class="band-title" id="band-title" data-i18n="band.title">Venga a sentarse.</p>
+        <p class="band-text" data-i18n="band.text">Las fotos dan una idea; en la tienda lo vive. Le asesoramos con calma, sin compromiso.</p>
+        <div class="cta-row">
+          <a class="btn btn-light" href="#visitenos" data-i18n="band.cta">Planifique su visita</a>
         </div>
       </div>
     </section>
@@ -344,6 +482,17 @@
     </div>
   </dialog>
 
+  <!-- Showroom-lightbox -->
+  <dialog id="lightbox" class="lightbox" data-i18n-aria="show.dlg" aria-label="Fotos de la exposición">
+    <button type="button" class="lb-close" data-i18n-aria="show.close" aria-label="Cerrar">×</button>
+    <button type="button" class="lb-nav lb-prev" data-i18n-aria="show.prev" aria-label="Foto anterior"><span aria-hidden="true">←</span></button>
+    <figure class="lb-fig">
+      <img class="lb-img" src="" alt="">
+      <figcaption><span class="lb-cap"></span><span class="lb-count"></span></figcaption>
+    </figure>
+    <button type="button" class="lb-nav lb-next" data-i18n-aria="show.next" aria-label="Foto siguiente"><span aria-hidden="true">→</span></button>
+  </dialog>
+
   <!-- Merk-pop-up -->
   <dialog id="brand-dlg" class="enquiry brand-dlg" aria-labelledby="bd-name">
     <button type="button" class="enq-close" aria-label="Cerrar">×</button>
@@ -370,6 +519,7 @@
       </div>
       <nav aria-label="Footer">
         <a href="#nosotros" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="#exposicion" data-i18n="nav.showroom">Exposición</a>
         <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
         <a href="#visitenos" data-i18n="nav.visit">Visítenos</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
@@ -409,5 +559,6 @@
   <script src="assets/js/hdb.js" defer></script>
   <script src="assets/js/reviews.js" defer></script>
   <script src="assets/js/extras.js" defer></script>
+  <script src="assets/js/showroom.js" defer></script>
 </body>
 </html>

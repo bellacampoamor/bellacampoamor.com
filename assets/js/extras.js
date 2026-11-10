@@ -257,7 +257,8 @@
   if (!reduce && "IntersectionObserver" in window) {
     var sel = [
       ".section .eyebrow", ".section h2", ".section .prose", ".card", ".brand-card", ".brands-note",
-      ".map", ".info > div", ".storefront", "#contacto .form", ".rv-track", ".bali-head .btn"
+      ".map", ".info > div", ".storefront", "#contacto .form", ".rv-track", ".bali-head .btn",
+      ".sg-item", ".sg-filters", ".band-inner"
     ].join(",");
     var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest(".hero, dialog"); });
     var rv = new IntersectionObserver(function (en) {
@@ -271,7 +272,7 @@
     }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
     els.forEach(function (el) {
       var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
-      if (el.matches(".card, .brand-card, .info > div")) el.style.setProperty("--d", Math.min(sib, 5) * 90 + "ms");
+      if (el.matches(".card, .brand-card, .info > div, .sg-item")) el.style.setProperty("--d", Math.min(sib, 5) * 90 + "ms");
       el.classList.add("reveal");
       rv.observe(el);
     });

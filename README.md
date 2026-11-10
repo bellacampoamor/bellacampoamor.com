@@ -48,3 +48,9 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 ## Reviews vragen
 - Blok "¿Ya nos conoce?" (`#resena`) op de homepage, vóór het contactformulier: knop naar het Google-reviewvenster, op desktop ook een QR-code (`assets/img/qr-review.svg`). Link "Escriba una reseña" in de footer van beide pagina's.
 - Korte links voor bonnen, mails en folders: **bellacampoamor.com/review** en **bellacampoamor.com/resena** sturen direct door naar het Google-reviewvenster (Google place ID `ChIJzQiJHhgGYw0RzR8puSEgpAQ`).
+
+## Showroom (`assets/js/showroom.js`, `assets/img/showroom/`)
+- Sectie **Exposición** (`#exposicion`) onder "Sobre nosotros": fotomozaïek van de showroom in Campoamor met filter (Salones / Comedores / Dormitorios) en lightbox (pijltjestoetsen, swipe).
+- **Sfeerband** "Venga a sentarse" tussen "Qué ofrecemos" en de merken.
+- Foto's: per foto `naam.webp` + `naam.jpg` (900 px, raster) en `naam-xl.webp` (lightbox), zonder EXIF/GPS. Foto toevoegen: `<li class="sg-item">` kopiëren in `index.html` (`sg-wide` = 2 kolommen, `sg-tall` = 2 rijen), `data-cat` = `salon|comedor|dormitorio`, alt-tekst ES in de HTML en EN/NL als `show.sN` in `main.js`.
+- Alleen foto's van de winkel in Campoamor gebruiken.
