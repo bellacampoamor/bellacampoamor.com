@@ -128,7 +128,45 @@
       "ask.thanks": "Thank you so much for your support!",
       "ask.qr": "Scan with your phone",
       "ask.qrAlt": "QR code to write a Google review",
-      "ask.footer": "Write a review"
+      "ask.footer": "Write a review",
+      "nav.appt": "Book a visit",
+      "visit.appt": "Book a personal appointment",
+      "appt.eyebrow": "Personal appointment",
+      "appt.title": "Our full attention, just for you",
+      "appt.lead": "Furnishing a whole house or several rooms? Book an appointment and we will take all the time you need: with a coffee, no rush and no other customers at the same time.",
+      "appt.p1": "With a coffee, at your own pace",
+      "appt.p2": "An adviser just for you",
+      "appt.p3": "We walk through our 1,400 m² together and plan every room",
+      "appt.p4": "In Spanish, English or Dutch",
+      "appt.s1": "How much time do you need?",
+      "appt.d60": "A few rooms",
+      "appt.d120": "Recommended for a house",
+      "appt.d180": "Large house or villa",
+      "appt.s2": "Choose a day and time",
+      "appt.prevWeek": "Previous week",
+      "appt.nextWeek": "Next week",
+      "appt.loading": "Loading the calendar…",
+      "appt.s3": "Your details",
+      "appt.your": "Your appointment",
+      "appt.pick": "Choose a day and time",
+      "appt.phone": "Phone",
+      "appt.scope": "What would you like to furnish?",
+      "appt.sc.casa": "A whole house",
+      "appt.sc.varias": "Several rooms",
+      "appt.sc.exterior": "Terrace / garden",
+      "appt.sc.otro": "Other",
+      "appt.people": "People",
+      "appt.area": "Area / type of home (optional)",
+      "appt.areaPh": "e.g. villa in Campoamor, 3 bedrooms",
+      "appt.msg": "Anything we should know? (optional)",
+      "appt.msgPh": "Style, rooms, timing, budget…",
+      "appt.send": "Request appointment",
+      "appt.note": "Your appointment is provisional until we confirm it by phone or e-mail.",
+      "appt.doneEyebrow": "Request received",
+      "appt.doneTitle": "Thank you! The coffee will be ready",
+      "appt.doneText": "We have received your request. We will confirm your appointment by phone or e-mail as soon as possible.",
+      "appt.doneAddr": "Where",
+      "appt.doneShow": "View the showroom"
     },
     nl: {
       "nav.showroom": "Showroom",
@@ -255,7 +293,45 @@
       "ask.thanks": "Heel erg bedankt voor uw steun!",
       "ask.qr": "Scan met uw telefoon",
       "ask.qrAlt": "QR-code om een Google-review te schrijven",
-      "ask.footer": "Schrijf een review"
+      "ask.footer": "Schrijf een review",
+      "nav.appt": "Afspraak maken",
+      "visit.appt": "Maak een persoonlijke afspraak",
+      "appt.eyebrow": "Persoonlijke afspraak",
+      "appt.title": "Al onze aandacht, alleen voor u",
+      "appt.lead": "Richt u een heel huis of meerdere ruimtes in? Maak een afspraak en we nemen alle tijd voor u: met een kop koffie, zonder haast en zonder andere klanten tegelijk.",
+      "appt.p1": "Met een kop koffie, in uw eigen tempo",
+      "appt.p2": "Een adviseur alleen voor u",
+      "appt.p3": "Samen door onze 1.400 m² en elke ruimte doordenken",
+      "appt.p4": "In het Spaans, Engels of Nederlands",
+      "appt.s1": "Hoeveel tijd heeft u nodig?",
+      "appt.d60": "Een paar ruimtes",
+      "appt.d120": "Aanbevolen voor een huis",
+      "appt.d180": "Groot huis of villa",
+      "appt.s2": "Kies een dag en tijd",
+      "appt.prevWeek": "Vorige week",
+      "appt.nextWeek": "Volgende week",
+      "appt.loading": "Agenda wordt geladen…",
+      "appt.s3": "Uw gegevens",
+      "appt.your": "Uw afspraak",
+      "appt.pick": "Kies een dag en tijd",
+      "appt.phone": "Telefoon",
+      "appt.scope": "Wat wilt u inrichten?",
+      "appt.sc.casa": "Een heel huis",
+      "appt.sc.varias": "Meerdere ruimtes",
+      "appt.sc.exterior": "Terras / tuin",
+      "appt.sc.otro": "Anders",
+      "appt.people": "Personen",
+      "appt.area": "Plaats / type woning (optioneel)",
+      "appt.areaPh": "bijv. villa in Campoamor, 3 slaapkamers",
+      "appt.msg": "Iets wat we moeten weten? (optioneel)",
+      "appt.msgPh": "Stijl, ruimtes, planning, budget…",
+      "appt.send": "Afspraak aanvragen",
+      "appt.note": "Uw afspraak is voorlopig tot we die telefonisch of per e-mail bevestigen.",
+      "appt.doneEyebrow": "Aanvraag ontvangen",
+      "appt.doneTitle": "Dank u! De koffie staat klaar",
+      "appt.doneText": "We hebben uw aanvraag ontvangen. We bevestigen de afspraak zo snel mogelijk telefonisch of per e-mail.",
+      "appt.doneAddr": "Waar",
+      "appt.doneShow": "Bekijk de showroom"
     },
     es: {
       "show.open": "Ampliar foto",
@@ -269,7 +345,9 @@
       "form.sending": "Enviando…",
       "form.ok": "¡Gracias! Le responderemos pronto.",
       "form.error": "Rellene su nombre, un e-mail válido y un mensaje, y acepte la política de privacidad.",
-      "form.fail": "Algo salió mal. Inténtelo de nuevo o contáctenos por teléfono."
+      "form.fail": "Algo salió mal. Inténtelo de nuevo o contáctenos por teléfono.",
+      "appt.prevWeek": "Semana anterior",
+      "appt.nextWeek": "Semana siguiente"
     }
   };
 
@@ -294,6 +372,12 @@
     if (!(k in T.es)) T.es[k] = el.getAttribute("alt");
   });
 
+  var phs = document.querySelectorAll("[data-i18n-ph]");
+  phs.forEach(function (el) {
+    var k = el.getAttribute("data-i18n-ph");
+    if (!(k in T.es)) T.es[k] = el.getAttribute("placeholder");
+  });
+
   var current = "es";
   function t(k) { return (T[current] && T[current][k]) || T.es[k] || ""; }
 
@@ -315,6 +399,10 @@
     alts.forEach(function (el) {
       var v = t(el.getAttribute("data-i18n-alt"));
       if (v) el.setAttribute("alt", v);
+    });
+    phs.forEach(function (el) {
+      var v = t(el.getAttribute("data-i18n-ph"));
+      if (v) el.setAttribute("placeholder", v);
     });
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));

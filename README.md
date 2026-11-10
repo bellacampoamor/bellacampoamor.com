@@ -54,3 +54,13 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - **Sfeerband** "Venga a sentarse" tussen "Qué ofrecemos" en de merken.
 - Foto's: per foto `naam.webp` + `naam.jpg` (900 px, raster) en `naam-xl.webp` (lightbox), zonder EXIF/GPS. Foto toevoegen: `<li class="sg-item">` kopiëren in `index.html` (`sg-wide` = 2 kolommen, `sg-tall` = 2 rijen), `data-cat` = `salon|comedor|dormitorio`, alt-tekst ES in de HTML en EN/NL als `show.sN` in `main.js`.
 - Alleen foto's van de winkel in Campoamor gebruiken.
+
+## Afspraak maken (`cita.html`, `assets/js/cita.js`)
+- Menu-item **Pida cita / Book a visit / Afspraak maken** (op alle pagina's, ook in de footer en bij "Visítenos").
+- Klant kiest duur (1, 2 of 3 uur), dag en starttijd. Alleen tijden binnen de openingstijden (ma–vr 10–18, za 10–14), vanaf morgen tot zes weken vooruit, per half uur. Eén klant per tijdslot.
+- Edge function `website-appointment` (code in `supabase/functions/website-appointment/`):
+  `GET` = vrije tijden, `POST` = verzoek. Opslag in tabel `website_appointments` (overlap onmogelijk door een exclusion constraint).
+- Bij een verzoek: **PROFORMA**-afspraak in Google Agenda (agenda "Citas web · Bella Campoamor") en een e-mail via Resend naar info@bellacampoamor.com met alle gegevens en een `.ics`-bijlage. Reply-to = de klant.
+- Google Agenda-koppeling via Google Apps Script: zie `google-apps-script/citas.gs` (installatie bovenin dat bestand). Secrets in Supabase: `GOOGLE_SCRIPT_URL`, `GOOGLE_SCRIPT_SECRET`. Zonder die secrets werkt alles behalve de agenda (dan alleen mail + `.ics`).
+- In de agenda "Citas web · Bella Campoamor": elke afspraak daarin is op de website bezet (ook zelf toegevoegde blokkades zoals vakantie of feestdagen). Een PROFORMA-afspraak verwijderen = tijdslot weer vrij. Na bevestiging met de klant "PROFORMA" uit de titel halen.
+- Openingstijden wijzigen: `HOURS` in de edge function (en in `extras.js` / `index.html`).
