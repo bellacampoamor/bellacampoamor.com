@@ -1,17 +1,18 @@
 // Afspraken via bellacampoamor.com/cita.html ("Pida cita").
 // GET  -> vrije tijden binnen de openingstijden (komende weken), per dag de bezette blokken.
 // POST -> afspraakverzoek: opslaan in website_appointments, PROFORMA-afspraak in Google Agenda
-//         (via Google Apps Script) en e-mail via Resend naar info@bellacampoamor.com (met .ics-bijlage).
+//         (via n8n-workflow "BellaFlow: Website afspraken → Google Agenda") en e-mail via Resend
+//         naar info@bellacampoamor.com (met .ics-bijlage).
 // Eén klant per tijdslot: de winkel neemt alle tijd voor deze klant.
 // Secrets: RESEND_API_KEY (verplicht); optioneel WEBSITE_FROM, WEBSITE_TO,
-//          GOOGLE_SCRIPT_URL + GOOGLE_SCRIPT_SECRET (agenda; zonder deze alleen mail + .ics).
+//          CALENDAR_HOOK_URL + CALENDAR_HOOK_SECRET (n8n-webhook voor de agenda; zonder deze alleen mail + .ics).
 import { createClient } from 'npm:@supabase/supabase-js@2'
 
 const ALLOWED = ['https://bellacampoamor.com', 'https://www.bellacampoamor.com', 'https://bellacampoamor.github.io']
 const FROM = Deno.env.get('WEBSITE_FROM') ?? 'Web Bella Furniture & Outdoor <web@bellacampoamor.com>'
 const TO = Deno.env.get('WEBSITE_TO') ?? 'info@bellacampoamor.com'
-const SCRIPT_URL = Deno.env.get('GOOGLE_SCRIPT_URL') ?? ''
-const SCRIPT_SECRET = Deno.env.get('GOOGLE_SCRIPT_SECRET') ?? ''
+const SCRIPT_URL = Deno.env.get('CALENDAR_HOOK_URL') ?? ''
+const SCRIPT_SECRET = Deno.env.get('CALENDAR_HOOK_SECRET') ?? ''
 const TZ = 'Europe/Madrid'
 const LOCATION = 'Bella Furniture & Outdoor, Polígono A-2 La Regía Oeste, 03189 Dehesa de Campoamor (Alicante)'
 
@@ -77,7 +78,7 @@ function addDays(date: string, n: number) {
 const weekday = (date: string) => new Date(date + 'T12:00:00Z').getUTCDay()
 const hhmm = (min: number) => `${String(Math.floor(min / 60)).padStart(2, '0')}:${String(min % 60).padStart(2, '0')}`
 
-// ---------- Google Agenda via Apps Script ----------
+// ---------- Google Agenda via n8n-webhook ----------
 type Busy = { start: number; end: number; id?: string }
 let cache: { at: number; key: string; data: { busy: Busy[]; ids: Set<string> } | null } | null = null
 
@@ -88,13 +89,14 @@ async function callScript(body: Record<string, unknown>) {
   try {
     const r = await fetch(SCRIPT_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...body, secret: SCRIPT_SECRET }),
       redirect: 'follow',
       signal: ctl.signal,
     })
     if (!r.ok) return null
-    const j = await r.json()
+    let j = JSON.parse(await r.text())
+    if (typeof j === 'string') j = JSON.parse(j)
     return j && !j.error ? j : null
   } catch {
     return null
@@ -103,7 +105,7 @@ async function callScript(body: Record<string, unknown>) {
   }
 }
 
-// Bezette tijden uit de agenda "Citas web · Bella Campoamor". null = agenda niet bereikbaar.
+// Bezette tijden uit Google Agenda (via n8n). null = agenda niet bereikbaar.
 async function googleBusy(fromMs: number, toMs: number, fresh = false) {
   const key = `${fromMs}-${toMs}`
   if (!fresh && cache && cache.key === key && Date.now() - cache.at < 60_000) return cache.data
