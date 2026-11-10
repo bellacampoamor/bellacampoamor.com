@@ -959,6 +959,11 @@ html.lb-lock { overflow: hidden; }
 
 /* Visítenos: duim omhoog bij de gevelfoto */
 #visitenos .two-col > :first-child { position: relative; }
+#visitenos .storefront { margin-top: 0; }
+#visitenos .info .visit-btns { display: flex; flex-wrap: wrap; gap: .8rem; }
+#visitenos .info .visit-appt { margin-top: 0; }
+#visitenos .visit-text .info { margin-top: 2rem; }
+@media (max-width: 860px) { #visitenos .visit-text { order: -1; } }
 .bg-visit { height: 300px; bottom: 0; left: min(calc(100% - 150px), 300px); }
 
 /* Contact: staat op de onderrand van het oranje vlak */
