@@ -1,0 +1,32 @@
+name: fetch-campoamor-media
+on:
+  push:
+    branches: [feature/uitbreiding-site]
+    paths: [.github/workflows/fetch-media.yml]
+permissions:
+  contents: write
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download + process
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg webp >/dev/null
+          mkdir -p assets/media/frames
+          curl -fsSL -A "Mozilla/5.0" -o /tmp/tour.mp4 https://bellarojales.es/wp-content/uploads/2026/09/bella-group-campoamor-video-tour.mp4
+          curl -fsSL -A "Mozilla/5.0" -o /tmp/store.webp https://bellarojales.es/wp-content/uploads/2026/09/bella-furniture-outdoor-campoamor-store-768x1024.webp
+          ffprobe -v error -show_entries format=duration:stream=width,height -of default=nw=1 /tmp/tour.mp4 | tee assets/media/info.txt
+          ls -la /tmp/tour.mp4 >> assets/media/info.txt
+          cp /tmp/store.webp assets/media/store-768.webp
+          # web-geoptimaliseerde video zonder audio, max 720p
+          ffmpeg -y -loglevel error -i /tmp/tour.mp4 -an -vf "scale='min(720,iw)':-2" -c:v libx264 -preset slow -crf 28 -movflags +faststart -pix_fmt yuv420p assets/media/campoamor-tour.mp4
+          # frames elke 3 s
+          ffmpeg -y -loglevel error -i /tmp/tour.mp4 -vf "fps=1/3,scale='min(1280,iw)':-2" -q:v 3 assets/media/frames/f_%02d.jpg
+          ls -la assets/media assets/media/frames >> assets/media/info.txt
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add assets/media
+          git commit -m "Media: Campoamor videotour + frames (auto)" && git push
