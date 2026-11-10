@@ -566,6 +566,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 760px) {
   .review-ask { grid-template-columns: 1fr; }
   .ra-qr { display: none; } /* op de telefoon is de knop handiger dan een QR-code */
+}
 
 /* ---------- Showroom-galerij ---------- */
 .sg-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.2rem 2rem; }
