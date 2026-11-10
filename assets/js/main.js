@@ -88,7 +88,14 @@
       "reviews.eyebrow": "Reviews",
       "reviews.title": "What our customers say",
       "sticky.quote": "Request a quote",
-      "sticky.call": "Call the store"
+      "sticky.call": "Call the store",
+      "ask.title": "Been to our store? Tell us what you thought",
+      "ask.p": "Your review helps other people on the coast find us, and helps us get better. Leaving a Google review only takes a minute.",
+      "ask.cta": "Write a Google review",
+      "ask.thanks": "Thank you so much for your support!",
+      "ask.qr": "Scan with your phone",
+      "ask.qrAlt": "QR code to write a Google review",
+      "ask.footer": "Write a review"
     },
     nl: {
       "skip": "Naar de inhoud",
@@ -175,7 +182,14 @@
       "reviews.eyebrow": "Reviews",
       "reviews.title": "Wat onze klanten zeggen",
       "sticky.quote": "Offerte aanvragen",
-      "sticky.call": "Bel de winkel"
+      "sticky.call": "Bel de winkel",
+      "ask.title": "Al bij ons geweest? Vertel ons wat u ervan vond",
+      "ask.p": "Uw review helpt andere mensen aan de kust ons te vinden, en helpt ons beter te worden. Een Google-review schrijven kost maar een minuutje.",
+      "ask.cta": "Schrijf een Google-review",
+      "ask.thanks": "Heel erg bedankt voor uw steun!",
+      "ask.qr": "Scan met uw telefoon",
+      "ask.qrAlt": "QR-code om een Google-review te schrijven",
+      "ask.footer": "Schrijf een review"
     },
     es: {
       "totop": "Volver arriba",
