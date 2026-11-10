@@ -68,21 +68,8 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 600 500" preserveAspectRatio="xMidYMid slice">
-          <circle cx="430" cy="150" r="90" fill="#F2B48F"/>
-          <path d="M0 380 Q150 330 300 370 T600 350 V500 H0Z" fill="#EFE4D6"/>
-          <path d="M0 420 Q170 385 320 415 T600 400 V500 H0Z" fill="#FAF6F1"/>
-          <!-- parasol -->
-          <path d="M150 230 Q230 160 310 230 Z" fill="#111"/>
-          <rect x="228" y="228" width="4" height="150" fill="#111"/>
-          <!-- lounge chair -->
-          <path d="M300 372 L360 372 L395 330 L402 335 L370 380 L300 380 Z" fill="#111"/>
-          <rect x="305" y="380" width="4" height="18" fill="#111"/>
-          <rect x="362" y="380" width="4" height="18" fill="#111"/>
-        </svg>
-      </div>
       <div class="wrap hero-inner">
+        <div class="hero-text">
         <p class="eyebrow" data-i18n="hero.eyebrow">Dehesa de Campoamor · Orihuela Costa</p>
         <h1 data-i18n="hero.title">Vivir al aire libre, con estilo mediterráneo</h1>
         <p class="lead" data-i18n="hero.lead">Bella Furniture &amp; Outdoor es su tienda de muebles de exterior e interior en la Costa Blanca. Venga a ver, sentir y probar en nuestra tienda.</p>
@@ -90,6 +77,18 @@
           <a class="btn btn-dark" href="#visitenos" data-i18n="hero.cta1">Visite la tienda</a>
           <a class="btn btn-ghost" href="#contacto" data-i18n="hero.cta2">Contacte con nosotros</a>
         </div>
+        </div>
+        <figure class="photo-card hero-photo">
+          <picture>
+            <source srcset="assets/img/gevel.webp" type="image/webp">
+            <img src="assets/img/gevel.jpg" width="481" height="637" fetchpriority="high" decoding="async" alt="Fachada de la tienda Bella Outdoor &amp; Furniture en Dehesa de Campoamor" data-i18n-alt="visit.photo">
+          </picture>
+          <figcaption>
+            <span class="pc-name">BELLA</span>
+            <span class="pc-sub">Outdoor &amp; Furniture</span>
+            <span class="pc-addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><span class="addr-street">[[ADRES]]</span>, Dehesa de Campoamor</span></span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -140,11 +139,16 @@
           <p class="eyebrow" data-i18n="visit.eyebrow">Visítenos</p>
           <h2 data-i18n="visit.title">Pase por la tienda</h2>
           <p class="prose" data-i18n="visit.p">La mejor manera de elegir muebles es verlos en persona. Le esperamos en nuestra tienda en Dehesa de Campoamor.</p>
-          <figure class="storefront">
+          <figure class="photo-card storefront">
             <picture>
               <source srcset="assets/img/gevel.webp" type="image/webp">
-              <img src="assets/img/gevel.jpg" width="481" height="637" loading="lazy" decoding="async" alt="Fachada de la tienda Bella Furniture &amp; Outdoor en Dehesa de Campoamor" data-i18n-alt="visit.photo">
+              <img src="assets/img/gevel.jpg" width="481" height="637" loading="lazy" decoding="async" alt="Fachada de la tienda Bella Outdoor &amp; Furniture en Dehesa de Campoamor" data-i18n-alt="visit.photo">
             </picture>
+            <figcaption>
+              <span class="pc-name">BELLA</span>
+              <span class="pc-sub">Outdoor &amp; Furniture</span>
+              <span class="pc-addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><span class="addr-street">[[ADRES]]</span>, Dehesa de Campoamor</span></span>
+            </figcaption>
           </figure>
         </div>
         <dl class="info">
