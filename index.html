@@ -21,8 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- TODO: vul telefoon en openingstijden in zodra bekend -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FurnitureStore",
@@ -37,7 +36,14 @@
       "addressLocality": "Dehesa de Campoamor, Orihuela Costa",
       "addressRegion": "Alicante",
       "addressCountry": "ES"
-    }
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 37.9113721, "longitude": -0.7436499 },
+    "telephone": "+34865776925",
+    "email": "info@bellacampoamor.com",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+    ]
   }
   </script>
 </head>
@@ -106,6 +112,16 @@
           <p data-i18n="about.p2">Somos una tienda local en Dehesa de Campoamor y conocemos el clima de la costa: sol, sal y viento. Por eso le recomendamos materiales que aguantan.</p>
         </div>
       </div>
+      <div class="wrap">
+        <figure class="map">
+          <iframe title="Mapa: Bella Furniture &amp; Outdoor, Polígono A-2 La Regía Oeste, Dehesa de Campoamor" data-i18n-title="about.map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.7516%2C37.9073%2C-0.7357%2C37.9154&amp;layer=mapnik&amp;marker=37.91137%2C-0.74365"></iframe>
+          <figcaption>
+            <span>Polígono A-2 La Regía Oeste, 03189 Dehesa de Campoamor</span>
+            <a href="https://www.openstreetmap.org/?mlat=37.91137&amp;mlon=-0.74365#map=17/37.91137/-0.74365" target="_blank" rel="noopener" data-i18n="about.mapLink">Ver mapa más grande</a>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- WAT WE BIEDEN (informatief, geen artikelen) -->
@@ -160,7 +176,13 @@
           </div>
           <div>
             <dt data-i18n="visit.hours">Horario</dt>
-            <dd><span class="todo">[[OPENINGSTIJDEN]]</span></dd>
+            <dd>
+              <table class="hours">
+                <tr><th data-i18n="hours.mf">Lunes a viernes</th><td>10:00 – 18:00</td></tr>
+                <tr><th data-i18n="hours.sat">Sábado</th><td>10:00 – 14:00</td></tr>
+                <tr><th data-i18n="hours.sun">Domingo</th><td data-i18n="hours.closed">Cerrado</td></tr>
+              </table>
+            </dd>
           </div>
           <div>
             <dd><a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Bella+Furniture+%26+Outdoor%2C+Pol%C3%ADgono+A-2+La+Reg%C3%ADa+Oeste%2C+03189+Dehesa+de+Campoamor" target="_blank" rel="noopener" data-i18n="visit.route">Cómo llegar</a></dd>
@@ -175,11 +197,10 @@
         <div>
           <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
           <h2 data-i18n="contact.title">¿Tiene alguna pregunta?</h2>
-          <p class="prose" data-i18n="contact.p">Llámenos, envíenos un WhatsApp o un mensaje. Le respondemos en español, inglés o neerlandés.</p>
+          <p class="prose" data-i18n="contact.p">Llámenos o envíenos un mensaje. Le respondemos en español, inglés o neerlandés.</p>
           <ul class="contact-list">
-            <li><span data-i18n="contact.phone">Teléfono</span>: <span class="todo">[[TELEFOON]]</span></li>
-            <li>WhatsApp: <span class="todo">[[WHATSAPP]]</span></li>
-            <li>E-mail: <span class="todo">[[E-MAIL]]</span></li>
+            <li><span data-i18n="contact.phone">Teléfono</span>: <a href="tel:+34865776925">+34 865 77 69 25</a></li>
+            <li>E-mail: <a href="mailto:info@bellacampoamor.com">info@bellacampoamor.com</a></li>
           </ul>
         </div>
         <form class="form" id="contact-form" novalidate>
@@ -203,6 +224,7 @@
         <p class="footer-name">Bella Furniture &amp; Outdoor</p>
         <p>Polígono A-2 La Regía Oeste</p>
         <p>03189 Dehesa de Campoamor, Orihuela Costa</p>
+        <p><a href="tel:+34865776925">+34 865 77 69 25</a> · <a href="mailto:info@bellacampoamor.com">info@bellacampoamor.com</a></p>
       </div>
       <nav aria-label="Footer">
         <a href="#nosotros" data-i18n="nav.about">Sobre nosotros</a>
@@ -225,7 +247,7 @@
 
   <script>
     // n8n-webhook voor het contactformulier. Leeg = fallback naar e-mail.
-    window.BELLA_CONFIG = { contactWebhook: "", contactEmail: "" };
+    window.BELLA_CONFIG = { contactWebhook: "", contactEmail: "info@bellacampoamor.com" };
   </script>
   <script src="assets/js/main.js" defer></script>
 </body>

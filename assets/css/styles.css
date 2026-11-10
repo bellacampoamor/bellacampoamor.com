@@ -166,6 +166,18 @@ p { margin: 0 0 1em; }
 /* Storefront photo */
 .storefront { margin-top: 2rem; max-width: 420px; }
 
+/* Map */
+.map { margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; border-radius: var(--radius); overflow: hidden; background: var(--sand); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+.map iframe { display: block; width: 100%; height: clamp(300px, 42vw, 440px); border: 0; }
+.map figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding: .9rem 1.2rem; font-size: .92rem; color: var(--muted); }
+.map figcaption a { color: var(--terra-dark); font-weight: 700; }
+
+/* Opening hours */
+.hours { border-collapse: collapse; }
+.hours th { text-align: left; font-weight: 500; padding: .15rem 1.5rem .15rem 0; }
+.hours td { padding: .15rem 0; font-variant-numeric: tabular-nums; }
+.contact-list a, .footer-top p a { color: inherit; }
+
 /* Info list */
 .info { margin: 0; display: grid; gap: 1.6rem; }
 .info dt { font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--terra-dark); margin-bottom: .3rem; }

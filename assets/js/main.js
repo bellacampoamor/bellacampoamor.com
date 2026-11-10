@@ -29,6 +29,12 @@
       "offer.c3.p": "Furniture with a Mediterranean touch for your house or apartment.",
       "offer.c4.t": "Advice",
       "offer.c4.p": "We help you choose what suits your space, your style and your budget.",
+      "about.map": "Map: Bella Furniture & Outdoor, Polígono A-2 La Regía Oeste, Dehesa de Campoamor",
+      "about.mapLink": "View larger map",
+      "hours.mf": "Monday to Friday",
+      "hours.sat": "Saturday",
+      "hours.sun": "Sunday",
+      "hours.closed": "Closed",
       "visit.eyebrow": "Visit us",
       "visit.title": "Drop by the store",
       "visit.p": "The best way to choose furniture is to see it in person. We look forward to welcoming you in our store in Dehesa de Campoamor.",
@@ -38,7 +44,7 @@
       "visit.photo": "Storefront of Bella Outdoor & Furniture in Dehesa de Campoamor",
       "contact.eyebrow": "Contact",
       "contact.title": "Any questions?",
-      "contact.p": "Call us, send a WhatsApp or a message. We reply in Spanish, English or Dutch.",
+      "contact.p": "Call us or send us a message. We reply in Spanish, English or Dutch.",
       "contact.phone": "Phone",
       "form.name": "Name",
       "form.email": "E-mail",
@@ -49,7 +55,7 @@
       "form.sending": "Sending…",
       "form.ok": "Thank you! We will get back to you soon.",
       "form.error": "Please fill in your name, a valid e-mail, a message and accept the privacy terms.",
-      "form.fail": "Something went wrong. Please try again or contact us by phone or WhatsApp.",
+      "form.fail": "Something went wrong. Please try again or contact us by phone.",
       "legal.notice": "Legal notice",
       "legal.privacy": "Privacy policy"
     },
@@ -79,6 +85,12 @@
       "offer.c3.p": "Meubelen met een mediterrane touch voor uw huis of appartement.",
       "offer.c4.t": "Advies",
       "offer.c4.p": "We helpen u kiezen wat past bij uw ruimte, uw stijl en uw budget.",
+      "about.map": "Kaart: Bella Furniture & Outdoor, Polígono A-2 La Regía Oeste, Dehesa de Campoamor",
+      "about.mapLink": "Grotere kaart bekijken",
+      "hours.mf": "Maandag t/m vrijdag",
+      "hours.sat": "Zaterdag",
+      "hours.sun": "Zondag",
+      "hours.closed": "Gesloten",
       "visit.eyebrow": "Bezoek ons",
       "visit.title": "Kom langs in de winkel",
       "visit.p": "Meubelen kiest u het best door ze in het echt te zien. We verwelkomen u graag in onze winkel in Dehesa de Campoamor.",
@@ -88,7 +100,7 @@
       "visit.photo": "Gevel van de winkel Bella Outdoor & Furniture in Dehesa de Campoamor",
       "contact.eyebrow": "Contact",
       "contact.title": "Heeft u een vraag?",
-      "contact.p": "Bel ons, stuur een WhatsApp of een bericht. We antwoorden in het Spaans, Engels of Nederlands.",
+      "contact.p": "Bel ons of stuur een bericht. We antwoorden in het Spaans, Engels of Nederlands.",
       "contact.phone": "Telefoon",
       "form.name": "Naam",
       "form.email": "E-mail",
@@ -99,7 +111,7 @@
       "form.sending": "Bezig met versturen…",
       "form.ok": "Bedankt! We nemen snel contact met u op.",
       "form.error": "Vul uw naam, een geldig e-mailadres en een bericht in en accepteer de privacyvoorwaarden.",
-      "form.fail": "Er ging iets mis. Probeer het opnieuw of neem contact op via telefoon of WhatsApp.",
+      "form.fail": "Er ging iets mis. Probeer het opnieuw of neem telefonisch contact op.",
       "legal.notice": "Juridische informatie",
       "legal.privacy": "Privacybeleid"
     },
@@ -107,7 +119,7 @@
       "form.sending": "Enviando…",
       "form.ok": "¡Gracias! Le responderemos pronto.",
       "form.error": "Rellene su nombre, un e-mail válido y un mensaje, y acepte la política de privacidad.",
-      "form.fail": "Algo salió mal. Inténtelo de nuevo o contáctenos por teléfono o WhatsApp."
+      "form.fail": "Algo salió mal. Inténtelo de nuevo o contáctenos por teléfono."
     }
   };
 
@@ -120,6 +132,11 @@
   document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
     var k = el.getAttribute("data-i18n-aria");
     if (!(k in T.es)) T.es[k] = "Menú";
+  });
+  var titles = document.querySelectorAll("[data-i18n-title]");
+  titles.forEach(function (el) {
+    var k = el.getAttribute("data-i18n-title");
+    if (!(k in T.es)) T.es[k] = el.getAttribute("title");
   });
   var alts = document.querySelectorAll("[data-i18n-alt]");
   alts.forEach(function (el) {
@@ -140,6 +157,10 @@
     });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    });
+    titles.forEach(function (el) {
+      var v = t(el.getAttribute("data-i18n-title"));
+      if (v) el.setAttribute("title", v);
     });
     alts.forEach(function (el) {
       var v = t(el.getAttribute("data-i18n-alt"));
