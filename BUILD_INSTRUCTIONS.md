@@ -2,6 +2,8 @@
 
 > **Update 10-11-2026:** de site is **puur informatief, zonder artikelen/producten**, en is gebouwd als **één pagina** (statische HTML/CSS/JS, geen Astro). Waar dit document over een collectie of productpagina's spreekt, geldt dat niet meer.
 
+> **Update 10-11-2026 (2):** uitzondering: de HomeDecoBali-collectie wordt getoond (4 willekeurige producten op de homepage, `bali.html` met 4 per categorie), met prijzen en een aanvraagformulier per product. Geen online verkoop. Zie README.
+
 > **Gebruik:** plaats dit bestand als `BUILD_INSTRUCTIONS.md` in de root van een nieuwe, lege GitHub-repo (bijv. `bellacampoamor-site`) en geef Claude de opdracht:
 > *"Lees BUILD_INSTRUCTIONS.md en bouw de website volgens deze instructies."*
 

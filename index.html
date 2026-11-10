@@ -62,6 +62,7 @@
       <nav id="nav" class="nav" aria-label="Principal">
         <a href="#nosotros" data-i18n="nav.about">Sobre nosotros</a>
         <a href="#ofrecemos" data-i18n="nav.offer">Qué ofrecemos</a>
+        <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
         <a href="#visitenos" data-i18n="nav.visit">Visítenos</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
         <div class="lang" role="group" aria-label="Idioma / Language / Taal">
@@ -157,6 +158,21 @@
       </div>
     </section>
 
+    <!-- BALI-COLLECTIE (HomeDecoBali): 4 willekeurige producten -->
+    <section id="bali" class="section section-bali">
+      <div class="wrap">
+        <div class="bali-head">
+          <div>
+            <p class="eyebrow" data-i18n="bali.eyebrow">Colección Bali · HomeDecoBali</p>
+            <h2 data-i18n="bali.title">Hecho a mano en Bali</h2>
+            <p class="prose" data-i18n="bali.lead">Una selección de decoración y muebles artesanales de HomeDecoBali, disponible a través de nuestra tienda en Campoamor. Haga clic en un producto para consultarnos.</p>
+          </div>
+          <a class="btn btn-dark" href="bali.html" data-i18n="bali.cta">Descubra la colección Bali</a>
+        </div>
+        <div class="pgrid" id="hdb-home" aria-busy="true" aria-live="polite"></div>
+      </div>
+    </section>
+
     <!-- BEZOEK ONS -->
     <section id="visitenos" class="section">
       <div class="wrap two-col">
@@ -225,6 +241,25 @@
     </section>
   </main>
 
+  <!-- Productaanvraag (HDB): geen online verkoop, alleen vragen -->
+  <dialog id="enquiry" class="enquiry" aria-labelledby="enq-title">
+    <button type="button" class="enq-close" aria-label="Cerrar">×</button>
+    <h2 class="enq-title" id="enq-title">Consulta sobre este producto</h2>
+    <p class="enq-intro"></p>
+    <div class="enq-product"></div>
+    <form class="form enq-form" novalidate>
+      <label><span data-i18n="form.name">Nombre</span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="form.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span data-i18n="form.phone">Teléfono (opcional)</span><input name="phone" type="tel" autocomplete="tel"></label>
+      <label><span data-i18n="form.message">Mensaje</span><textarea name="message" rows="4" required></textarea></label>
+      <label class="check"><input type="checkbox" name="privacy" required> <span data-i18n="form.privacy">Acepto el tratamiento de mis datos para responder a mi consulta.</span></label>
+      <input type="hidden" name="language" value="es">
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn btn-dark" type="submit" data-i18n="form.send">Enviar</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
   <!-- FOOTER: geen Bella-logo; BellaFlow-beeldmerk alleen hier -->
   <footer class="site-footer">
     <div class="wrap footer-top">
@@ -236,6 +271,7 @@
       </div>
       <nav aria-label="Footer">
         <a href="#nosotros" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
         <a href="#visitenos" data-i18n="nav.visit">Visítenos</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
@@ -258,5 +294,6 @@
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hdb.js" defer></script>
 </body>
 </html>

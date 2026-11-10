@@ -58,7 +58,20 @@
       "form.error": "Please fill in your name, a valid e-mail, a message and accept the privacy terms.",
       "form.fail": "Something went wrong. Please try again or contact us by phone.",
       "legal.notice": "Legal notice",
-      "legal.privacy": "Privacy policy"
+      "legal.privacy": "Privacy policy",
+      "nav.bali": "Bali collection",
+      "bali.eyebrow": "Bali collection · HomeDecoBali",
+      "bali.title": "Handmade in Bali",
+      "bali.lead": "A selection of handcrafted decoration and furniture from HomeDecoBali, available through our store in Campoamor. Click a product to ask us about it.",
+      "bali.cta": "Discover the Bali collection",
+      "bp.eyebrow": "Bella Furniture & Outdoor · in collaboration with HomeDecoBali",
+      "bp.title": "The Bali collection",
+      "bp.lead": "Handmade by artisan families in Bali: wood, rattan, capiz shell and natural fibres. Every visit shows a new selection of four pieces per category.",
+      "bp.note": "We do not sell online. Ask us about any piece, or come and see the collection in our store in Dehesa de Campoamor.",
+      "bp.shuffle": "Show other products",
+      "bp.loading": "Loading the collection…",
+      "bp.cta.title": "Looking for something specific?",
+      "bp.cta.p": "The full HomeDecoBali range is available through us. Tell us what you are looking for and we will help you."
     },
     nl: {
       "skip": "Naar de inhoud",
@@ -115,7 +128,20 @@
       "form.error": "Vul uw naam, een geldig e-mailadres en een bericht in en accepteer de privacyvoorwaarden.",
       "form.fail": "Er ging iets mis. Probeer het opnieuw of neem telefonisch contact op.",
       "legal.notice": "Juridische informatie",
-      "legal.privacy": "Privacybeleid"
+      "legal.privacy": "Privacybeleid",
+      "nav.bali": "Bali-collectie",
+      "bali.eyebrow": "Bali-collectie · HomeDecoBali",
+      "bali.title": "Handgemaakt op Bali",
+      "bali.lead": "Een selectie handgemaakte decoratie en meubelen van HomeDecoBali, verkrijgbaar via onze winkel in Campoamor. Klik op een product om ons er iets over te vragen.",
+      "bali.cta": "Ontdek de Bali-collectie",
+      "bp.eyebrow": "Bella Furniture & Outdoor · in samenwerking met HomeDecoBali",
+      "bp.title": "De Bali-collectie",
+      "bp.lead": "Handgemaakt door ambachtelijke families op Bali: hout, rotan, capizschelp en natuurlijke vezels. Bij elk bezoek ziet u een nieuwe selectie van vier stuks per categorie.",
+      "bp.note": "We verkopen niet online. Vraag ons naar elk product, of kom de collectie bekijken in onze winkel in Dehesa de Campoamor.",
+      "bp.shuffle": "Andere producten tonen",
+      "bp.loading": "Collectie wordt geladen…",
+      "bp.cta.title": "Op zoek naar iets bijzonders?",
+      "bp.cta.p": "Het volledige assortiment van HomeDecoBali is via ons verkrijgbaar. Vertel ons wat u zoekt en we helpen u graag."
     },
     es: {
       "form.sending": "Enviando…",
@@ -174,6 +200,8 @@
     var hidden = document.querySelector('#contact-form input[name="language"]');
     if (hidden) hidden.value = lang;
     try { localStorage.setItem("bella-lang", lang); } catch (e) {}
+    window.BELLA_LANG = lang;
+    try { document.dispatchEvent(new CustomEvent("bella:lang", { detail: lang })); } catch (e) {}
     try {
       var url = new URL(location.href);
       if (lang === "es") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);

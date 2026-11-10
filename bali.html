@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colección Bali · Bella Furniture &amp; Outdoor · Dehesa de Campoamor</title>
+  <meta name="description" content="Colección Bali de HomeDecoBali en Bella Furniture & Outdoor, Dehesa de Campoamor: decoración, iluminación y muebles hechos a mano en Bali. Consúltenos o visite la tienda.">
+  <link rel="canonical" href="https://bellacampoamor.com/bali.html">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Colección Bali · Bella Furniture & Outdoor">
+  <meta property="og:description" content="Decoración, iluminación y muebles hechos a mano en Bali, en Dehesa de Campoamor.">
+  <meta property="og:image" content="https://bellacampoamor.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://bellacampoamor.com/bali.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- HEADER: enige plek van het Bella-logo -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Bella Furniture & Outdoor – inicio">
+        <img src="assets/img/bella-logo.png" alt="Bella Furniture & Outdoor" width="1000" height="285">
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav" data-i18n-aria="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav" aria-label="Principal">
+        <a href="index.html#nosotros" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="index.html#ofrecemos" data-i18n="nav.offer">Qué ofrecemos</a>
+        <a href="bali.html" aria-current="page" data-i18n="nav.bali">Colección Bali</a>
+        <a href="index.html#visitenos" data-i18n="nav.visit">Visítenos</a>
+        <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Taal">
+          <button data-lang="es" aria-pressed="true">ES</button>
+          <button data-lang="en" aria-pressed="false">EN</button>
+          <button data-lang="nl" aria-pressed="false">NL</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="bali-hero">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="bp.eyebrow">Bella Furniture &amp; Outdoor · en colaboración con HomeDecoBali</p>
+        <h1 data-i18n="bp.title">La colección Bali</h1>
+        <p class="lead" data-i18n="bp.lead">Hecho a mano por familias artesanas en Bali: madera, ratán, concha capiz y fibras naturales. En cada visita verá una nueva selección de cuatro piezas por categoría.</p>
+        <p class="bali-note" data-i18n="bp.note">No vendemos online. Consúltenos sobre cualquier pieza o venga a ver la colección en nuestra tienda de Dehesa de Campoamor.</p>
+        <div class="cta-row">
+          <button type="button" class="btn btn-dark" id="hdb-shuffle" data-i18n="bp.shuffle">Mostrar otros productos</button>
+          <a class="btn btn-ghost" href="index.html#visitenos" data-i18n="hero.cta1">Visite la tienda</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap hdb-bali" id="hdb-bali" aria-busy="true" aria-live="polite">
+      <p class="hdb-loading" data-i18n="bp.loading">Cargando la colección…</p>
+    </div>
+
+    <section class="section section-terra">
+      <div class="wrap two-col">
+        <div>
+          <h2 data-i18n="bp.cta.title">¿Busca algo en concreto?</h2>
+          <p class="prose" data-i18n="bp.cta.p">Toda la gama de HomeDecoBali está disponible a través de nosotros. Díganos lo que busca y le ayudamos.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="index.html#contacto" data-i18n="hero.cta2">Contacte con nosotros</a>
+          <a class="btn btn-ghost" href="tel:+34865776925">+34 865 77 69 25</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Productaanvraag (HDB): geen online verkoop, alleen vragen -->
+  <dialog id="enquiry" class="enquiry" aria-labelledby="enq-title">
+    <button type="button" class="enq-close" aria-label="Cerrar">×</button>
+    <h2 class="enq-title" id="enq-title">Consulta sobre este producto</h2>
+    <p class="enq-intro"></p>
+    <div class="enq-product"></div>
+    <form class="form enq-form" novalidate>
+      <label><span data-i18n="form.name">Nombre</span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="form.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span data-i18n="form.phone">Teléfono (opcional)</span><input name="phone" type="tel" autocomplete="tel"></label>
+      <label><span data-i18n="form.message">Mensaje</span><textarea name="message" rows="4" required></textarea></label>
+      <label class="check"><input type="checkbox" name="privacy" required> <span data-i18n="form.privacy">Acepto el tratamiento de mis datos para responder a mi consulta.</span></label>
+      <input type="hidden" name="language" value="es">
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn btn-dark" type="submit" data-i18n="form.send">Enviar</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <!-- FOOTER: geen Bella-logo; BellaFlow-beeldmerk alleen hier -->
+  <footer class="site-footer">
+    <div class="wrap footer-top">
+      <div>
+        <p class="footer-name">Bella Furniture &amp; Outdoor</p>
+        <p>Polígono A-2 La Regía Oeste</p>
+        <p>03189 Dehesa de Campoamor, Orihuela Costa</p>
+        <p><a href="tel:+34865776925">+34 865 77 69 25</a> · <a href="mailto:info@bellacampoamor.com">info@bellacampoamor.com</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html#nosotros" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
+        <a href="index.html#visitenos" data-i18n="nav.visit">Visítenos</a>
+        <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <nav aria-label="Legal">
+        <a href="aviso-legal.html" data-i18n="legal.notice">Aviso legal</a>
+        <a href="privacidad.html" data-i18n="legal.privacy">Política de privacidad</a>
+      </nav>
+    </div>
+    <div class="wrap copyright">© <span id="year">2026</span> Bella Furniture &amp; Outdoor</div>
+    <div class="powered-by">
+      <a href="https://bellaflow.es" target="_blank" rel="noopener">
+        <img src="assets/img/bellaflow-mark.png" alt="BellaFlow" width="34" height="22">
+        <span>Powered by Bellaflow.es</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
+    window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
+  </script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hdb.js" defer></script>
+</body>
+</html>
