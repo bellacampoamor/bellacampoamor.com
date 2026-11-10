@@ -797,3 +797,68 @@ html.lb-lock { overflow: hidden; }
 .ad-when { font-weight: 700; font-size: 1.15rem; }
 .ad-when::first-letter, .as-val::first-letter { text-transform: uppercase; }
 .visit-appt { margin-top: 1rem; }
+
+/* ---------- Afspraak woninginrichting: fotopaneel (homepage) ---------- */
+.appt-panel { position: relative; isolation: isolate; overflow: hidden; color: #fff; padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.ap-bg, .ap-bg img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+.ap-bg img { object-fit: cover; object-position: center 55%; transform: scale(1.04); }
+.appt-panel::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(100deg, rgba(60,26,16,.92) 0%, rgba(138,63,43,.78) 38%, rgba(17,17,17,.25) 72%, rgba(17,17,17,.05) 100%);
+}
+.ap-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.appt-panel .eyebrow { color: #F2B48F; }
+.ap-title {
+  font-family: var(--font-head); font-stretch: 125%; font-weight: 800; text-transform: uppercase;
+  font-size: clamp(1.9rem, 4.4vw, 3.3rem); line-height: 1.05; margin: 0 0 .6em; max-width: 16ch; color: #fff;
+}
+.ap-text { max-width: 46ch; color: #f6eee6; font-size: 1.1rem; margin: 0 0 1.8rem; }
+.ap-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; }
+.ap-steps li { display: flex; align-items: center; gap: .6rem; font-weight: 600; font-size: .95rem; }
+.ap-steps b {
+  display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; flex: none;
+  background: var(--terra); color: var(--ink); font-family: var(--font-head); font-size: .95rem;
+}
+.ap-card {
+  position: relative; background: var(--bg); color: var(--ink); border-radius: var(--radius);
+  padding: clamp(1.6rem, 3vw, 2.2rem); box-shadow: 0 30px 60px rgba(0,0,0,.35);
+  border-top: 5px solid var(--terra); transform: rotate(-1deg);
+}
+.ap-stamp {
+  position: absolute; top: -2.6rem; right: -1.2rem; width: 6.4rem; height: 6.4rem; border-radius: 50%;
+  display: grid; place-items: center; text-align: center; padding: .8rem;
+  background: var(--terra); color: var(--ink); border: 3px dashed rgba(17,17,17,.55); outline: 4px solid var(--terra);
+  font-family: var(--font-head); font-weight: 800; font-size: .72rem; line-height: 1.15; text-transform: uppercase;
+  transform: rotate(12deg); box-shadow: 0 10px 22px rgba(0,0,0,.25);
+}
+.ap-stamp::before { content: "☕"; display: block; font-size: 1.4rem; margin-bottom: .15rem; }
+.ap-stamp span { display: block; }
+.ap-q { font-family: var(--font-head); font-weight: 800; font-size: 1.15rem; margin: 0 0 1rem; }
+.ap-opt {
+  display: grid; grid-template-columns: 84px 1fr auto; gap: 1rem; align-items: center;
+  background: #fff; border: 2px solid transparent; border-radius: 12px; padding: .6rem 1rem .6rem .6rem;
+  margin-bottom: .8rem; text-decoration: none; color: inherit;
+  box-shadow: 0 4px 14px rgba(60,40,20,.08); transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.ap-opt img { width: 84px; height: 66px; object-fit: cover; border-radius: 8px; transition: transform .3s; }
+.ap-opt-txt b { display: block; font-size: 1.05rem; }
+.ap-opt-txt small { display: block; color: #6b5f55; font-size: .85rem; margin-top: .15rem; }
+.ap-arrow {
+  display: grid; place-items: center; width: 2.3rem; height: 2.3rem; border-radius: 50%;
+  background: var(--ink); color: #fff; font-weight: 700; transition: background .2s, transform .2s;
+}
+.ap-opt:hover, .ap-opt:focus-visible { border-color: var(--terra); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(60,40,20,.16); outline: none; }
+.ap-opt:hover img { transform: scale(1.06); }
+.ap-opt:hover .ap-arrow, .ap-opt:focus-visible .ap-arrow { background: var(--terra); color: var(--ink); transform: translateX(3px); }
+.ap-note { margin: .4rem 0 0; font-size: .85rem; color: #6b5f55; text-align: center; }
+@media (max-width: 860px) {
+  .ap-inner { grid-template-columns: 1fr; }
+  .appt-panel::before { background: linear-gradient(180deg, rgba(60,26,16,.9) 0%, rgba(138,63,43,.8) 55%, rgba(17,17,17,.55) 100%); }
+  .ap-card { transform: none; margin-top: 2rem; }
+  .ap-stamp { width: 5.4rem; height: 5.4rem; top: -2.4rem; right: -.2rem; font-size: .62rem; }
+}
+@media (max-width: 420px) {
+  .ap-opt { grid-template-columns: 64px 1fr auto; gap: .7rem; }
+  .ap-opt img { width: 64px; height: 54px; }
+}
+@media (prefers-reduced-motion: reduce) { .ap-opt, .ap-opt img, .ap-arrow { transition: none; } }

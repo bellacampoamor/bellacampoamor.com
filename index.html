@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261110c">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261110d">
 
     <script type="application/ld+json">
   {
@@ -255,6 +255,42 @@
             </button>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- AFSPRAAK WONINGINRICHTING: fotopaneel met keuze heel huis / enkele ruimtes -->
+    <section id="interiorismo" class="appt-panel" aria-labelledby="ap-title">
+      <picture class="ap-bg">
+        <source srcset="assets/img/showroom/salon-boucle-xl.webp" type="image/webp" media="(min-width: 900px)">
+        <source srcset="assets/img/showroom/salon-boucle.webp" type="image/webp">
+        <img src="assets/img/showroom/salon-boucle.jpg" width="900" height="675" loading="lazy" decoding="async" alt="" >
+      </picture>
+      <div class="wrap ap-inner">
+        <div class="ap-copy">
+          <p class="eyebrow" data-i18n="ap.eyebrow">Interiorismo personal</p>
+          <h2 id="ap-title" class="ap-title" data-i18n="ap.title">¿Amueblar su casa? Empecemos con un café.</h2>
+          <p class="ap-text" data-i18n="ap.text">Tanto si acaba de comprar una casa como si quiere renovar solo el salón: reserve una cita personal y recorremos juntos la exposición. Solo usted, nuestro equipo y un plan a su medida.</p>
+          <ol class="ap-steps">
+            <li><b>1</b><span data-i18n="ap.s1">Elija día y hora</span></li>
+            <li><b>2</b><span data-i18n="ap.s2">Café y plan en la tienda</span></li>
+            <li><b>3</b><span data-i18n="ap.s3">Entregamos en su casa</span></li>
+          </ol>
+        </div>
+        <div class="ap-card">
+          <span class="ap-stamp" aria-hidden="true"><span data-i18n="ap.stamp">un cliente a la vez</span></span>
+          <p class="ap-q" data-i18n="ap.q">¿Qué quiere amueblar?</p>
+          <a class="ap-opt" href="cita.html?alcance=casa">
+            <img src="assets/img/showroom/salon-oliva.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            <span class="ap-opt-txt"><b data-i18n="ap.o1.t">Toda la casa</b><small data-i18n="ap.o1.p">Villa, piso o casa de vacaciones · cita de 2 h</small></span>
+            <span class="ap-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="ap-opt" href="cita.html?alcance=varias">
+            <img src="assets/img/showroom/dormitorio-camas.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            <span class="ap-opt-txt"><b data-i18n="ap.o2.t">Algunas estancias</b><small data-i18n="ap.o2.p">Salón, dormitorio, comedor… · cita de 1 h</small></span>
+            <span class="ap-arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="ap-note" data-i18n="ap.note">Sin compromiso · en horario de tienda · lun–sáb</p>
+        </div>
       </div>
     </section>
 
@@ -558,10 +594,10 @@
     // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
-  <script src="assets/js/main.js?v=20261110c" defer></script>
-  <script src="assets/js/hdb.js?v=20261110c" defer></script>
-  <script src="assets/js/reviews.js?v=20261110c" defer></script>
-  <script src="assets/js/extras.js?v=20261110c" defer></script>
-  <script src="assets/js/showroom.js?v=20261110c" defer></script>
+  <script src="assets/js/main.js?v=20261110d" defer></script>
+  <script src="assets/js/hdb.js?v=20261110d" defer></script>
+  <script src="assets/js/reviews.js?v=20261110d" defer></script>
+  <script src="assets/js/extras.js?v=20261110d" defer></script>
+  <script src="assets/js/showroom.js?v=20261110d" defer></script>
 </body>
 </html>

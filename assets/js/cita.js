@@ -263,5 +263,18 @@
       .finally(function () { btn.disabled = false; });
   });
 
+  // ---------- voorkeuze via ?alcance=casa|varias (paneel op de homepage) ----------
+  (function () {
+    var m = /[?&]alcance=(casa|varias|exterior|otro)\b/.exec(location.search);
+    if (!m) return;
+    var r = form.querySelector('input[name="scope"][value="' + m[1] + '"]');
+    if (r) r.checked = true;
+    var d = { casa: 120, varias: 60 }[m[1]];
+    if (d) {
+      state.dur = d;
+      durBtns.forEach(function (x) { x.setAttribute("aria-checked", String(Number(x.dataset.dur) === d)); });
+    }
+  })();
+
   load(false);
 })();
