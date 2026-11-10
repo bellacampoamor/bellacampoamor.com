@@ -33,6 +33,7 @@ h1, h2, h3 {
   line-height: 1.08;
   letter-spacing: .01em;
   margin: 0 0 .6em;
+  text-wrap: balance;
 }
 h1 { font-size: clamp(2rem, 5.2vw, 3.8rem); }
 h2 { font-size: clamp(1.6rem, 3.4vw, 2.5rem); }
@@ -121,8 +122,10 @@ p { margin: 0 0 1em; }
 
 /* Hero */
 .hero { padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 7vw, 6rem); }
-.hero-inner { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
-.hero h1 { max-width: 15ch; }
+.hero-inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+/* Kop schaalt mee met de kolombreedte, zodat het langste woord ("Mediterranean") in elke taal past */
+.hero-text { container-type: inline-size; padding-right: 1.5rem; }
+.hero h1 { font-size: clamp(1.6rem, 8cqi, 3.1rem); }
 .hero-visual { position: relative; justify-self: end; width: 100%; max-width: 440px; }
 .hero-photo { width: 100%; }
 /* Folder-waaier: bescheiden, ligt schuin over de linkerbovenhoek van de gevelfoto */
@@ -135,6 +138,7 @@ p { margin: 0 0 1em; }
 .hero-flyers img { display: block; width: 100%; height: auto; }
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; }
+  .hero-text { padding-right: 0; }
   .hero-visual { justify-self: stretch; max-width: none; }
   .hero-flyers { width: 46%; left: -.4rem; top: -1.6rem; }
 }
@@ -160,8 +164,10 @@ p { margin: 0 0 1em; }
 .section-terra { background: var(--terra); }
 .section-terra .eyebrow { color: var(--ink); }
 .section-terra .prose { color: var(--ink); }
-.two-col { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
-@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+/* Rechterkolom begint gelijk met de kop (onder het eyebrow-label) */
+.two-col > :first-child:has(> .eyebrow:first-child) ~ * { margin-top: calc(.8rem * 1.6 + .8rem); }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } .two-col > :first-child ~ * { margin-top: 0 !important; } }
 
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
@@ -170,6 +176,8 @@ p { margin: 0 0 1em; }
   padding: 1.8rem 1.5rem; border-top: 4px solid var(--terra);
 }
 .card p { color: var(--muted); margin: 0; font-size: .98rem; }
+/* Subgrid: teksten in alle kaarten starten op dezelfde hoogte, ook als een titel in een taal over 2 regels loopt */
+.card { display: grid; grid-template-rows: subgrid; grid-row: span 2; row-gap: 0; align-content: start; }
 @media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
 
