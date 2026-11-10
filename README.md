@@ -44,3 +44,7 @@ Optioneel: secrets `WEBSITE_FROM` (afzender) en `WEBSITE_TO` (ontvanger).
 
 ## Quick view producten (`assets/js/hdb.js`)
 Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschrijving, materiaal/maten en het aanvraagformulier. Bij hover toont de kaart de tweede foto. De feed `website-hdb-products` levert hiervoor `images` en `description`.
+
+## Reviews vragen
+- Blok "¿Ya nos conoce?" (`#resena`) op de homepage, vóór het contactformulier: knop naar het Google-reviewvenster, op desktop ook een QR-code (`assets/img/qr-review.svg`). Link "Escriba una reseña" in de footer van beide pagina's.
+- Korte links voor bonnen, mails en folders: **bellacampoamor.com/review** en **bellacampoamor.com/resena** sturen direct door naar het Google-reviewvenster (Google place ID `ChIJzQiJHhgGYw0RzR8puSEgpAQ`).
