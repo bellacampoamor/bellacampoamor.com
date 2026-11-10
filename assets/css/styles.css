@@ -928,3 +928,70 @@ html.lb-lock { overflow: hidden; }
 .faq summary:focus-visible { outline: 3px solid var(--terra); outline-offset: 2px; border-radius: 12px; }
 .faq details p { margin: 0; padding: 0 1.2rem 1.15rem; color: var(--muted); }
 @media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; } }
+/* ---------- Bella-medewerker: decoratieve uitgeknipte foto's (assets/img/team/) ---------- */
+.bella-gal {
+  position: absolute; z-index: 3; pointer-events: none; user-select: none;
+  width: auto; max-width: none; height: 300px;
+  filter: drop-shadow(0 14px 22px rgba(0,0,0,.22));
+}
+/* Waar ze niet tegen een rand staat, vervaagt ze onderaan */
+.bella-gal.fade { filter: none; -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 98%); mask-image: linear-gradient(to bottom, #000 74%, transparent 98%); }
+
+/* Hero: met de folder, rechtsonder half over de gevelfoto */
+.bg-hero { height: 74%; right: -17%; bottom: 0; }
+.hero-photo figcaption { padding-right: 34%; }
+
+/* Exposición: wijst naar de filterknoppen */
+#exposicion > .wrap { position: relative; }
+.bg-show { height: 280px; right: -1.5rem; bottom: -4.2rem; }
+
+/* Interiorismo-paneel: met koffie, links naast de kaart */
+.bg-appt { height: 390px; right: calc(100% - 2.2rem); bottom: -2.6rem; transform: rotate(1deg); filter: drop-shadow(0 20px 30px rgba(0,0,0,.45)); }
+.ap-steps { max-width: 30rem; }
+
+/* Sfeerband: wijst naar tekst en knop */
+.band-inner { position: relative; }
+.bg-band { height: clamp(300px, 36vw, 470px); right: 4%; bottom: 0; filter: drop-shadow(0 20px 34px rgba(0,0,0,.5)); }
+
+/* Bali (home): presenteert de knop */
+.bali-cta { display: flex; align-items: center; gap: .2rem; }
+.bg-bali { position: relative; height: 200px; margin: 0 0 -3.6rem; align-self: flex-end; }
+
+/* Visítenos: duim omhoog bij de gevelfoto */
+#visitenos .two-col > :first-child { position: relative; }
+.bg-visit { height: 300px; bottom: 0; left: min(calc(100% - 150px), 300px); }
+
+/* Contact: staat op de onderrand van het oranje vlak */
+#contacto .two-col { align-items: stretch; }
+#contacto .two-col > :first-child { display: flex; flex-direction: column; }
+.bg-contact { position: relative; display: block; align-self: flex-start; height: 330px; margin: auto 0 calc(-1 * clamp(4rem, 9vw, 7rem)) -1rem; padding-top: 2rem; box-sizing: content-box; filter: drop-shadow(0 14px 22px rgba(60,20,10,.25)); }
+
+/* Bali-pagina en afspraakpagina: rechts in de kop */
+.bali-hero, .appt-hero { position: relative; overflow: hidden; }
+.bali-hero > .wrap, .appt-hero > .wrap { position: relative; }
+.bg-balihero { height: clamp(260px, 30vw, 380px); right: 0; bottom: calc(-1 * clamp(2.5rem, 5vw, 3.5rem)); }
+.bg-cita { height: clamp(240px, 28vw, 350px); right: 0; top: 0; }
+.appt-hero:has(.bg-cita) .appt-points { max-width: calc(100% - 270px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media (max-width: 1199px) { .bg-appt { display: none; } }
+@media (max-width: 1100px) {
+  .bg-hero { right: -6%; }
+  .bg-band { right: 0; }
+}
+@media (max-width: 860px) {
+  .bg-hero { height: 66%; right: -.6rem; }
+  .bg-show, .bg-bali, .bg-appt, .bg-contact { display: none; }
+  .ap-steps { max-width: none; }
+  .bg-band { height: 250px; right: -1rem; opacity: .97; }
+  .photo-band .band-text, .photo-band .band-title { position: relative; z-index: 4; }
+  .bg-visit { height: 230px; left: auto; right: -.6rem; }
+  .bg-balihero { height: 200px; right: -1.2rem; bottom: auto; top: -1rem; }
+  .bali-hero h1, .bali-hero .eyebrow { padding-right: 34%; }
+  .bg-cita { height: 190px; right: -1rem; top: -1rem; }
+  .appt-hero h1, .appt-hero .eyebrow { padding-right: 34%; }
+  .appt-hero:has(.bg-cita) .appt-points { max-width: none; }
+}
+@media (max-width: 480px) {
+  .bg-band { display: none; }
+}
+@media print { .bella-gal { display: none; } }

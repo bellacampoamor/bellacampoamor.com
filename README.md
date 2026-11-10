@@ -64,3 +64,9 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Google Agenda-koppeling via n8n-workflow **"BellaFlow: Website afspraken → Google Agenda"** (webhook `https://bellaflow.app.n8n.cloud/webhook/bella-citas`, agenda hacocampoamor@gmail.com). Secrets in Supabase: `CALENDAR_HOOK_URL`, `CALENDAR_HOOK_SECRET` (zelfde sleutel als in de Switch-node van de workflow). Werkt de agenda niet, dan gaat alles door met alleen mail + `.ics`.
 - In Google Agenda: getimede afspraken zijn op de website bezet; hele-dag-afspraken alleen als de titel bv. "Cerrado", "Vacaciones", "Festivo" of "Gesloten" bevat. Een PROFORMA-afspraak verwijderen = tijdslot weer vrij. Na bevestiging met de klant "PROFORMA" uit de titel halen.
 - Openingstijden wijzigen: `HOURS` in de edge function (en in `extras.js` / `index.html`).
+
+## Bella-medewerker (decoratieve foto's, `assets/img/team/`)
+- Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in acht poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
+- Poses: brochure, koffie, duim, verbaasd, presenteert, wijst-links, wijst-rechts, basis.
+- Gebruik: `<img class="bella-gal bg-…">`, puur decoratief (`alt=""`, `aria-hidden`). Plaatsing per sectie staat onderaan `styles.css` (blok "Bella-medewerker"). Klasse `fade` laat haar onderaan vervagen waar ze niet op een rand staat.
+- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), Contacto (wijst-rechts), bali.html (basis), cita.html (koffie). Op mobiel zijn een paar verborgen of kleiner.
