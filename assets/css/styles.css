@@ -157,6 +157,13 @@ p { margin: 0 0 1em; }
 @media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
 
+/* Storefront photo */
+.storefront { margin: 2rem 0 0; max-width: 420px; }
+.storefront img {
+  width: 100%; height: auto; border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+
 /* Info list */
 .info { margin: 0; display: grid; gap: 1.6rem; }
 .info dt { font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--terra-dark); margin-bottom: .3rem; }

@@ -35,6 +35,7 @@
       "visit.address": "Address",
       "visit.hours": "Opening hours",
       "visit.route": "Get directions",
+      "visit.photo": "Storefront of Bella Furniture & Outdoor in Dehesa de Campoamor",
       "contact.eyebrow": "Contact",
       "contact.title": "Any questions?",
       "contact.p": "Call us, send a WhatsApp or a message. We reply in Spanish, English or Dutch.",
@@ -84,6 +85,7 @@
       "visit.address": "Adres",
       "visit.hours": "Openingstijden",
       "visit.route": "Routebeschrijving",
+      "visit.photo": "Gevel van de winkel Bella Furniture & Outdoor in Dehesa de Campoamor",
       "contact.eyebrow": "Contact",
       "contact.title": "Heeft u een vraag?",
       "contact.p": "Bel ons, stuur een WhatsApp of een bericht. We antwoorden in het Spaans, Engels of Nederlands.",
@@ -119,6 +121,11 @@
     var k = el.getAttribute("data-i18n-aria");
     if (!(k in T.es)) T.es[k] = "Menú";
   });
+  var alts = document.querySelectorAll("[data-i18n-alt]");
+  alts.forEach(function (el) {
+    var k = el.getAttribute("data-i18n-alt");
+    if (!(k in T.es)) T.es[k] = el.getAttribute("alt");
+  });
 
   var current = "es";
   function t(k) { return (T[current] && T[current][k]) || T.es[k] || ""; }
@@ -133,6 +140,10 @@
     });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    });
+    alts.forEach(function (el) {
+      var v = t(el.getAttribute("data-i18n-alt"));
+      if (v) el.setAttribute("alt", v);
     });
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
