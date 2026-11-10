@@ -966,6 +966,13 @@ html.lb-lock { overflow: hidden; }
 @media (max-width: 860px) { #visitenos .visit-text { order: -1; } }
 .bg-visit { height: 300px; bottom: 0; left: min(calc(100% - 150px), 300px); }
 
+/* FAQ: ligt onder de vraagknop en wijst omhoog naar de kop */
+.bg-faq { position: relative; display: block; width: min(100%, 360px); height: auto; margin: 2.2rem 0 0 -.4rem; filter: drop-shadow(0 12px 18px rgba(60,40,20,.16)); }
+
+/* Review vragen: twee duimen omhoog, staat op de onderrand van het donkere vlak */
+.review-ask:has(.bg-ask) { grid-template-columns: minmax(0, 1fr) auto auto; }
+.bg-ask { position: relative; align-self: end; height: 380px; margin: -1rem 0 calc(-1 * clamp(3rem, 7vw, 5rem)); filter: drop-shadow(0 18px 30px rgba(0,0,0,.45)); }
+
 /* Contact: staat op de onderrand van het oranje vlak */
 #contacto .two-col { align-items: stretch; }
 #contacto .two-col > :first-child { display: flex; flex-direction: column; }
@@ -985,7 +992,9 @@ html.lb-lock { overflow: hidden; }
 }
 @media (max-width: 860px) {
   .bg-hero { height: 66%; right: -.6rem; }
-  .bg-show, .bg-bali, .bg-appt, .bg-contact { display: none; }
+  .bg-show, .bg-bali, .bg-appt, .bg-contact, .bg-ask { display: none; }
+  .review-ask:has(.bg-ask) { grid-template-columns: 1fr; }
+  .bg-faq { width: min(70%, 220px); margin: 1.4rem auto 0; }
   .ap-steps { max-width: none; }
   .bg-band { height: 250px; right: -1rem; opacity: .97; }
   .photo-band .band-text, .photo-band .band-title { position: relative; z-index: 4; }
