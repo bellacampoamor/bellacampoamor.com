@@ -6,6 +6,7 @@
     en: {
       "skip": "Skip to content",
       "menu": "Menu",
+      "totop": "Back to top",
       "nav.about": "About us",
       "nav.offer": "What we offer",
       "nav.visit": "Visit us",
@@ -76,6 +77,7 @@
     nl: {
       "skip": "Naar de inhoud",
       "menu": "Menu",
+      "totop": "Terug naar boven",
       "nav.about": "Over ons",
       "nav.offer": "Wat we bieden",
       "nav.visit": "Bezoek ons",
@@ -144,6 +146,7 @@
       "bp.cta.p": "Het volledige assortiment van HomeDecoBali is via ons verkrijgbaar. Vertel ons wat u zoekt en we helpen u graag."
     },
     es: {
+      "totop": "Volver arriba",
       "form.sending": "Enviando…",
       "form.ok": "¡Gracias! Le responderemos pronto.",
       "form.error": "Rellene su nombre, un e-mail válido y un mensaje, y acepte la política de privacidad.",
@@ -295,6 +298,24 @@
       } else {
         show(t("form.fail"), "error");
       }
+    });
+  }
+
+  // Knop "terug naar boven": verschijnt na een stukje scrollen
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    toTop.hidden = false;
+    var onScroll = function () {
+      toTop.classList.toggle("is-visible", window.scrollY > 600);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      var brand = document.querySelector(".brand");
+      if (brand) brand.focus({ preventScroll: true });
     });
   }
 })();
