@@ -8,7 +8,7 @@ Geen producten/artikelen – puur informatief. Talen: ES (standaard), EN, NL (kn
 - `aviso-legal.html`, `privacidad.html` – juridische pagina's (tekst nog aanleveren)
 - `assets/css/styles.css`, `assets/js/main.js` (vertalingen + contactformulier)
 - `assets/img/bella-logo.png` – **alleen in de header**
-- `assets/img/bellaflow-mark.svg` – **alleen in de footer**, met "Powered by Bellaflow.es" (nu placeholder: vervang het bestand door het echte beeldmerk)
+- `assets/img/bellaflow-mark.png` – **alleen in de footer**, met "Powered by Bellaflow.es"
 
 ## Nog invullen
 Zoek op `[[` in de bestanden: adres, openingstijden, telefoon, WhatsApp, e-mail, bedrijfsgegevens voor de juridische pagina's.

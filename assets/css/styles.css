@@ -194,7 +194,7 @@ p { margin: 0 0 1em; }
 .powered-by { border-top: 1px solid #2a2a2a; padding: 1rem 0 1.4rem; text-align: center; }
 .powered-by a { display: inline-flex; align-items: center; gap: .5rem; color: #8f877f; text-decoration: none; font-size: .82rem; }
 .powered-by a:hover { color: #fff; }
-.powered-by img { width: 22px; height: 22px; }
+.powered-by img { width: auto; height: 22px; }
 
 /* Legal pages */
 .legal { padding: 4rem 0 6rem; max-width: 760px; }
