@@ -239,7 +239,7 @@
       }
       var data = {
         name: d.get("name"), email: email, phone: d.get("phone"),
-        message: d.get("message"), language: current, page: location.href
+        message: d.get("message"), language: current, website: d.get("website") || ""
       };
 
       if (cfg.contactWebhook) {

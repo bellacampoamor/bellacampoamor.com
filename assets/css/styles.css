@@ -202,6 +202,8 @@ p { margin: 0 0 1em; }
 .form-status.error { color: #a12a12; }
 .form-status.ok { color: #1f6b3a; }
 
+.form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
 /* Footer */
 .site-footer { background: var(--ink); color: #e9e2da; padding-top: 3.5rem; font-size: .95rem; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; padding-bottom: 2.5rem; }

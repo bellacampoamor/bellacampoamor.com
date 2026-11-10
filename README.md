@@ -20,3 +20,9 @@ Eigen domein: voeg een bestand `CNAME` toe met `bellacampoamor.com` en zet de DN
 
 ## Lokaal bekijken
 `python3 -m http.server` en open http://localhost:8000
+
+## Contactformulier
+Het formulier post naar de Supabase edge function `website-contact` (project BellaFlow, code in `supabase/functions/website-contact/`).
+Die slaat het bericht op in tabel `website_messages` en mailt het via Resend naar info@bellacampoamor.com (reply-to = de bezoeker).
+Nodig: secret `RESEND_API_KEY` in Supabase en het domein bellacampoamor.com geverifieerd in Resend.
+Optioneel: secrets `WEBSITE_FROM` (afzender) en `WEBSITE_TO` (ontvanger).
