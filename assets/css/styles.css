@@ -177,9 +177,20 @@ p { margin: 0 0 1em; }
 .storefront { margin-top: 2rem; max-width: 420px; }
 
 /* Map */
-.map { margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; border-radius: var(--radius); overflow: hidden; background: var(--sand); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
-.map iframe { display: block; width: 100%; height: clamp(300px, 42vw, 440px); border: 0; }
-.map figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding: .9rem 1.2rem; font-size: .92rem; color: var(--muted); }
+.map {
+  --bronze: linear-gradient(135deg, #7A4A20 0%, #B87333 18%, #E9B77C 36%, #C48848 52%, #8C5A2B 70%, #D39A5E 86%, #7A4A20 100%);
+  max-width: 780px; margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  padding: clamp(12px, 2vw, 20px);
+  border-radius: calc(var(--radius) + 8px);
+  background: var(--bronze);
+  box-shadow: 0 18px 36px rgba(60,35,10,.18), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.25);
+}
+.map-inner {
+  border-radius: var(--radius); overflow: hidden; background: var(--sand);
+  box-shadow: 0 0 0 1px rgba(70,40,12,.55), 0 0 0 4px rgba(255,236,205,.35), inset 0 2px 6px rgba(0,0,0,.12);
+}
+.map iframe { display: block; width: 100%; height: clamp(220px, 30vw, 320px); border: 0; }
+.map figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding: .8rem 1.1rem; font-size: .9rem; color: var(--muted); }
 .map figcaption a { color: var(--terra-dark); font-weight: 700; }
 
 /* Opening hours */
