@@ -62,7 +62,7 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
   `GET` = vrije tijden, `POST` = verzoek. Opslag in tabel `website_appointments` (overlap onmogelijk door een exclusion constraint).
 - Bij een verzoek: **PROFORMA**-afspraak in Google Agenda (agenda hacocampoamor@gmail.com) en een e-mail via Resend naar info@bellacampoamor.com met alle gegevens en een `.ics`-bijlage. Reply-to = de klant.
 - Google Agenda-koppeling via n8n-workflow **"BellaFlow: Website afspraken → Google Agenda"** (webhook `https://bellaflow.app.n8n.cloud/webhook/bella-citas`, agenda hacocampoamor@gmail.com). Secrets in Supabase: `CALENDAR_HOOK_URL`, `CALENDAR_HOOK_SECRET` (zelfde sleutel als in de Switch-node van de workflow). Werkt de agenda niet, dan gaat alles door met alleen mail + `.ics`.
-- In Google Agenda: getimede afspraken zijn op de website bezet; hele-dag-afspraken alleen als de titel bv. "Cerrado", "Vacaciones", "Festivo" of "Gesloten" bevat. Een PROFORMA-afspraak verwijderen = tijdslot weer vrij. Na bevestiging met de klant "PROFORMA" uit de titel halen.
+- In Google Agenda blokkeert alleen een afspraak met in de titel PROFORMA, Cita, Cerrado, Vacaciones, Festivo, Gesloten, Bloqueado of "Sin citas" de website; leveringen en andere afspraken tellen niet mee. Een PROFORMA-afspraak verwijderen = tijdslot weer vrij. Na bevestiging met de klant "PROFORMA" uit de titel halen (laat "Cita" staan, anders komt het tijdslot vrij).
 - Openingstijden wijzigen: `HOURS` in de edge function (en in `extras.js` / `index.html`).
 
 ## Bella-medewerker (decoratieve foto's, `assets/img/team/`)
