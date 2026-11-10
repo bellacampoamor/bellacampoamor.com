@@ -80,7 +80,15 @@
       "bp.shuffle": "Show other products",
       "bp.loading": "Loading the collection…",
       "bp.cta.title": "Looking for something specific?",
-      "bp.cta.p": "The full HomeDecoBali range is available through us. Tell us what you are looking for and we will help you."
+      "bp.cta.p": "The full HomeDecoBali range is available through us. Tell us what you are looking for and we will help you.",
+      "brands.more": "More information",
+      "brands.inStore": "In our 1,400 m² showroom:",
+      "brands.plan": "Plan your visit",
+      "brands.advice": "Ask for advice",
+      "reviews.eyebrow": "Reviews",
+      "reviews.title": "What our customers say",
+      "sticky.quote": "Request a quote",
+      "sticky.call": "Call the store"
     },
     nl: {
       "skip": "Naar de inhoud",
@@ -159,10 +167,19 @@
       "bp.shuffle": "Andere producten tonen",
       "bp.loading": "Collectie wordt geladen…",
       "bp.cta.title": "Op zoek naar iets bijzonders?",
-      "bp.cta.p": "Het volledige assortiment van HomeDecoBali is via ons verkrijgbaar. Vertel ons wat u zoekt en we helpen u graag."
+      "bp.cta.p": "Het volledige assortiment van HomeDecoBali is via ons verkrijgbaar. Vertel ons wat u zoekt en we helpen u graag.",
+      "brands.more": "Meer informatie",
+      "brands.inStore": "In onze showroom van 1.400 m²:",
+      "brands.plan": "Plan uw bezoek",
+      "brands.advice": "Vraag advies",
+      "reviews.eyebrow": "Reviews",
+      "reviews.title": "Wat onze klanten zeggen",
+      "sticky.quote": "Offerte aanvragen",
+      "sticky.call": "Bel de winkel"
     },
     es: {
       "totop": "Volver arriba",
+      "sticky.call": "Llamar a la tienda",
       "form.sending": "Enviando…",
       "form.ok": "¡Gracias! Le responderemos pronto.",
       "form.error": "Rellene su nombre, un e-mail válido y un mensaje, y acepte la política de privacidad.",
