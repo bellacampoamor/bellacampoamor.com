@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261110d">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261110e">
 
     <script type="application/ld+json">
   {
@@ -47,9 +47,73 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Entregan a domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Entregamos sus muebles a domicilio en Dehesa de Campoamor, Orihuela Costa, La Zenia, Torrevieja y alrededores. Consúltenos las condiciones para su dirección."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo ver y probar los muebles antes de comprar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. En nuestra tienda de 1.400 m² en dos plantas puede sentarse, tocar los materiales y comparar colores en persona."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito cita para visitar la tienda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Puede venir sin cita de lunes a viernes de 10:00 a 18:00 y los sábados de 10:00 a 14:00. ¿Va a amueblar una casa entera o varias estancias? Entonces le recomendamos reservar una cita personal: le atendemos solo a usted, con calma y con un café."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué materiales aguantan el clima de la costa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El sol, la sal y el viento exigen materiales adecuados. En la tienda le explicamos qué estructuras, tejidos y acabados resisten mejor en su terraza y cómo mantenerlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué idiomas me pueden atender?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le atendemos en español, inglés y neerlandés, en la tienda, por teléfono y por e-mail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Venden también online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, no tenemos tienda online. En la web puede ver una selección y pedir información; la compra se hace en la tienda, donde le asesoramos en persona."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- TOPBALK: live open/gesloten (Europe/Madrid) + telefoon -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <p class="topbar-status" data-open-status hidden><span class="os-dot" aria-hidden="true"></span><span class="os-text"></span></p>
+      <a class="topbar-phone" href="tel:+34865776925"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>+34 865 77 69 25</a>
+    </div>
+  </div>
 
   <!-- HEADER: enige plek van het Bella-logo -->
   <header class="site-header" id="top">
@@ -89,7 +153,6 @@
           <a class="btn btn-dark" href="#visitenos" data-i18n="hero.cta1">Visite la tienda</a>
           <a class="btn btn-ghost" href="#contacto" data-i18n="hero.cta2">Contacte con nosotros</a>
         </div>
-        <p class="open-status" data-open-status hidden><span class="os-dot" aria-hidden="true"></span><span class="os-text"></span></p>
         </div>
         <div class="hero-visual">
         <figure class="photo-card hero-photo">
@@ -125,6 +188,17 @@
         </div>
       </div>
       <div class="wrap">
+        <aside class="welcome" aria-labelledby="wl-title">
+          <span class="wl-mono" aria-hidden="true">T</span>
+          <div>
+            <p class="eyebrow" data-i18n="wl.eyebrow">Bienvenidos a Bella</p>
+            <p class="wl-title" id="wl-title" data-i18n="wl.title">Tamara Verschoor y su equipo le esperan</p>
+            <p class="wl-text" data-i18n="wl.text">Tamara dirige la tienda de Dehesa de Campoamor. Con su equipo le atiende en español, inglés o neerlandés, le enseña la exposición y piensa con usted en lo que encaja en su casa y su terraza.</p>
+          </div>
+          <a class="btn btn-dark wl-btn" href="cita.html" data-i18n="wl.cta">Reserve una cita personal</a>
+        </aside>
+      </div>
+      <div class="wrap">
         <figure class="map">
           <div class="map-inner">
           <iframe title="Mapa: Bella Furniture &amp; Outdoor, Polígono A-2 La Regía Oeste, Dehesa de Campoamor" data-i18n-title="about.map" referrerpolicy="no-referrer-when-downgrade"
@@ -135,6 +209,27 @@
           </figcaption>
           </div>
         </figure>
+      </div>
+    </section>
+
+    <!-- VIDEOTOUR Campoamor: laadt pas bij klikken -->
+    <section id="videotour" class="section section-ink" aria-labelledby="vt-title">
+      <div class="wrap vt-grid">
+        <div class="vt-copy">
+          <p class="eyebrow" data-i18n="vt.eyebrow">Videotour</p>
+          <h2 id="vt-title" data-i18n="vt.title">Dé un paseo por la tienda</h2>
+          <p class="prose" data-i18n="vt.p">Un minuto por nuestra tienda de Dehesa de Campoamor: la planta de exterior, los rincones de salón y el dormitorio. Y luego, venga a verlo en persona.</p>
+          <a class="btn btn-light" href="#visitenos" data-i18n="vt.cta">Cómo llegar</a>
+        </div>
+        <div class="video" id="video">
+          <video preload="none" playsinline controls poster="assets/img/showroom/vista-aerea-1280.webp" width="1280" height="720" aria-label="Vídeo: recorrido por la tienda Bella en Dehesa de Campoamor" data-i18n-aria="vt.video">
+            <source src="assets/img/showroom/videotour-campoamor.mp4" type="video/mp4">
+          </video>
+          <button class="video-play" type="button" aria-controls="video">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="vt.play">Ver el vídeo (1 min)</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -408,6 +503,44 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="preguntas" class="section section-sand" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div>
+          <p class="eyebrow" data-i18n="faq.eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title" data-i18n="faq.title">Bueno saberlo</h2>
+          <p class="prose" data-i18n="faq.p">¿No encuentra su pregunta? Llámenos o escríbanos.</p>
+          <a class="btn btn-ghost" href="#contacto" data-i18n="faq.cta">Haga su pregunta</a>
+        </div>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">¿Entregan a domicilio?</summary>
+            <p data-i18n="faq.a1">Sí. Entregamos sus muebles a domicilio en Dehesa de Campoamor, Orihuela Costa, La Zenia, Torrevieja y alrededores. Consúltenos las condiciones para su dirección.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">¿Puedo ver y probar los muebles antes de comprar?</summary>
+            <p data-i18n="faq.a2">Sí. En nuestra tienda de 1.400 m² en dos plantas puede sentarse, tocar los materiales y comparar colores en persona.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">¿Necesito cita para visitar la tienda?</summary>
+            <p data-i18n="faq.a3">No. Puede venir sin cita de lunes a viernes de 10:00 a 18:00 y los sábados de 10:00 a 14:00. ¿Va a amueblar una casa entera o varias estancias? Entonces le recomendamos reservar una cita personal: le atendemos solo a usted, con calma y con un café.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">¿Qué materiales aguantan el clima de la costa?</summary>
+            <p data-i18n="faq.a4">El sol, la sal y el viento exigen materiales adecuados. En la tienda le explicamos qué estructuras, tejidos y acabados resisten mejor en su terraza y cómo mantenerlos.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">¿En qué idiomas me pueden atender?</summary>
+            <p data-i18n="faq.a5">Le atendemos en español, inglés y neerlandés, en la tienda, por teléfono y por e-mail.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">¿Venden también online?</summary>
+            <p data-i18n="faq.a6">No, no tenemos tienda online. En la web puede ver una selección y pedir información; la compra se hace en la tienda, donde le asesoramos en persona.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- BEZOEK ONS -->
     <section id="visitenos" class="section">
       <div class="wrap two-col">
@@ -560,6 +693,7 @@
         <a href="#exposicion" data-i18n="nav.showroom">Exposición</a>
         <a href="bali.html" data-i18n="nav.bali">Colección Bali</a>
         <a href="#visitenos" data-i18n="nav.visit">Visítenos</a>
+        <a href="#preguntas" data-i18n="nav.faq">Preguntas</a>
         <a href="cita.html" data-i18n="nav.appt">Pida cita</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
         <a href="#resena" data-i18n="ask.footer">Escriba una reseña</a>
@@ -594,10 +728,10 @@
     // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
-  <script src="assets/js/main.js?v=20261110d" defer></script>
-  <script src="assets/js/hdb.js?v=20261110d" defer></script>
-  <script src="assets/js/reviews.js?v=20261110d" defer></script>
-  <script src="assets/js/extras.js?v=20261110d" defer></script>
-  <script src="assets/js/showroom.js?v=20261110d" defer></script>
+  <script src="assets/js/main.js?v=20261110e" defer></script>
+  <script src="assets/js/hdb.js?v=20261110e" defer></script>
+  <script src="assets/js/reviews.js?v=20261110e" defer></script>
+  <script src="assets/js/extras.js?v=20261110e" defer></script>
+  <script src="assets/js/showroom.js?v=20261110e" defer></script>
 </body>
 </html>

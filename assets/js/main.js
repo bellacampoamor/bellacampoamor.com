@@ -32,6 +32,33 @@
       "show.s9": "Beds with lift-up storage bases, wooden mirrors and jute rugs",
       "show.s11": "Living room with a white sofa, wooden coffee table and round dining table under glass pendant lights",
       "show.s10": "Modular sofa by the window, with pampas plumes and a wooden lamp",
+      "wl.eyebrow": "Welcome to Bella",
+      "wl.title": "Tamara Verschoor and her team look forward to seeing you",
+      "wl.text": "Tamara runs the store in Dehesa de Campoamor. Together with her team she helps you in Spanish, English or Dutch, shows you around the showroom and thinks along with you about what suits your home and terrace.",
+      "wl.cta": "Book a personal appointment",
+      "vt.eyebrow": "Video tour",
+      "vt.title": "Take a walk through the store",
+      "vt.p": "One minute through our store in Dehesa de Campoamor: the outdoor floor, the living room corners and the bedroom. And then come and see it in person.",
+      "vt.cta": "How to get here",
+      "vt.video": "Video: a walk through the Bella store in Dehesa de Campoamor",
+      "vt.play": "Watch the video (1 min)",
+      "nav.faq": "FAQ",
+      "faq.eyebrow": "Frequently asked questions",
+      "faq.title": "Good to know",
+      "faq.p": "Can't find your question? Call or write to us.",
+      "faq.cta": "Ask your question",
+      "faq.q1": "Do you deliver to my home?",
+      "faq.a1": "Yes. We deliver your furniture to Dehesa de Campoamor, Orihuela Costa, La Zenia, Torrevieja and the surrounding area. Ask us about the conditions for your address.",
+      "faq.q2": "Can I see and try the furniture before buying?",
+      "faq.a2": "Yes. In our 1,400 m² store on two floors you can sit down, feel the materials and compare colours in person.",
+      "faq.q3": "Do I need an appointment to visit the store?",
+      "faq.a3": "No. You are welcome without an appointment Monday to Friday 10:00–18:00 and Saturday 10:00–14:00. Furnishing a whole house or several rooms? Then we recommend booking a personal appointment: we help only you, calmly and over a coffee.",
+      "faq.q4": "Which materials withstand the coastal climate?",
+      "faq.a4": "Sun, salt and wind call for the right materials. In the store we explain which frames, fabrics and finishes hold up best on your terrace, and how to maintain them.",
+      "faq.q5": "Which languages do you speak?",
+      "faq.a5": "We help you in Spanish, English and Dutch – in the store, by phone and by e-mail.",
+      "faq.q6": "Do you also sell online?",
+      "faq.a6": "No, we don't have an online shop. On the website you can see a selection and ask for information; you buy in the store, where we advise you in person.",
       "ap.eyebrow": "Personal interior advice",
       "ap.title": "Furnishing your home? Let's start with a coffee.",
       "ap.text": "Whether you've just bought a house or only want to refresh the living room: book a personal appointment and we'll walk through the showroom together. Just you, our team and a plan made to measure.",
@@ -210,6 +237,33 @@
       "show.s9": "Bedden met opklapbare opbergbodem, houten spiegels en jute vloerkleden",
       "show.s11": "Woonkamer met witte bank, houten salontafel en ronde eettafel onder glazen hanglampen",
       "show.s10": "Modulaire bank bij het raam, met pampaspluimen en een houten lamp",
+      "wl.eyebrow": "Welkom bij Bella",
+      "wl.title": "Tamara Verschoor en haar team verwelkomen u graag",
+      "wl.text": "Tamara leidt de winkel in Dehesa de Campoamor. Samen met haar team helpt ze u in het Spaans, Engels of Nederlands, leidt u rond door de showroom en denkt met u mee over wat bij uw huis en terras past.",
+      "wl.cta": "Maak een persoonlijke afspraak",
+      "vt.eyebrow": "Videotour",
+      "vt.title": "Loop even door de winkel",
+      "vt.p": "Eén minuut door onze winkel in Dehesa de Campoamor: de buitenverdieping, de zithoeken en de slaapkamer. En kom het daarna in het echt bekijken.",
+      "vt.cta": "Route",
+      "vt.video": "Video: een wandeling door de Bella-winkel in Dehesa de Campoamor",
+      "vt.play": "Bekijk de video (1 min)",
+      "nav.faq": "Vragen",
+      "faq.eyebrow": "Veelgestelde vragen",
+      "faq.title": "Goed om te weten",
+      "faq.p": "Staat uw vraag er niet bij? Bel of mail ons.",
+      "faq.cta": "Stel uw vraag",
+      "faq.q1": "Bezorgen jullie aan huis?",
+      "faq.a1": "Ja. We bezorgen uw meubelen in Dehesa de Campoamor, Orihuela Costa, La Zenia, Torrevieja en omgeving. Vraag ons naar de voorwaarden voor uw adres.",
+      "faq.q2": "Kan ik de meubelen zien en proberen voordat ik koop?",
+      "faq.a2": "Ja. In onze winkel van 1.400 m² op twee verdiepingen kunt u zitten, de materialen voelen en kleuren in het echt vergelijken.",
+      "faq.q3": "Moet ik een afspraak maken om de winkel te bezoeken?",
+      "faq.a3": "Nee. U bent zonder afspraak welkom van maandag t/m vrijdag 10:00–18:00 en op zaterdag 10:00–14:00. Richt u een heel huis of meerdere ruimtes in? Dan raden we een persoonlijke afspraak aan: we helpen alleen u, rustig en met een kop koffie.",
+      "faq.q4": "Welke materialen kunnen tegen het kustklimaat?",
+      "faq.a4": "Zon, zout en wind vragen om de juiste materialen. In de winkel leggen we uit welke frames, stoffen en afwerkingen het best standhouden op uw terras, en hoe u ze onderhoudt.",
+      "faq.q5": "In welke talen kunnen jullie me helpen?",
+      "faq.a5": "We helpen u in het Spaans, Engels en Nederlands – in de winkel, telefonisch en per e-mail.",
+      "faq.q6": "Verkopen jullie ook online?",
+      "faq.a6": "Nee, we hebben geen webshop. Op de website ziet u een selectie en kunt u informatie aanvragen; kopen doet u in de winkel, waar we u persoonlijk adviseren.",
       "ap.eyebrow": "Persoonlijk interieuradvies",
       "ap.title": "Uw woning inrichten? We beginnen met koffie.",
       "ap.text": "Of u nu net een huis heeft gekocht of alleen de woonkamer wilt vernieuwen: maak een persoonlijke afspraak en we lopen samen door de showroom. Alleen u, ons team en een plan op maat.",
@@ -550,5 +604,14 @@
       var brand = document.querySelector(".brand");
       if (brand) brand.focus({ preventScroll: true });
     });
+  }
+
+  // Videotour: pas laden bij klikken
+  var vbox = document.getElementById("video");
+  if (vbox) {
+    var vv = vbox.querySelector("video"), vb = vbox.querySelector(".video-play");
+    vv.removeAttribute("controls");
+    vb.addEventListener("click", function () { vbox.classList.add("playing"); vv.setAttribute("controls", ""); vv.play(); });
+    vv.addEventListener("play", function () { vbox.classList.add("playing"); });
   }
 })();
