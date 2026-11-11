@@ -66,10 +66,11 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Openingstijden wijzigen: `HOURS` in de edge function (en in `extras.js` / `index.html`).
 
 ## Bella-medewerker (decoratieve foto's, `assets/img/team/`)
-- Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in tien poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
-- Poses: brochure, koffie, duim, tweeduims, verbaasd, presenteert, wijst-links, wijst-rechts, basis, ligt (liggend, wijst omhoog; liggend formaat 1100 px breed).
+- Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in vijftien poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
+- Poses: brochure, koffie, duim, tweeduims, verbaasd, presenteert, wijst-links, wijst-rechts, basis, ligt (liggend, wijst omhoog; liggend formaat 1100 px breed), schaal (Balinese houten schaal, frangipani in het haar), stoffen (stoffenwaaier), tablet, wijst-u (wijst naar de kijker), profiel (van opzij, wijst naar rechts).
+- Regel: elke foto maar op één plek op de hele site (ook de nieuwsbrief-pop-up telt mee). `basis` is op dit moment ongebruikt (reserve).
 - Gebruik: `<img class="bella-gal bg-…">`, puur decoratief (`alt=""`, `aria-hidden`). Plaatsing per sectie staat onderaan `styles.css` (blok "Bella-medewerker"). Klasse `fade` laat haar onderaan vervagen waar ze niet op een rand staat.
-- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html (basis), cita.html (koffie). Op mobiel zijn een paar verborgen of kleiner.
+- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html kop (schaal), bali.html terra-blok "¿Busca algo en concreto?" (tablet, alleen > 1180 px), cita.html kop (stoffen), cita.html naast het formulier (profiel, alleen > 900 px), nieuwsbrief-pop-up (wijst-u). Op mobiel zijn een paar verborgen of kleiner.
 
 ## Talen en SEO (`tools/build-lang.mjs`)
 - **Bron = de Spaanse pagina's** in de root (`index.html`, `bali.html`, `cita.html`). Vertalingen staan in `T.en` / `T.nl` in `assets/js/main.js`.

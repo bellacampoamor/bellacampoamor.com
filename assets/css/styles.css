@@ -1010,6 +1010,20 @@ html.lb-lock { overflow: hidden; }
 .bg-cita { height: clamp(240px, 28vw, 350px); right: 0; top: 0; }
 .appt-hero:has(.bg-cita) .appt-points { max-width: calc(100% - 270px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+/* Bali-pagina, terra-blok "¿Busca algo en concreto?": met tablet, staat op de onderrand */
+.section-terra:has(.bg-balicta) { position: relative; overflow: hidden; }
+.section-terra:has(.bg-balicta) > .wrap { position: relative; }
+.bg-balicta { height: 300px; right: 0; bottom: calc(-1 * clamp(4rem, 9vw, 7rem)); filter: drop-shadow(0 18px 28px rgba(0,0,0,.3)); }
+@media (max-width: 1180px) { .bg-balicta { display: none; } }
+
+/* Afspraakpagina: wijst vanuit de linkerkolom naar het gegevensformulier */
+.bg-citaform { position: relative; grid-column: 1; grid-row: 2; justify-self: end; align-self: end; height: 400px; margin: 0 1rem -1rem 0; }
+.appt-grid:has(.bg-citaform) .appt-side { grid-column: 2; grid-row: 1 / span 2; }
+@media (max-width: 900px) {
+  .bg-citaform { display: none; }
+  .appt-grid:has(.bg-citaform) .appt-side { grid-column: auto; grid-row: auto; }
+}
+
 @media (max-width: 1199px) { .bg-appt { display: none; } }
 @media (max-width: 1100px) {
   .bg-hero { right: -6%; }
