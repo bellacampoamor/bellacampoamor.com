@@ -43,13 +43,13 @@
   // Merkverhalen (ES/EN/NL)
   var BRANDS = {
     life: {
-      name: "Life Outdoor Living", logo: "assets/img/brands/life.png", type: "furniture",
+      name: "Life Outdoor Living", logo: "/assets/img/brands/life.png", type: "furniture",
       es: "Conjuntos lounge, de comedor y tumbonas con un diseño atemporal. Materiales elegidos para el uso en exterior y fáciles de mantener.",
       en: "Lounge sets, dining sets and sun loungers with a timeless design. Materials chosen for outdoor use and easy to look after.",
       nl: "Loungesets, diningsets en ligbedden met een tijdloos design. Materialen gekozen voor buitengebruik en makkelijk te onderhouden."
     },
     suns: {
-      name: "SUNS", logo: "assets/img/brands/suns.png", type: "furniture",
+      name: "SUNS", logo: "/assets/img/brands/suns.png", type: "furniture",
       es: "Muebles de jardín y lounge con un diseño contemporáneo, para terraza, jardín y piscina. Combinaciones de materiales y colores para cada estilo.",
       en: "Garden and lounge furniture with a contemporary design, for terrace, garden and pool. Combinations of materials and colours for every style.",
       nl: "Tuin- en loungemeubelen met een eigentijds design, voor terras, tuin en zwembad. Combinaties van materialen en kleuren voor elke stijl."

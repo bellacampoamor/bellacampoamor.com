@@ -87,13 +87,14 @@ p { margin: 0 0 1em; }
 .nav a { text-decoration: none; font-weight: 500; font-size: .98rem; }
 .nav a:hover { color: var(--terra-dark); }
 .lang { display: flex; gap: .25rem; margin-left: .4rem; }
-.lang button {
+.lang button, .nav .lang a {
+  text-decoration: none; width: auto; border-bottom: 1px solid transparent; white-space: nowrap;
   font: 700 .78rem/1 var(--font-body); letter-spacing: .06em;
   padding: .45rem .55rem; border-radius: 6px; cursor: pointer;
   background: transparent; border: 1px solid transparent; color: var(--muted);
 }
-.lang button[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); }
-.lang button:hover { color: var(--ink); }
+.lang button[aria-pressed="true"], .nav .lang a[aria-current="true"] { border-color: var(--ink); color: var(--ink); }
+.lang button:hover, .nav .lang a:hover { color: var(--ink); }
 
 .menu-toggle {
   display: none; width: 44px; height: 44px; padding: 10px;
@@ -126,6 +127,8 @@ p { margin: 0 0 1em; }
 /* Kop schaalt mee met de kolombreedte, zodat het langste woord ("Mediterranean") in elke taal past */
 .hero-text { container-type: inline-size; padding-right: 1.5rem; }
 .hero h1 { font-size: clamp(1.6rem, 8cqi, 3.1rem); }
+/* Eyebrow staat (voor SEO) binnen de h1, maar oogt als losse eyebrow */
+h1 > .eyebrow { display: block; font-family: var(--font-body); font-stretch: 100%; font-size: .8rem; line-height: 1.4; margin-bottom: .8rem; text-wrap: wrap; }
 .hero-visual { position: relative; justify-self: end; width: 100%; max-width: 440px; }
 .hero-photo { width: 100%; }
 /* Folder-waaier: bescheiden, ligt schuin over de linkerbovenhoek van de gevelfoto */
@@ -673,7 +676,8 @@ html.lb-lock { overflow: hidden; }
 @media (max-width: 1100px) and (min-width: 861px) {
   .nav { gap: .7rem; } .nav a { font-size: .85rem; } .nav a.nav-cta { padding: .5rem .8rem; }
   .brand img, .site-header.scrolled .brand img { width: 140px; }
-  .lang button { padding: .4rem .35rem; }
+  .lang button, .nav .lang a {
+  text-decoration: none; width: auto; border-bottom: 1px solid transparent; white-space: nowrap; padding: .4rem .35rem; }
 }
 @media (max-width: 860px) {
   .nav a.nav-cta { width: auto; margin-top: .8rem; padding: .75rem 1.3rem; border-bottom: 0; }

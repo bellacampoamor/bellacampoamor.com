@@ -1,7 +1,7 @@
 # BellaCampoamor.com
 
 Informatieve one-page website voor **Bella Furniture & Outdoor**, Dehesa de Campoamor (Orihuela Costa).
-Informatief, met een etalage van de HomeDecoBali-collectie (geen online verkoop). Talen: ES (standaard), EN, NL (knop in de header of `?lang=en` / `?lang=nl`).
+Informatief, met een etalage van de HomeDecoBali-collectie (geen online verkoop). Talen: ES (standaard, `/`), EN (`/en/`), NL (`/nl/`) – elke taal een eigen URL voor Google.
 
 ## Structuur
 - `index.html` – de pagina (header, hero, over ons, wat we bieden, Bali-collectie (4 willekeurige producten), bezoek ons, contact, footer)
@@ -70,3 +70,14 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Poses: brochure, koffie, duim, tweeduims, verbaasd, presenteert, wijst-links, wijst-rechts, basis, ligt (liggend, wijst omhoog; liggend formaat 1100 px breed).
 - Gebruik: `<img class="bella-gal bg-…">`, puur decoratief (`alt=""`, `aria-hidden`). Plaatsing per sectie staat onderaan `styles.css` (blok "Bella-medewerker"). Klasse `fade` laat haar onderaan vervagen waar ze niet op een rand staat.
 - Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html (basis), cita.html (koffie). Op mobiel zijn een paar verborgen of kleiner.
+
+## Talen en SEO (`tools/build-lang.mjs`)
+- **Bron = de Spaanse pagina's** in de root (`index.html`, `bali.html`, `cita.html`). Vertalingen staan in `T.en` / `T.nl` in `assets/js/main.js`.
+- Na elke wijziging aan die pagina's of aan de vertalingen: **`node tools/build-lang.mjs`** draaien en het resultaat meecommitten. Het script
+  - schrijft `en/` en `nl/` (vooraf vertaalde HTML, zodat Google elke taal ziet) – **nooit met de hand bewerken**;
+  - zet in elke pagina het SEO-blok in de `<head>` tussen `<!-- SEO:START -->` en `<!-- SEO:END -->`: title, description, canonical, hreflang (es/en/nl/x-default), Open Graph en JSON-LD (FurnitureStore, WebSite, FAQPage uit de FAQ-teksten, BreadcrumbList);
+  - schrijft `sitemap.xml` met hreflang-alternates.
+- Titels/omschrijvingen per pagina en taal: `META` bovenin het script.
+- Taalknoppen zijn gewone links; een eerder gekozen taal (localStorage) en oude `?lang=en`-links sturen door naar de juiste URL.
+- Nieuwe pagina in alle talen? Voeg hem toe aan `PAGES` en `META` in het script.
+- Na livegang: sitemap indienen in Google Search Console (`https://bellacampoamor.com/sitemap.xml`).

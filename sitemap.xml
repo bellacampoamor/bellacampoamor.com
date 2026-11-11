@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bellacampoamor.com/</loc></url>
-  <url><loc>https://bellacampoamor.com/bali.html</loc></url>
-  <url><loc>https://bellacampoamor.com/cita.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bellacampoamor.com/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/nl/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/bali.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/bali.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/en/bali.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/bali.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/nl/bali.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/bali.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/bali.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/cita.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/cita.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/en/cita.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/cita.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/nl/cita.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/cita.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/cita.html"/>
+  </url>
 </urlset>

@@ -84,7 +84,7 @@
       "nav.offer": "What we offer",
       "nav.visit": "Visit us",
       "nav.contact": "Contact",
-      "hero.eyebrow": "Dehesa de Campoamor · Orihuela Costa",
+      "hero.eyebrow": "Outdoor & indoor furniture · Dehesa de Campoamor",
       "hero.title": "Outdoor living, Mediterranean style",
       "hero.lead": "Bella Furniture & Outdoor is your store for outdoor and indoor furniture on the Costa Blanca. Come and see, feel and try in our store.",
       "hero.cta1": "Visit the store",
@@ -287,7 +287,7 @@
       "nav.offer": "Wat we bieden",
       "nav.visit": "Bezoek ons",
       "nav.contact": "Contact",
-      "hero.eyebrow": "Dehesa de Campoamor · Orihuela Costa",
+      "hero.eyebrow": "Buiten- en binnenmeubelen · Dehesa de Campoamor",
       "hero.title": "Buiten leven in mediterrane stijl",
       "hero.lead": "Bella Furniture & Outdoor is uw winkel voor buiten- en binnenmeubelen aan de Costa Blanca. Kom kijken, voelen en proberen in onze winkel.",
       "hero.cta1": "Bezoek de winkel",
@@ -485,28 +485,33 @@
     });
     var hidden = document.querySelector('#contact-form input[name="language"]');
     if (hidden) hidden.value = lang;
-    try { localStorage.setItem("bella-lang", lang); } catch (e) {}
     window.BELLA_LANG = lang;
     try { document.dispatchEvent(new CustomEvent("bella:lang", { detail: lang })); } catch (e) {}
-    try {
-      var url = new URL(location.href);
-      if (lang === "es") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
-      history.replaceState(null, "", url);
-    } catch (e) {}
   }
 
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  // Elke taal heeft een eigen URL (ES = /, EN = /en/, NL = /nl/) voor Google.
+  // De HTML is al vertaald door tools/build-lang.mjs; de taalknoppen zijn gewone links.
+  var PAGE_LANG = T[document.documentElement.lang] ? document.documentElement.lang : "es";
+  function langUrl(lang) {
+    var path = location.pathname.replace(/^\/(en|nl)(\/|$)/, "/");
+    if (lang !== "es") path = "/" + lang + path;
+    return path + location.search.replace(/([?&])lang=[a-z]+&?/, "$1").replace(/[?&]$/, "") + location.hash;
+  }
+  document.querySelectorAll(".lang a[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      try { localStorage.setItem("bella-lang", a.getAttribute("data-lang")); } catch (e) {}
+    });
   });
 
-  var initial = "es";
+  // Oude links met ?lang=en en een eerder gekozen taal: door naar de juiste URL
   try {
     var q = new URLSearchParams(location.search).get("lang");
     var stored = localStorage.getItem("bella-lang");
-    if (q && T[q]) initial = q;
-    else if (stored && T[stored]) initial = stored;
+    var want = (q && T[q]) ? q : ((stored && T[stored]) ? stored : null);
+    if (q && T[q]) localStorage.setItem("bella-lang", q);
+    if (want && want !== PAGE_LANG && location.protocol !== "file:") { location.replace(langUrl(want)); return; }
   } catch (e) {}
-  setLang(initial);
+  setLang(PAGE_LANG);
 
   // Mobiel menu
   var toggle = document.querySelector(".menu-toggle");
