@@ -1017,13 +1017,14 @@ html.lb-lock { overflow: hidden; }
 @media (max-width: 1180px) { .bg-balicta { display: none; } }
 
 /* Afspraakpagina: wijst vanuit de linkerkolom naar het gegevensformulier */
-.bg-citaform { position: relative; grid-column: 1; grid-row: 2; justify-self: end; align-self: end; height: 440px; width: auto; margin: 0 1rem -1rem 0; filter: none;
+.bg-citaform { position: relative; grid-column: 1; grid-row: 2; justify-self: end; align-self: end; height: 440px; width: auto; margin: 0 calc(-1 * clamp(1.5rem, 4vw, 3rem) - 34px) -1rem 0; filter: none; z-index: 0;
   /* video heeft de paginakleur als achtergrond; randen zacht laten weglopen zodat er geen kader zichtbaar is */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 8%, #000 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 4%, #000 98%, transparent 100%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 8%, #000 97%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 4%, #000 98%, transparent 100%);
   mask-composite: intersect; }
-.appt-grid:has(.bg-citaform) .appt-side { grid-column: 2; grid-row: 1 / span 2; }
+/* de video schuift iets onder de formulierkaart: zo staat haar vingertop tegen de kaart en verdwijnt de kortste armzwaai erachter */
+.appt-grid:has(.bg-citaform) .appt-side { grid-column: 2; grid-row: 1 / span 2; z-index: 1; }
 @media (max-width: 900px) {
   .bg-citaform { display: none; }
   .appt-grid:has(.bg-citaform) .appt-side { grid-column: auto; grid-row: auto; }
