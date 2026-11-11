@@ -168,7 +168,7 @@ function store(lang) {
     areaServed: ["Dehesa de Campoamor", "Orihuela Costa", "Campoamor", "La Zenia", "Cabo Roig", "Playa Flamenca", "Torrevieja", "Pilar de la Horadada", "Costa Blanca"].map((n) => ({ "@type": "Place", name: n })),
     knowsLanguage: ["es", "en", "nl", "da", "de"],
     brand: [{ "@type": "Brand", name: "Life Outdoor Living" }, { "@type": "Brand", name: "SUNS" }, { "@type": "Brand", name: "HomeDecoBali" }],
-    employee: { "@type": "Person", name: "Tamara Verschoor", jobTitle: lang === "es" ? "Directora de tienda" : lang === "nl" ? "Winkelmanager" : "Store manager" },
+    employee: { "@type": "Person", name: "Tamara", jobTitle: lang === "es" ? "Directora de tienda" : lang === "nl" ? "Winkelmanager" : "Store manager" },
   };
 }
 
