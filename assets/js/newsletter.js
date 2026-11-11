@@ -10,7 +10,7 @@
   var ENDPOINT = "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-subscribe";
   var KEY = "bella-newsletter";
   var SNOOZE_DAYS = 21;
-  var IMG = "/assets/img/team/bella-wijst-links";
+  var IMG = "/assets/img/team/bella-wijst-u";
 
   var T = {
     es: {
@@ -108,7 +108,7 @@
           '<button type="button" class="nl-btn nl-done-btn">' + esc(t.okBtn) + '</button></div>' +
       '</div>' +
       '<div class="nl-art" aria-hidden="true">' +
-        '<img src="' + IMG + '.webp" srcset="' + IMG + '-sm.webp 381w, ' + IMG + '.webp 699w" sizes="(max-width: 640px) 200px, 320px" width="699" height="1100" alt="" decoding="async">' +
+        '<img src="' + IMG + '.webp" srcset="' + IMG + '-sm.webp 207w, ' + IMG + '.webp 379w" sizes="(max-width: 640px) 200px, 320px" width="379" height="1100" alt="" decoding="async">' +
       '</div>' +
     '</div>';
   document.body.appendChild(dlg);
