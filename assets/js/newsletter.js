@@ -82,13 +82,17 @@
   var confetti = "";
   for (var i = 0; i < 34; i++) {
     var shape = i % 3 === 0 ? "nl-c nl-c-round" : (i % 3 === 1 ? "nl-c nl-c-bar" : "nl-c");
-    confetti += '<i class="' + shape + '" style="left:' + (4 + Math.random() * 92).toFixed(1) + "%;top:" + (3 + Math.random() * 88).toFixed(1) +
+    // Rechterhelft vrij verspreid; links alleen langs boven- en onderrand, zodat de tekst leesbaar blijft
+    var x = i < 22 ? 50 + Math.random() * 47 : 3 + Math.random() * 47;
+    var y = i < 22 ? 3 + Math.random() * 90 : (i % 2 ? 2 + Math.random() * 9 : 89 + Math.random() * 8);
+    confetti += '<i class="' + shape + '" style="left:' + x.toFixed(1) + "%;top:" + y.toFixed(1) +
       "%;background:" + colors[i % colors.length] + ";transform:rotate(" + Math.round(Math.random() * 180) + "deg);animation-delay:-" + (Math.random() * 6).toFixed(1) + 's"></i>';
   }
   dlg.innerHTML =
     '<div class="nl-head"><p class="nl-title" id="nl-title">' + esc(t.title) + '</p>' +
     '<button type="button" class="nl-x" aria-label="' + esc(t.close) + '">×</button></div>' +
     '<div class="nl-body">' +
+      '<div class="nl-confetti" aria-hidden="true">' + confetti + '</div>' +
       '<div class="nl-main">' +
         '<form class="nl-form" novalidate>' +
           '<p class="nl-text">' + esc(t.text) + '</p>' +
@@ -103,8 +107,8 @@
         '<div class="nl-done" hidden><p class="nl-done-t">' + esc(t.okT) + '</p><p>' + esc(t.okP) + '</p>' +
           '<button type="button" class="nl-btn nl-done-btn">' + esc(t.okBtn) + '</button></div>' +
       '</div>' +
-      '<div class="nl-art" aria-hidden="true">' + confetti +
-        '<img src="' + IMG + '.webp" srcset="' + IMG + '-sm.webp 381w, ' + IMG + '.webp 699w" sizes="(max-width: 640px) 150px, 300px" width="699" height="1100" alt="" decoding="async">' +
+      '<div class="nl-art" aria-hidden="true">' +
+        '<img src="' + IMG + '.webp" srcset="' + IMG + '-sm.webp 381w, ' + IMG + '.webp 699w" sizes="(max-width: 640px) 200px, 320px" width="699" height="1100" alt="" decoding="async">' +
       '</div>' +
     '</div>';
   document.body.appendChild(dlg);
