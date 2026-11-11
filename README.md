@@ -81,3 +81,12 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Taalknoppen zijn gewone links; een eerder gekozen taal (localStorage) en oude `?lang=en`-links sturen door naar de juiste URL.
 - Nieuwe pagina in alle talen? Voeg hem toe aan `PAGES` en `META` in het script.
 - Na livegang: sitemap indienen in Google Search Console (`https://bellacampoamor.com/sitemap.xml`).
+
+## Nieuwsbrief-pop-up (`assets/js/newsletter.js`)
+- Pop-up "¿Quiere ser el primero en enterarse?" met Bella (pose wijst-links) en confetti, op `index.html` en `bali.html` (alle talen; niet op `cita.html` en de juridische pagina's). Teksten ES/EN/NL staan in `newsletter.js` zelf (taal = `<html lang>`).
+- Verschijnt na 20 s, na 50 % scrollen of bij exit intent (desktop), nooit in de eerste 6 s, niet als er al een dialoog open is of de bezoeker een formulier invult. Eén keer per sessie; wegklikken = 21 dagen rust; ingeschreven = nooit meer (localStorage `bella-newsletter`). Testen zonder pop-up: `?nopopup`.
+- Altijd te openen via de footerlink "Boletín / Newsletter / Nieuwsbrief" of `#boletin` in de URL.
+- Verplicht vinkje (uitdrukkelijke toestemming, RGPD/LSSI). Edge function `website-subscribe` slaat op in tabel **`website_subscribers`** (e-mail uniek en in kleine letters, taal, bronpagina, `consent_at`, `consent_text`, `status`). Zelfde adres opnieuw = toestemming vernieuwd, geen dubbele rij. Limiet 5/uur per IP.
+- **Voor marketingmails alleen `status = 'active'` gebruiken.** Elke mail moet een afmeldlink bevatten:
+  `https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-subscribe?unsubscribe=<unsubscribe_token>` (zet status op `unsubscribed`).
+- Exporteren: `select email, language, created_at from website_subscribers where status = 'active' order by created_at;`
