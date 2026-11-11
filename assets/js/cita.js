@@ -276,5 +276,9 @@
     }
   })();
 
+  // Bella-video naast het formulier: stil bij 'minder beweging'
+  var bv = document.querySelector(".bg-citaform");
+  if (bv && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { bv.removeAttribute("autoplay"); bv.pause(); }
+
   load(false);
 })();
