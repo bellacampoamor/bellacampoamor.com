@@ -50,9 +50,12 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Korte links voor bonnen, mails en folders: **bellacampoamor.com/review** en **bellacampoamor.com/resena** sturen direct door naar het Google-reviewvenster (Google place ID `ChIJzQiJHhgGYw0RzR8puSEgpAQ`).
 
 ## Showroom (`assets/js/showroom.js`, `assets/img/showroom/`)
-- Sectie **Exposición** (`#exposicion`) onder "Sobre nosotros": fotomozaïek van de showroom in Campoamor met filter (Salones / Comedores / Dormitorios) en lightbox (pijltjestoetsen, swipe).
-- **Sfeerband** "Venga a sentarse" tussen "Qué ofrecemos" en de merken.
-- Foto's: per foto `naam.webp` + `naam.jpg` (900 px, raster) en `naam-xl.webp` (lightbox), zonder EXIF/GPS. Foto toevoegen: `<li class="sg-item">` kopiëren in `index.html` (`sg-wide` = 2 kolommen, `sg-tall` = 2 rijen), `data-cat` = `salon|comedor|dormitorio`, alt-tekst ES in de HTML en EN/NL als `show.sN` in `main.js`.
+- Homepage, sectie **Exposición** (`#exposicion`): teaser met twee kaarten (elk 3 foto's + "+N fotos") die linken naar twee eigen fotopagina's:
+  - `exposicion-interior.html` – binnenmeubelen (salones/comedores/dormitorios), 5 foto's, geen filter;
+  - `exposicion-exterior.html` – tuinmeubelen (Life, SUNS), 15 foto's (`exterior-*.jpg/webp`), filter Lounge / Comedores / Tumbonas.
+- Beide pagina's: mozaïek + lightbox (pijltjestoetsen, swipe) via `showroom.js`, en een terra-blok dat naar de andere showroom linkt. Footer van alle pagina's linkt naar beide.
+- Geen foto dubbel: de teaserfoto's op de homepage (en de 3 foto's in het Interiorismo-paneel) staan níet nog eens op de fotopagina's. Medewerker-foto's: `profiel` op de interieurpagina, `basis` op de tuinpagina.
+- Foto's: per foto `naam.webp` + `naam.jpg` (900 px, raster) en `naam-xl.webp` (lightbox), zonder EXIF/GPS. Foto toevoegen: `<li class="sg-item">` kopiëren op de fotopagina (`sg-wide` = 2 kolommen, `sg-tall` = 2 rijen), alt-tekst ES in de HTML en EN/NL als `show.sN` (interieur) of `ext.sN` (tuin) in `main.js`; pas ook "+N fotos" (`sp.in.count`/`sp.out.count`) aan.
 - Alleen foto's van de winkel in Campoamor gebruiken.
 
 ## Afspraak maken (`cita.html`, `assets/js/cita.js`)
@@ -68,9 +71,9 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 ## Bella-medewerker (decoratieve foto's, `assets/img/team/`)
 - Uitgeknipte AI-foto's (Higgsfield) van één vaste "verkoopster" in vijftien poses: `bella-<pose>.webp` (1100 px hoog) en `bella-<pose>-sm.webp` (600 px), transparante achtergrond.
 - Poses: brochure, koffie, duim, tweeduims, verbaasd, presenteert, wijst-links, wijst-rechts, basis, ligt (liggend, wijst omhoog; liggend formaat 1100 px breed), schaal (Balinese houten schaal, frangipani in het haar), stoffen (stoffenwaaier), tablet, wijst-u (wijst naar de kijker), profiel (van opzij, wijst naar rechts).
-- Regel: elke foto maar op één plek op de hele site (ook de nieuwsbrief-pop-up telt mee). `basis` is op dit moment ongebruikt (reserve).
+- Regel: elke foto maar op één plek op de hele site (ook de nieuwsbrief-pop-up telt mee). Er is geen reservefoto meer.
 - Gebruik: `<img class="bella-gal bg-…">`, puur decoratief (`alt=""`, `aria-hidden`). Plaatsing per sectie staat onderaan `styles.css` (blok "Bella-medewerker"). Klasse `fade` laat haar onderaan vervagen waar ze niet op een rand staat.
-- Huidige plekken: hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html kop (schaal), bali.html terra-blok "¿Busca algo en concreto?" (tablet, alleen > 1180 px), cita.html kop (stoffen), cita.html naast het formulier (video `bella-profiel-video.mp4` met poster `.webp`: wijst van opzij naar het formulier en draait dan naar de bezoeker; links/rechts strak bijgesneden en iets onder de formulierkaart geschoven zodat haar vingertop tegen de kaart staat; achtergrond ingekleurd in `--bg` #FAF6F1, heen-en-terug zodat de loop naadloos is; alleen > 900 px, staat stil bij 'minder beweging'). Losse foto `profiel` is nu reserve, nieuwsbrief-pop-up (wijst-u). Op mobiel zijn een paar verborgen of kleiner.
+- Huidige plekken: exposicion-interior.html kop (profiel), exposicion-exterior.html kop (basis), hero (brochure), Exposición (verbaasd), Interiorismo-paneel (koffie, alleen ≥ 1200 px), sfeerband (wijst-links), Bali-blok (presenteert), Visítenos (duim), FAQ (ligt), review-blok (tweeduims, verborgen < 860 px), Contacto (wijst-rechts), bali.html kop (schaal), bali.html terra-blok "¿Busca algo en concreto?" (tablet, alleen > 1180 px), cita.html kop (stoffen), cita.html naast het formulier (video `bella-profiel-video.mp4` met poster `.webp`: wijst van opzij naar het formulier en draait dan naar de bezoeker; links/rechts strak bijgesneden en iets onder de formulierkaart geschoven zodat haar vingertop tegen de kaart staat; achtergrond ingekleurd in `--bg` #FAF6F1, heen-en-terug zodat de loop naadloos is; alleen > 900 px, staat stil bij 'minder beweging'). nieuwsbrief-pop-up (wijst-u). Op mobiel zijn een paar verborgen of kleiner.
 
 ## Talen en SEO (`tools/build-lang.mjs`)
 - **Bron = de Spaanse pagina's** in de root (`index.html`, `bali.html`, `cita.html`). Vertalingen staan in `T.en` / `T.nl` in `assets/js/main.js`.
