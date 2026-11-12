@@ -85,7 +85,7 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - **Zoekwoorden/merknamen**: titels en omschrijvingen beginnen met "Bella Furniture & Outdoor". In de JSON-LD staan `alternateName` (Bella, Bella Outdoor, Bella Furniture, Bella Outdoor & Furniture, Bella Campoamor, Bella Outside, Haco Bella), `legalName` Haco Invest SL, merken (Life/LIFE, SUNS/Suns by Bella) en Bella Group als `parentOrganization` (onzichtbaar op de gewone pagina's).
 
 ## Bella Group-pagina (`bella-group.html`)
-- Korte uitleg over Bella Group (Bella Furniture, Bella Outdoor, Bella Kitchens, Bella House) en een zichtbaar blok met naamvarianten ("También nos conoce como"), o.a. Bella + plaatsnaam. Géén blok met showrooms (bewuste keuze). Niet in het hoofdmenu: bereikbaar via de links "Altea" en "Rojales" in de footer.
+- Korte uitleg over Bella Group (Bella Furniture, Bella Outdoor, Bella Kitchens, Bella House) en een zichtbaar blok met naamvarianten ("También nos conoce como"), o.a. Bella + plaatsnaam. Blok "Onze andere vestigingen": alleen Altea en Rojales, met links naar hun pagina's op bellagroup.es en bellarojales.es. De landingspagina krijgt verder niets extra's; alleen de footerlinks Altea/Rojales wijzen naar deze pagina. Niet in het hoofdmenu: bereikbaar via de links "Altea" en "Rojales" in de footer.
 - Teksten: `grp.*` in `main.js`; JSON-LD van de groep: functie `group()` in `tools/build-lang.mjs`.
 
 ## Nieuwsbrief-pop-up (`assets/js/newsletter.js`)
