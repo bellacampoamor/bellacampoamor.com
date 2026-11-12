@@ -23,25 +23,25 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://bellacampoamor.com";
 const LANGS = ["es", "en", "nl"];
 const LOCALE = { es: "es_ES", en: "en_GB", nl: "nl_NL" };
-const PAGES = ["index.html", "bali.html", "cita.html"];
+const PAGES = ["index.html", "bali.html", "cita.html", "bella-group.html"];
 const PLACE_URL = "https://www.google.com/maps/search/?api=1&query=Bella+Furniture+%26+Outdoor&query_place_id=ChIJzQiJHhgGYw0RzR8puSEgpAQ";
 
 /* ---------- Titels en omschrijvingen per pagina en taal ---------- */
 const META = {
   "index.html": {
     es: {
-      title: "Muebles de jardín e interior en Campoamor | Bella Furniture & Outdoor",
-      desc: "Tienda de muebles de exterior e interior en Dehesa de Campoamor, Orihuela Costa. Exposición de 2.000 m², entrega a domicilio y atención en español, inglés, neerlandés, danés y alemán.",
+      title: "Bella Furniture & Outdoor Campoamor | Muebles de jardín e interior",
+      desc: "Bella Outdoor & Furniture en Dehesa de Campoamor, Orihuela Costa: muebles de jardín e interior de Life Outdoor Living y SUNS. Exposición de 2.000 m² y entrega a domicilio.",
       og: "Muebles de exterior e interior en Dehesa de Campoamor, Orihuela Costa. Exposición de 2.000 m² en dos plantas.",
     },
     en: {
-      title: "Garden & Home Furniture Store in Campoamor, Orihuela Costa | Bella",
-      desc: "Outdoor and indoor furniture store in Dehesa de Campoamor, Orihuela Costa. 2,000 m² showroom, home delivery and service in English, Spanish, Dutch, Danish and German.",
+      title: "Bella Furniture & Outdoor Campoamor | Garden & Home Furniture",
+      desc: "Bella Outdoor & Furniture in Dehesa de Campoamor, Orihuela Costa: garden and indoor furniture by Life Outdoor Living and SUNS. 2,000 m² showroom, home delivery, English spoken.",
       og: "Outdoor and indoor furniture in Dehesa de Campoamor, Orihuela Costa. A 2,000 m² showroom on two floors.",
     },
     nl: {
-      title: "Tuinmeubelen & meubelwinkel in Campoamor, Orihuela Costa | Bella",
-      desc: "Winkel in buiten- en binnenmeubelen in Dehesa de Campoamor, Orihuela Costa. Showroom van 2.000 m², bezorging aan huis en service in het Nederlands, Engels, Spaans, Deens en Duits.",
+      title: "Bella Furniture & Outdoor Campoamor | Tuinmeubels & binnenmeubels",
+      desc: "Bella tuinmeubels en binnenmeubels in Dehesa de Campoamor, Orihuela Costa: Life Outdoor Living en SUNS. Showroom van 2.000 m², bezorging aan huis, Nederlandstalige service.",
       og: "Buiten- en binnenmeubelen in Dehesa de Campoamor, Orihuela Costa. Showroom van 2.000 m² op twee verdiepingen.",
     },
   },
@@ -83,6 +83,26 @@ const META = {
       desc: "Uw huis aan de Costa Blanca inrichten? Maak een persoonlijke afspraak bij Bella Furniture & Outdoor in Dehesa de Campoamor: alle aandacht, met koffie en zonder haast.",
       og: "Een persoonlijke afspraak om uw huis in te richten: alle aandacht, met koffie en zonder haast.",
       crumb: "Afspraak maken",
+    },
+  },
+  "bella-group.html": {
+    es: {
+      title: "Bella Group: Bella Furniture, Bella Outdoor y Bella Kitchens | Altea, Rojales, Campoamor",
+      desc: "Qué es Bella Group: Bella Furniture, Bella Outdoor (Life, SUNS) y Bella Kitchens, con exposiciones en Altea, Rojales y Dehesa de Campoamor, en la Costa Blanca.",
+      og: "Bella Furniture, Bella Outdoor y Bella Kitchens en Altea, Rojales y Campoamor.",
+      crumb: "Bella Group",
+    },
+    en: {
+      title: "Bella Group: Bella Furniture, Bella Outdoor & Bella Kitchens | Altea, Rojales, Campoamor",
+      desc: "What is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) and Bella Kitchens, with showrooms in Altea, Rojales and Dehesa de Campoamor on the Costa Blanca.",
+      og: "Bella Furniture, Bella Outdoor and Bella Kitchens in Altea, Rojales and Campoamor.",
+      crumb: "Bella Group",
+    },
+    nl: {
+      title: "Bella Group: Bella Furniture, Bella Outdoor & Bella Kitchens | Altea, Rojales, Campoamor",
+      desc: "Wat is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) en Bella Kitchens, met showrooms in Altea, Rojales en Dehesa de Campoamor aan de Costa Blanca.",
+      og: "Bella Furniture, Bella Outdoor en Bella Kitchens in Altea, Rojales en Campoamor.",
+      crumb: "Bella Group",
     },
   },
 };
@@ -145,6 +165,9 @@ function store(lang) {
     "@type": "FurnitureStore",
     "@id": SITE + "/#store",
     name: "Bella Furniture & Outdoor",
+    alternateName: ["Bella", "Bella Outdoor", "Bella Furniture", "Bella Outdoor & Furniture", "Bella Outdoor and Furniture", "Bella Campoamor", "Bella Outside", "Haco Bella"],
+    legalName: "Haco Invest SL",
+    parentOrganization: { "@id": GROUP_ID },
     description: STORE_DESC[lang],
     url: pageUrl(lang, "index.html"),
     logo: SITE + "/assets/img/bella-logo.png",
@@ -167,9 +190,36 @@ function store(lang) {
     ],
     areaServed: ["Dehesa de Campoamor", "Orihuela Costa", "Campoamor", "La Zenia", "Cabo Roig", "Playa Flamenca", "Torrevieja", "Pilar de la Horadada", "Costa Blanca"].map((n) => ({ "@type": "Place", name: n })),
     knowsLanguage: ["es", "en", "nl", "da", "de"],
-    brand: [{ "@type": "Brand", name: "Life Outdoor Living" }, { "@type": "Brand", name: "SUNS" }, { "@type": "Brand", name: "HomeDecoBali" }],
+    brand: [
+      { "@type": "Brand", name: "Life Outdoor Living", alternateName: "LIFE" },
+      { "@type": "Brand", name: "SUNS", alternateName: "Suns by Bella" },
+      { "@type": "Brand", name: "HomeDecoBali" },
+    ],
     employee: { "@type": "Person", name: "Tamara", jobTitle: lang === "es" ? "Directora de tienda" : lang === "nl" ? "Winkelmanager" : "Store manager" },
   };
+}
+
+/* Bella Group: op elke pagina (onzichtbaar) als moederorganisatie; op bella-group.html uitgebreid */
+const GROUP_ID = SITE + "/bella-group.html#group";
+function group(full) {
+  const g = {
+    "@type": "Organization",
+    "@id": GROUP_ID,
+    name: "Bella Group",
+    alternateName: ["BellaGroup", "Bella Group Costa Blanca"],
+    url: "https://bellagroup.es",
+    foundingDate: "2005",
+  };
+  if (!full) return g;
+  const shop = (name, street, pc, town, extra) => ({ "@type": "Store", name, address: { "@type": "PostalAddress", streetAddress: street, postalCode: pc, addressLocality: town, addressRegion: "Alicante", addressCountry: "ES" }, ...extra });
+  g.subOrganization = [
+    { "@id": SITE + "/#store" },
+    shop("Bella Altea", "Partida el Planet, 180", "03590", "Altea", { alternateName: ["Bella Furniture & Outdoor Altea", "Bella Kitchens Altea", "Suns by Bella Altea"] }),
+    shop("Bella Rojales", "Ctra. Almoradí, km 17,5", "03160", "Rojales", { alternateName: ["Bella Outdoor Rojales", "Bella Kitchens Rojales"] }),
+    shop("Bella Rojales – interior", "Av. de los Álamos, 10", "03170", "Rojales", { alternateName: "Bella Furniture Rojales" }),
+    { "@type": "Organization", name: "Bella Kitchens", alternateName: ["Belle Kitchens", "Bella Group Kitchens"], url: "https://bellagroup.es/en/areas/kitchens/" },
+  ];
+  return g;
 }
 
 function headBlock(page, lang, esHtml) {
@@ -196,7 +246,7 @@ function headBlock(page, lang, esHtml) {
   L.push(`<meta property="og:image:alt" content="Bella Furniture &amp; Outdoor · Dehesa de Campoamor">`);
   L.push(`<meta name="twitter:card" content="summary_large_image">`);
 
-  const graph = [store(lang)];
+  const graph = [store(lang), group(page === "bella-group.html")];
   if (page === "index.html") {
     graph.push({ "@type": "WebSite", "@id": SITE + "/#website", url: SITE + "/", name: "Bella Furniture & Outdoor", inLanguage: LANGS, publisher: { "@id": SITE + "/#store" } });
     const faq = faqEntities(esHtml, lang);

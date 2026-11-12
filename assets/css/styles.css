@@ -1136,3 +1136,15 @@ html.lb-lock { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .nl-dlg.nl-in, .nl-c { animation: none; }
 }
+
+/* Footer-vestigingen → Bella Group-pagina */
+.footer-branches-list a.fb-link { color: inherit; text-decoration: underline; text-decoration-color: #5a534d; text-underline-offset: 3px; }
+.footer-branches-list a.fb-link:hover { text-decoration-color: var(--terra); }
+
+/* Bella Group-pagina (bella-group.html) */
+.grp-stores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.grp-store { background: #fff; border-radius: 14px; padding: 1.4rem 1.5rem; scroll-margin-top: 110px; }
+.grp-store h3 { margin: 0 0 .4rem; }
+.grp-store p { margin: 0 0 .6rem; color: var(--muted); }
+.grp-store address { font-style: normal; color: var(--ink); font-size: .95rem; line-height: 1.55; }
+@media (max-width: 860px) { .grp-stores { grid-template-columns: 1fr; } }

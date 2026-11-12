@@ -33,6 +33,20 @@
       "@type": "FurnitureStore",
       "@id": "https://bellacampoamor.com/#store",
       "name": "Bella Furniture & Outdoor",
+      "alternateName": [
+        "Bella",
+        "Bella Outdoor",
+        "Bella Furniture",
+        "Bella Outdoor & Furniture",
+        "Bella Outdoor and Furniture",
+        "Bella Campoamor",
+        "Bella Outside",
+        "Haco Bella"
+      ],
+      "legalName": "Haco Invest SL",
+      "parentOrganization": {
+        "@id": "https://bellacampoamor.com/bella-group.html#group"
+      },
       "description": "Tienda de muebles de exterior e interior con una exposición de 2.000 m² en dos plantas en Dehesa de Campoamor, Orihuela Costa. Entrega a domicilio.",
       "url": "https://bellacampoamor.com/",
       "logo": "https://bellacampoamor.com/assets/img/bella-logo.png",
@@ -125,11 +139,13 @@
       "brand": [
         {
           "@type": "Brand",
-          "name": "Life Outdoor Living"
+          "name": "Life Outdoor Living",
+          "alternateName": "LIFE"
         },
         {
           "@type": "Brand",
-          "name": "SUNS"
+          "name": "SUNS",
+          "alternateName": "Suns by Bella"
         },
         {
           "@type": "Brand",
@@ -141,6 +157,17 @@
         "name": "Tamara",
         "jobTitle": "Directora de tienda"
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bellacampoamor.com/bella-group.html#group",
+      "name": "Bella Group",
+      "alternateName": [
+        "BellaGroup",
+        "Bella Group Costa Blanca"
+      ],
+      "url": "https://bellagroup.es",
+      "foundingDate": "2005"
     },
     {
       "@type": "BreadcrumbList",
@@ -171,7 +198,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261111d">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261112a">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -284,8 +311,8 @@
     <div class="wrap footer-branches">
       <p class="footer-branches-title" data-i18n="footer.branches">Bella también le espera en</p>
       <div class="footer-branches-list">
-        <p><strong>Altea</strong><br>Partida el Planet, 180<br>03590 Altea</p>
-        <p><strong>Rojales</strong><br>Av. de los Álamos, 10, 03170 <span data-i18n="footer.indoor">(interior)</span><br>Ctra. Almoradí, km 17,5, 03160 <span data-i18n="footer.outdoor">(exterior y cocinas)</span></p>
+        <p><a class="fb-link" href="bella-group.html#altea"><strong>Altea</strong></a><br>Partida el Planet, 180<br>03590 Altea</p>
+        <p><a class="fb-link" href="bella-group.html#rojales"><strong>Rojales</strong></a><br>Av. de los Álamos, 10, 03170 <span data-i18n="footer.indoor">(interior)</span><br>Ctra. Almoradí, km 17,5, 03160 <span data-i18n="footer.outdoor">(exterior y cocinas)</span></p>
       </div>
     </div>
     <div class="wrap copyright">© <span id="year">2026</span> Bella Furniture &amp; Outdoor</div>
@@ -313,7 +340,7 @@
     // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
-  <script src="assets/js/main.js?v=20261111a" defer></script>
+  <script src="assets/js/main.js?v=20261112a" defer></script>
   <script src="assets/js/hdb.js?v=20261111a" defer></script>
   <script src="assets/js/extras.js?v=20261111a" defer></script>
   <script src="/assets/js/newsletter.js?v=20261111c" defer></script>
