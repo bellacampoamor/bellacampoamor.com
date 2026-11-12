@@ -33,6 +33,20 @@
       "@type": "FurnitureStore",
       "@id": "https://bellacampoamor.com/#store",
       "name": "Bella Furniture & Outdoor",
+      "alternateName": [
+        "Bella",
+        "Bella Outdoor",
+        "Bella Furniture",
+        "Bella Outdoor & Furniture",
+        "Bella Outdoor and Furniture",
+        "Bella Campoamor",
+        "Bella Outside",
+        "Haco Bella"
+      ],
+      "legalName": "Haco Invest SL",
+      "parentOrganization": {
+        "@id": "https://bellacampoamor.com/bella-group.html#group"
+      },
       "description": "Winkel in buiten- en binnenmeubelen met een showroom van 2.000 m² op twee verdiepingen in Dehesa de Campoamor, Orihuela Costa. Bezorging aan huis.",
       "url": "https://bellacampoamor.com/nl/",
       "logo": "https://bellacampoamor.com/assets/img/bella-logo.png",
@@ -125,11 +139,13 @@
       "brand": [
         {
           "@type": "Brand",
-          "name": "Life Outdoor Living"
+          "name": "Life Outdoor Living",
+          "alternateName": "LIFE"
         },
         {
           "@type": "Brand",
-          "name": "SUNS"
+          "name": "SUNS",
+          "alternateName": "Suns by Bella"
         },
         {
           "@type": "Brand",
@@ -141,6 +157,17 @@
         "name": "Tamara",
         "jobTitle": "Winkelmanager"
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bellacampoamor.com/bella-group.html#group",
+      "name": "Bella Group",
+      "alternateName": [
+        "BellaGroup",
+        "Bella Group Costa Blanca"
+      ],
+      "url": "https://bellagroup.es",
+      "foundingDate": "2005"
     },
     {
       "@type": "BreadcrumbList",
@@ -170,7 +197,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20261111d">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261112a">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Naar de inhoud</a>
@@ -311,8 +338,8 @@
     <div class="wrap footer-branches">
       <p class="footer-branches-title" data-i18n="footer.branches">U vindt Bella ook in</p>
       <div class="footer-branches-list">
-        <p><strong>Altea</strong><br>Partida el Planet, 180<br>03590 Altea</p>
-        <p><strong>Rojales</strong><br>Av. de los Álamos, 10, 03170 <span data-i18n="footer.indoor">(interieur)</span><br>Ctra. Almoradí, km 17,5, 03160 <span data-i18n="footer.outdoor">(buiten &amp; keukens)</span></p>
+        <p><a class="fb-link" href="bella-group.html#altea"><strong>Altea</strong></a><br>Partida el Planet, 180<br>03590 Altea</p>
+        <p><a class="fb-link" href="bella-group.html#rojales"><strong>Rojales</strong></a><br>Av. de los Álamos, 10, 03170 <span data-i18n="footer.indoor">(interieur)</span><br>Ctra. Almoradí, km 17,5, 03160 <span data-i18n="footer.outdoor">(buiten &amp; keukens)</span></p>
       </div>
     </div>
     <div class="wrap copyright">© <span id="year">2026</span> Bella Furniture &amp; Outdoor</div>
@@ -332,7 +359,7 @@
     // Afspraken -> Supabase edge function website-appointment -> Google Agenda (PROFORMA) + Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { appointmentApi: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-appointment" };
   </script>
-  <script src="../assets/js/main.js?v=20261111a" defer></script>
+  <script src="../assets/js/main.js?v=20261112a" defer></script>
   <script src="../assets/js/cita.js?v=20261111a" defer></script>
 </body>
 </html>

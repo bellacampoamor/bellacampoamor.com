@@ -82,6 +82,11 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 - Taalknoppen zijn gewone links; een eerder gekozen taal (localStorage) en oude `?lang=en`-links sturen door naar de juiste URL.
 - Nieuwe pagina in alle talen? Voeg hem toe aan `PAGES` en `META` in het script.
 - Na livegang: sitemap indienen in Google Search Console (`https://bellacampoamor.com/sitemap.xml`).
+- **Zoekwoorden/merknamen**: titels en omschrijvingen beginnen met "Bella Furniture & Outdoor". In de JSON-LD staan `alternateName` (Bella, Bella Outdoor, Bella Furniture, Bella Outdoor & Furniture, Bella Campoamor, Bella Outside, Haco Bella), `legalName` Haco Invest SL, merken (Life/LIFE, SUNS/Suns by Bella) en Bella Group als `parentOrganization` (onzichtbaar op de gewone pagina's).
+
+## Bella Group-pagina (`bella-group.html`)
+- Korte uitleg over Bella Group (Bella Furniture, Bella Outdoor, Bella Kitchens, Bella House) en de showrooms Campoamor, Altea en Rojales, met link naar bellagroup.es. Niet in het hoofdmenu: bereikbaar via de links "Altea" en "Rojales" in de footer (`#altea`, `#rojales`).
+- Teksten: `grp.*` in `main.js`; JSON-LD van de groep: functie `group()` in `tools/build-lang.mjs`.
 
 ## Nieuwsbrief-pop-up (`assets/js/newsletter.js`)
 - Pop-up "¿Quiere ser el primero en enterarse?" met Bella (pose wijst-links) en confetti, op `index.html` en `bali.html` (alle talen; niet op `cita.html` en de juridische pagina's). Teksten ES/EN/NL staan in `newsletter.js` zelf (taal = `<html lang>`).
