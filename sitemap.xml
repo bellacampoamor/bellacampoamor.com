@@ -96,4 +96,52 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/bella-group.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/bella-group.html"/>
   </url>
+  <url>
+    <loc>https://bellacampoamor.com/exposicion-interior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-interior.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/en/exposicion-interior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-interior.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/nl/exposicion-interior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-interior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-interior.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/exposicion-exterior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/en/exposicion-exterior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+  </url>
+  <url>
+    <loc>https://bellacampoamor.com/nl/exposicion-exterior.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bellacampoamor.com/en/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bellacampoamor.com/nl/exposicion-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellacampoamor.com/exposicion-exterior.html"/>
+  </url>
 </urlset>

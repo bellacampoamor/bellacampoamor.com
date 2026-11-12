@@ -23,7 +23,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://bellacampoamor.com";
 const LANGS = ["es", "en", "nl"];
 const LOCALE = { es: "es_ES", en: "en_GB", nl: "nl_NL" };
-const PAGES = ["index.html", "bali.html", "cita.html", "bella-group.html"];
+const PAGES = ["index.html", "bali.html", "cita.html", "bella-group.html", "exposicion-interior.html", "exposicion-exterior.html"];
 const PLACE_URL = "https://www.google.com/maps/search/?api=1&query=Bella+Furniture+%26+Outdoor&query_place_id=ChIJzQiJHhgGYw0RzR8puSEgpAQ";
 
 /* ---------- Titels en omschrijvingen per pagina en taal ---------- */
@@ -103,6 +103,46 @@ const META = {
       desc: "Wat is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) en Bella Kitchens, met showrooms in Altea, Rojales en Dehesa de Campoamor aan de Costa Blanca.",
       og: "Bella Furniture, Bella Outdoor en Bella Kitchens in Altea, Rojales en Campoamor.",
       crumb: "Bella Group",
+    },
+  },
+  "exposicion-interior.html": {
+    es: {
+      title: "Exposición de muebles de interior en Campoamor | Bella",
+      desc: "Fotos de la exposición de muebles de interior de Bella en Dehesa de Campoamor, Orihuela Costa: salones, comedores y dormitorios montados. Visítenos o pida cita.",
+      og: "Salones, comedores y dormitorios montados en nuestra exposición de Dehesa de Campoamor.",
+      crumb: "Exposición de interior",
+    },
+    en: {
+      title: "Indoor furniture showroom in Campoamor | Bella",
+      desc: "Photos of Bella's indoor furniture showroom in Dehesa de Campoamor, Orihuela Costa: fully furnished living rooms, dining rooms and bedrooms. Visit us or book a visit.",
+      og: "Fully furnished living rooms, dining rooms and bedrooms in our Dehesa de Campoamor showroom.",
+      crumb: "Indoor showroom",
+    },
+    nl: {
+      title: "Showroom binnenmeubelen in Campoamor | Bella",
+      desc: "Foto's van de showroom met binnenmeubelen van Bella in Dehesa de Campoamor, Orihuela Costa: ingerichte woonkamers, eetkamers en slaapkamers. Kom langs of maak een afspraak.",
+      og: "Ingerichte woonkamers, eetkamers en slaapkamers in onze showroom in Dehesa de Campoamor.",
+      crumb: "Binnenshowroom",
+    },
+  },
+  "exposicion-exterior.html": {
+    es: {
+      title: "Exposición de muebles de jardín en Campoamor | Life y SUNS | Bella",
+      desc: "Fotos de la exposición de muebles de jardín y exterior de Bella en Dehesa de Campoamor, cerca de Torrevieja: conjuntos lounge, comedores, tumbonas y daybeds de Life y SUNS.",
+      og: "Conjuntos lounge, comedores de exterior, tumbonas y daybeds de Life Outdoor Living y SUNS en Dehesa de Campoamor.",
+      crumb: "Exposición de jardín",
+    },
+    en: {
+      title: "Garden furniture showroom in Campoamor | Life & SUNS | Bella",
+      desc: "Photos of Bella's garden and outdoor furniture showroom in Dehesa de Campoamor, near Torrevieja: lounge sets, dining sets, sunloungers and daybeds by Life and SUNS.",
+      og: "Lounge sets, outdoor dining sets, sunloungers and daybeds by Life Outdoor Living and SUNS in Dehesa de Campoamor.",
+      crumb: "Garden showroom",
+    },
+    nl: {
+      title: "Showroom tuinmeubelen in Campoamor | Life & SUNS | Bella",
+      desc: "Foto's van de tuinmeubelshowroom van Bella in Dehesa de Campoamor, vlak bij Torrevieja: loungesets, tuinsets, ligbedden en daybeds van Life en SUNS. Nederlandstalige service.",
+      og: "Loungesets, tuinsets, ligbedden en daybeds van Life Outdoor Living en SUNS in Dehesa de Campoamor.",
+      crumb: "Tuinmeubelshowroom",
     },
   },
 };

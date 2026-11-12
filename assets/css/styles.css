@@ -1153,3 +1153,71 @@ html.lb-lock { overflow: hidden; }
 .grp-more { margin-top: 1.4rem; }
 .grp-more a { color: var(--ink); font-weight: 700; }
 @media (max-width: 760px) { .grp-stores { grid-template-columns: 1fr; } }
+
+/* ---------- Showroom-teaser op de homepage: twee kaarten (interior / exterior) ---------- */
+.sp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.4vw, 1.8rem); margin-top: 2.2rem; }
+.sp-card {
+  display: flex; flex-direction: column; color: var(--ink); text-decoration: none;
+  background: #fff; border-radius: calc(var(--radius) + 4px); overflow: hidden;
+  box-shadow: 0 1px 0 rgba(17,17,17,.06), 0 18px 40px -26px rgba(60,35,20,.45);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s;
+}
+.sp-card:hover { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(17,17,17,.06), 0 26px 50px -24px rgba(60,35,20,.55); }
+.sp-card:focus-visible { outline: 3px solid var(--terra); outline-offset: 3px; }
+.sp-mosaic {
+  position: relative; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4px; aspect-ratio: 16 / 10; min-height: 0; overflow: hidden; background: #fff;
+}
+.sp-mosaic picture { overflow: hidden; min-width: 0; min-height: 0; }
+.sp-mosaic .sp-main { grid-row: span 2; }
+.sp-mosaic img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.sp-card:hover .sp-mosaic img { transform: scale(1.05); filter: saturate(1.08); }
+.sp-count {
+  position: absolute; right: .8rem; bottom: .8rem;
+  font: 700 .78rem/1 var(--font-body); letter-spacing: .06em;
+  background: rgba(17,17,17,.78); color: #fff; padding: .5rem .75rem; border-radius: 999px;
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+}
+.sp-body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.sp-kicker { font: 700 .74rem/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--terra-dark); margin: 0 0 .6rem; }
+.sp-body h3 { margin: 0 0 .5rem; font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+.sp-body p:not(.sp-kicker) { color: var(--muted); margin: 0 0 1.1rem; }
+.sp-link { margin-top: auto; font-weight: 700; display: inline-flex; align-items: center; gap: .5rem; }
+.sp-link::after { content: "→"; transition: transform .3s; }
+.sp-card:hover .sp-link::after { transform: translateX(5px); }
+.sp-out .sp-kicker { color: var(--leaf, #4f6b3a); }
+/* Medewerker staat nu naast de kop, niet meer bij de filters */
+#exposicion .bg-show { bottom: auto; top: -2.6rem; right: 0; height: 250px; }
+#exposicion .sg-head > div { max-width: calc(100% - 170px); }
+@media (max-width: 860px) {
+  .sp { grid-template-columns: 1fr; }
+  #exposicion .sg-head > div { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sp-card, .sp-mosaic img, .sp-link::after { transition: none; }
+  .sp-card:hover { transform: none; }
+}
+
+/* ---------- Fotopagina's van de showroom (exposicion-interior/-exterior.html) ---------- */
+.show-hero { position: relative; overflow: hidden; padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 3.5rem); background: var(--sand); border-bottom: 1px solid rgba(17,17,17,.06); }
+.show-hero > .wrap { position: relative; }
+.show-hero h1 { max-width: 18ch; }
+.show-hero .lead { max-width: 52ch; }
+.show-hero-ext { background-color: var(--rattan); }
+.show-hero-ext .eyebrow { color: var(--leaf, #4f6b3a); }
+.show-back { display: inline-flex; gap: .4rem; align-items: center; font-weight: 700; font-size: .9rem; color: var(--ink); text-decoration: none; margin-bottom: 1.4rem; }
+.show-back::before { content: "←"; transition: transform .3s; }
+.show-back:hover::before { transform: translateX(-4px); }
+.bg-showhero { height: clamp(260px, 30vw, 380px); right: 0; bottom: calc(-1 * clamp(2.5rem, 5vw, 3.5rem)); }
+.show-hero-int .bg-showhero { right: -2rem; }
+.section-gallery { padding-top: clamp(2.5rem, 5vw, 4rem); }
+.gal-title { font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0; }
+/* Interieur: 5 foto's → precies 4 × 3 rijen zonder gaten */
+.sg-int .sg-item:first-child { grid-column: span 2; grid-row: span 2; }
+@media (max-width: 860px) {
+  .bg-showhero { height: 200px; right: -1.2rem; bottom: auto; top: -1rem; }
+  .show-hero-int .bg-showhero { right: -2.4rem; }
+  .show-hero h1, .show-hero .eyebrow, .show-back { padding-right: 34%; }
+  .show-hero h1 { font-size: clamp(1.6rem, 7.2vw, 2.2rem); overflow-wrap: anywhere; }
+  .sg-int .sg-item:first-child { grid-row: auto; }
+}

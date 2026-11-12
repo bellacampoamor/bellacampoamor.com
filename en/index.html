@@ -258,7 +258,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
   <link rel="preload" as="image" href="../assets/img/gevel.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20261112c">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261112d">
 
 </head>
 <body>
@@ -391,123 +391,65 @@
       </div>
     </section>
 
-    <!-- SHOWROOM: echte foto's van de winkel in Campoamor -->
+    <!-- SHOWROOM: teaser van de twee showrooms (binnen / buiten), elk met een eigen fotopagina.
+         Regel: geen foto dubbel op de site, dus de teaserfoto's staan niet nog eens op de fotopagina's. -->
     <section id="exposicion" class="section section-showroom">
       <div class="wrap">
         <div class="sg-head">
           <div>
             <p class="eyebrow" data-i18n="show.eyebrow">Our showroom</p>
             <h2 data-i18n="show.title">2,000 m² of inspiration</h2>
-            <p class="prose" data-i18n="show.lead">Stroll through fully furnished living rooms, dining rooms and bedrooms. Sit down, feel the fabrics and see how each piece looks in a real setting.</p>
-          </div>
-          <div class="sg-filters" role="group" data-i18n-aria="show.filter" aria-label="Filter photos">
-            <button type="button" data-filter="all" aria-pressed="true" data-i18n="show.all">All</button>
-            <button type="button" data-filter="salon" aria-pressed="false" data-i18n="show.f.salon">Living rooms</button>
-            <button type="button" data-filter="comedor" aria-pressed="false" data-i18n="show.f.comedor">Dining</button>
-            <button type="button" data-filter="dormitorio" aria-pressed="false" data-i18n="show.f.dormitorio">Bedrooms</button>
+            <p class="prose" data-i18n="show.lead">Two showrooms under one roof: indoor furniture and garden furniture, all set up as it would be at home. Sit down, feel the fabrics and see how each piece looks in a real setting.</p>
           </div>
         </div>
-        <ul class="sg" role="list">
-          <li class="sg-item sg-wide" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-flow-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-flow.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-flow.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Living room with a curved camel sofa and wooden coffee tables in the Bella showroom" data-i18n-alt="show.s1">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item sg-tall" data-cat="comedor">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/comedor-rosa-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/comedor-rosa.webp" type="image/webp">
-                <img src="../assets/img/showroom/comedor-rosa.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Wooden dining table with pink chairs and a green plant wall" data-i18n-alt="show.s2">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.comedor">Dining</span>
-            </button>
-          </li>
-          <li class="sg-item" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-boucle-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-boucle.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-boucle.jpg" width="900" height="675" loading="lazy" decoding="async" alt="White bouclé sofa and armchair with marble tables and a golden Buddha head" data-i18n-alt="show.s3">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item sg-tall" data-cat="dormitorio">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/dormitorio-capitone-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/dormitorio-capitone.webp" type="image/webp">
-                <img src="../assets/img/showroom/dormitorio-capitone.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Sand-coloured upholstered capitonné bed" data-i18n-alt="show.s4">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.dormitorio">Bedroom</span>
-            </button>
-          </li>
-          <li class="sg-item" data-cat="comedor">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/comedor-raiz-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/comedor-raiz.webp" type="image/webp">
-                <img src="../assets/img/showroom/comedor-raiz.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Solid root-wood dining table and bench" data-i18n-alt="show.s5">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.comedor">Dining</span>
-            </button>
-          </li>
-          <li class="sg-item" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-oliva-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-oliva.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-oliva.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Olive-green living area with natural-fibre lamps and a round dining table" data-i18n-alt="show.s6">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item sg-tall" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-ratan-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-ratan.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-ratan.jpg" width="675" height="900" loading="lazy" decoding="async" alt="Living room with rattan lamps, wooden mirrors and a corner sofa" data-i18n-alt="show.s7">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item sg-wide" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-brexit-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-brexit.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-brexit.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Large bouclé corner sofa with swivel armchairs" data-i18n-alt="show.s8">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item" data-cat="dormitorio">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/dormitorio-camas-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/dormitorio-camas.webp" type="image/webp">
-                <img src="../assets/img/showroom/dormitorio-camas.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Beds with lift-up storage bases, wooden mirrors and jute rugs" data-i18n-alt="show.s9">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.dormitorio">Bedroom</span>
-            </button>
-          </li>
-          <li class="sg-item sg-wide" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-ventanal-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-ventanal.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-ventanal.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Modular sofa by the window, with pampas plumes and a wooden lamp" data-i18n-alt="show.s10">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-          <li class="sg-item sg-wide" data-cat="salon">
-            <button type="button" class="sg-open" data-full="../assets/img/showroom/salon-noche-xl.webp" data-i18n-aria="show.open" aria-label="Enlarge photo">
-              <picture>
-                <source srcset="../assets/img/showroom/salon-noche.webp" type="image/webp">
-                <img src="../assets/img/showroom/salon-noche.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Living room with a white sofa, wooden coffee table and round dining table under glass pendant lights" data-i18n-alt="show.s11">
-              </picture>
-              <span class="sg-tag" data-i18n="show.cat.salon">Living room</span>
-            </button>
-          </li>
-        </ul>
+        <div class="sp">
+        <a class="sp-card sp-in" href="exposicion-interior.html">
+          <div class="sp-mosaic">
+            <picture class="sp-main">
+              <source srcset="../assets/img/showroom/salon-flow.webp" type="image/webp">
+              <img src="../assets/img/showroom/salon-flow.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <picture>
+              <source srcset="../assets/img/showroom/comedor-rosa.webp" type="image/webp">
+              <img src="../assets/img/showroom/comedor-rosa.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <picture>
+              <source srcset="../assets/img/showroom/dormitorio-capitone.webp" type="image/webp">
+              <img src="../assets/img/showroom/dormitorio-capitone.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <span class="sp-count" data-i18n="sp.in.count">+5 photos</span>
+          </div>
+          <div class="sp-body">
+            <p class="sp-kicker" data-i18n="sp.in.k">Indoor</p>
+            <h3 data-i18n="sp.in.title">Indoor furniture</h3>
+            <p data-i18n="sp.in.text">Fully furnished living rooms, dining rooms and bedrooms, with sofas, tables and beds for the whole house.</p>
+            <span class="sp-link" data-i18n="sp.in.cta">View the indoor showroom</span>
+          </div>
+        </a>
+        <a class="sp-card sp-out" href="exposicion-exterior.html">
+          <div class="sp-mosaic">
+            <picture class="sp-main">
+              <source srcset="../assets/img/showroom/exterior-suns-lounge.webp" type="image/webp">
+              <img src="../assets/img/showroom/exterior-suns-lounge.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <picture>
+              <source srcset="../assets/img/showroom/exterior-teca-atardecer.webp" type="image/webp">
+              <img src="../assets/img/showroom/exterior-teca-atardecer.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <picture>
+              <source srcset="../assets/img/showroom/exterior-tumbona-rosa.webp" type="image/webp">
+              <img src="../assets/img/showroom/exterior-tumbona-rosa.jpg" width="900" height="675" loading="lazy" decoding="async" alt="">
+            </picture>
+            <span class="sp-count" data-i18n="sp.out.count">+15 photos</span>
+          </div>
+          <div class="sp-body">
+            <p class="sp-kicker" data-i18n="sp.out.k">Outdoor · Life &amp; SUNS</p>
+            <h3 data-i18n="sp.out.title">Garden furniture</h3>
+            <p data-i18n="sp.out.text">Lounge sets, outdoor dining sets, sunloungers and daybeds by Life Outdoor Living and SUNS, to enjoy outdoors all year round.</p>
+            <span class="sp-link" data-i18n="sp.out.cta">View the garden showroom</span>
+          </div>
+        </a>
+        </div>
         <img class="bella-gal bg-show fade" src="../assets/img/team/bella-verbaasd.webp" srcset="../assets/img/team/bella-verbaasd-sm.webp 279w, ../assets/img/team/bella-verbaasd.webp 511w" sizes="140px" width="511" height="1100" alt="" aria-hidden="true" loading="lazy" decoding="async">
       </div>
     </section>
@@ -813,16 +755,6 @@
     </div>
   </dialog>
 
-  <!-- Showroom-lightbox -->
-  <dialog id="lightbox" class="lightbox" data-i18n-aria="show.dlg" aria-label="Showroom photos">
-    <button type="button" class="lb-close" data-i18n-aria="show.close" aria-label="Close">×</button>
-    <button type="button" class="lb-nav lb-prev" data-i18n-aria="show.prev" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
-    <figure class="lb-fig">
-      <img class="lb-img" src="" alt="">
-      <figcaption><span class="lb-cap"></span><span class="lb-count"></span></figcaption>
-    </figure>
-    <button type="button" class="lb-nav lb-next" data-i18n-aria="show.next" aria-label="Next photo"><span aria-hidden="true">→</span></button>
-  </dialog>
 
   <!-- Merk-pop-up -->
   <dialog id="brand-dlg" class="enquiry brand-dlg" aria-labelledby="bd-name">
@@ -851,6 +783,8 @@
       <nav aria-label="Footer">
         <a href="#nosotros" data-i18n="nav.about">About us</a>
         <a href="#exposicion" data-i18n="nav.showroom">Showroom</a>
+        <a href="exposicion-interior.html" data-i18n="footer.showIn">Indoor showroom</a>
+        <a href="exposicion-exterior.html" data-i18n="footer.showOut">Garden showroom</a>
         <a href="bali.html" data-i18n="nav.bali">Bali collection</a>
         <a href="#visitenos" data-i18n="nav.visit">Visit us</a>
         <a href="#preguntas" data-i18n="nav.faq">FAQ</a>
@@ -900,6 +834,5 @@
   <script src="../assets/js/reviews.js?v=20261111a" defer></script>
   <script src="../assets/js/extras.js?v=20261111a" defer></script>
   <script src="/assets/js/newsletter.js?v=20261111c" defer></script>
-  <script src="../assets/js/showroom.js?v=20261111a" defer></script>
 </body>
 </html>
