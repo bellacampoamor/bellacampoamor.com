@@ -31,17 +31,17 @@ const META = {
   "index.html": {
     es: {
       title: "Bella Furniture & Outdoor Campoamor | Muebles de jardín e interior",
-      desc: "Bella Outdoor & Furniture en Dehesa de Campoamor, Orihuela Costa: muebles de jardín e interior de Life Outdoor Living y SUNS. Exposición de 2.000 m² y entrega a domicilio.",
+      desc: "Bella Outdoor & Furniture en Dehesa de Campoamor, Orihuela Costa, cerca de Torrevieja: muebles de jardín e interior de Life Outdoor Living y SUNS. Exposición de 2.000 m².",
       og: "Muebles de exterior e interior en Dehesa de Campoamor, Orihuela Costa. Exposición de 2.000 m² en dos plantas.",
     },
     en: {
       title: "Bella Furniture & Outdoor Campoamor | Garden & Home Furniture",
-      desc: "Bella Outdoor & Furniture in Dehesa de Campoamor, Orihuela Costa: garden and indoor furniture by Life Outdoor Living and SUNS. 2,000 m² showroom, home delivery, English spoken.",
+      desc: "Bella Outdoor & Furniture in Dehesa de Campoamor, Orihuela Costa, near Torrevieja: garden and indoor furniture by Life Outdoor Living and SUNS. 2,000 m² showroom.",
       og: "Outdoor and indoor furniture in Dehesa de Campoamor, Orihuela Costa. A 2,000 m² showroom on two floors.",
     },
     nl: {
       title: "Bella Furniture & Outdoor Campoamor | Tuinmeubels & binnenmeubels",
-      desc: "Bella tuinmeubels en binnenmeubels in Dehesa de Campoamor, Orihuela Costa: Life Outdoor Living en SUNS. Showroom van 2.000 m², bezorging aan huis, Nederlandstalige service.",
+      desc: "Bella tuinmeubels en binnenmeubels in Dehesa de Campoamor, Orihuela Costa, vlak bij Torrevieja: Life Outdoor Living en SUNS. Showroom van 2.000 m², Nederlandstalige service.",
       og: "Buiten- en binnenmeubelen in Dehesa de Campoamor, Orihuela Costa. Showroom van 2.000 m² op twee verdiepingen.",
     },
   },
@@ -165,7 +165,7 @@ function store(lang) {
     "@type": "FurnitureStore",
     "@id": SITE + "/#store",
     name: "Bella Furniture & Outdoor",
-    alternateName: ["Bella", "Bella Outdoor", "Bella Furniture", "Bella Outdoor & Furniture", "Bella Outdoor and Furniture", "Bella Campoamor", "Bella Outside", "Haco Bella"],
+    alternateName: ["Bella", "Bella Outdoor", "Bella Furniture", "Bella Outdoor & Furniture", "Bella Outdoor and Furniture", "Bella Campoamor", "Bella Orihuela Costa", "Bella Torrevieja", "Bella Costa Blanca", "Bella Outside", "Haco Bella"],
     legalName: "Haco Invest SL",
     parentOrganization: { "@id": GROUP_ID },
     description: STORE_DESC[lang],
@@ -188,7 +188,7 @@ function store(lang) {
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "18:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "14:00" },
     ],
-    areaServed: ["Dehesa de Campoamor", "Orihuela Costa", "Campoamor", "La Zenia", "Cabo Roig", "Playa Flamenca", "Torrevieja", "Pilar de la Horadada", "Costa Blanca"].map((n) => ({ "@type": "Place", name: n })),
+    areaServed: ["Dehesa de Campoamor", "Orihuela Costa", "Campoamor", "La Zenia", "Cabo Roig", "Playa Flamenca", "Torrevieja", "Pilar de la Horadada", "Mil Palmeras", "Costa Blanca"].map((n) => ({ "@type": "Place", name: n })),
     knowsLanguage: ["es", "en", "nl", "da", "de"],
     brand: [
       { "@type": "Brand", name: "Life Outdoor Living", alternateName: "LIFE" },
