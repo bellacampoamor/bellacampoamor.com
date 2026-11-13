@@ -94,8 +94,14 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 ## Nieuwsbrief-pop-up (`assets/js/newsletter.js`)
 - Pop-up "¿Quiere ser el primero en enterarse?" met Bella (pose wijst-links) en confetti, op `index.html` en `bali.html` (alle talen; niet op `cita.html` en de juridische pagina's). Teksten ES/EN/NL staan in `newsletter.js` zelf (taal = `<html lang>`).
 - Verschijnt na 20 s, na 50 % scrollen of bij exit intent (desktop), nooit in de eerste 6 s, niet als er al een dialoog open is of de bezoeker een formulier invult. Eén keer per sessie; wegklikken = 21 dagen rust; ingeschreven = nooit meer (localStorage `bella-newsletter`). Testen zonder pop-up: `?nopopup`.
-- Altijd te openen via de footerlink "Boletín / Newsletter / Nieuwsbrief" of `#boletin` in de URL.
+- Altijd te openen via de footerlink "Suscríbase / Sign up / Schrijf u in" (kolom "¿Nos sigue?") of `#boletin` in de URL.
 - Verplicht vinkje (uitdrukkelijke toestemming, RGPD/LSSI). Edge function `website-subscribe` slaat op in tabel **`website_subscribers`** (e-mail uniek en in kleine letters, taal, bronpagina, `consent_at`, `consent_text`, `status`). Zelfde adres opnieuw = toestemming vernieuwd, geen dubbele rij. Limiet 5/uur per IP.
 - **Voor marketingmails alleen `status = 'active'` gebruiken.** Elke mail moet een afmeldlink bevatten:
   `https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-subscribe?unsubscribe=<unsubscribe_token>` (zet status op `unsubscribed`).
 - Exporteren: `select email, language, created_at from website_subscribers where status = 'active' order by created_at;`
+
+## Footer (alle pagina's behalve de juridische)
+- Bovenaan een terracotta band "Servicio y contacto": winkeladres + openingstijden en telefoon/e-mail.
+- Vier kolommen: **Atención al cliente**, **Sobre Bella**, **Colecciones**, **¿Nos sigue?** (Facebook- en Instagram-knop in Bella-terracotta naar `bellacampoamor`, plus de nieuwsbrieflink die `newsletter.js` invoegt).
+- Daaronder de vestigingen Altea/Rojales (links naar `bella-group.html`), een onderbalk met © en Aviso legal/Privacidad, en "Powered by Bellaflow.es".
+- De footer staat in elke Spaanse pagina; na een wijziging `node tools/build-lang.mjs` draaien. Teksten: sleutels `footer.*` in `main.js`.

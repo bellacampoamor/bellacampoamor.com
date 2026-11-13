@@ -237,16 +237,42 @@ h1 > .eyebrow { display: block; font-family: var(--font-body); font-stretch: 100
 .form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Footer */
-.site-footer { background: var(--ink); color: #e9e2da; padding-top: 3.5rem; font-size: .95rem; }
-.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; padding-bottom: 2.5rem; }
-.footer-top p { margin: 0 0 .3rem; color: #b8afa6; }
-.footer-top .footer-name { font-family: var(--font-head); font-stretch: 125%; font-weight: 800; text-transform: uppercase; color: #fff; letter-spacing: .03em; }
-.footer-top nav { display: grid; gap: .45rem; align-content: start; }
-.footer-top a { text-decoration: none; color: #e9e2da; }
-.footer-top a:hover { color: var(--terra); }
-@media (max-width: 700px) { .footer-top { grid-template-columns: 1fr; } }
+.site-footer { background: var(--ink); color: #e9e2da; font-size: .95rem; }
+/* Band "Servicio y contacto" bovenaan de footer (terracotta) */
+.footer-service { background: var(--terra); color: #fff; }
+.footer-service-inner { display: grid; grid-template-columns: 1fr 1.25fr 1.25fr; gap: 1.2rem 2.5rem; align-items: center; padding: 1.9rem 0; }
+.footer-service-title { margin: 0; font-family: var(--font-head); font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.15; }
+.footer-service-item { display: flex; gap: 1rem; align-items: center; }
+.footer-service-item p { margin: 0; line-height: 1.5; color: #fff; }
+.footer-service-item strong { font-weight: 700; }
+.footer-service-item a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.55); text-underline-offset: 3px; }
+.footer-service-item a:hover { text-decoration-color: #fff; }
+.fs-ic { flex: none; width: 46px; height: 46px; color: #fff; }
+@media (max-width: 860px) { .footer-service-inner { grid-template-columns: 1fr; } }
+/* Vier kolommen */
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem 0 2.5rem; }
+.footer-col { display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; }
+.footer-col-title { margin: 0 0 .35rem; font-family: var(--font-head); font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; color: #fff; font-size: .9rem; }
+.footer-col a { text-decoration: none; color: #e9e2da; }
+.footer-col a:hover { color: var(--terra); }
+.footer-social { display: flex; gap: .7rem; margin-top: .15rem; }
+.footer-col a.fs-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--terra); color: #fff; transition: background .2s, transform .2s; }
+.footer-col a.fs-btn:hover { background: #fff; color: var(--terra); transform: translateY(-2px); }
+.fs-btn svg { width: 22px; height: 22px; }
+.footer-handle { margin: .2rem 0 0; color: #8f877f; font-size: .88rem; }
+.footer-nl { margin: .9rem 0 0; color: #b8afa6; line-height: 1.5; max-width: 16rem; }
+.footer-col .footer-nl a { color: var(--terra); text-decoration: underline; text-underline-offset: 3px; }
+.footer-col .footer-nl a:hover { color: #fff; }
+@media (max-width: 860px) { .footer-cols { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .footer-cols { grid-template-columns: 1fr; } }
+/* Onderbalk: copyright + juridisch */
+.footer-bottom { border-top: 1px solid #2a2a2a; padding: 1.1rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 1.5rem; color: #8f877f; font-size: .88rem; }
+.footer-bottom .copyright { border: 0; padding: 0; }
+.footer-bottom nav { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }
+.footer-bottom a { color: #8f877f; text-decoration: none; }
+.footer-bottom a:hover { color: var(--terra); }
 .copyright { border-top: 1px solid #2a2a2a; padding: 1.2rem 0; color: #8f877f; font-size: .88rem; }
-.footer-branches { border-top: 1px solid #2a2a2a; padding: 1.6rem 0; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem 2rem; align-items: start; }
+.footer-branches { border-top: 1px solid #2a2a2a; padding: 1.6rem 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem 2rem; align-items: start; }
 .footer-branches-title { margin: 0; font-family: var(--font-head); font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; color: #fff; font-size: .9rem; }
 .footer-branches-list { display: contents; }
 .footer-branches-list p { margin: 0; color: #b8afa6; line-height: 1.55; }

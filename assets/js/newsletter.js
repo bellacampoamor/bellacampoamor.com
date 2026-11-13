@@ -29,6 +29,8 @@
       err: "No se ha podido guardar. Inténtelo de nuevo o escríbanos a info@bellacampoamor.com.",
       close: "Cerrar",
       footer: "Boletín",
+      footerA: "Suscríbase",
+      footerB: " a nuestro boletín y reciba novedades y ofertas en su e-mail.",
     },
     en: {
       title: "Always the first to know?",
@@ -46,6 +48,8 @@
       err: "Something went wrong. Please try again or write to info@bellacampoamor.com.",
       close: "Close",
       footer: "Newsletter",
+      footerA: "Sign up",
+      footerB: " for our newsletter and get news and offers in your inbox.",
     },
     nl: {
       title: "Altijd als eerste op de hoogte?",
@@ -63,6 +67,8 @@
       err: "Opslaan is niet gelukt. Probeer het opnieuw of mail naar info@bellacampoamor.com.",
       close: "Sluiten",
       footer: "Nieuwsbrief",
+      footerA: "Schrijf u in",
+      footerB: " voor onze nieuwsbrief en ontvang nieuws en acties in uw mailbox.",
     },
   };
 
@@ -160,13 +166,17 @@
     }).finally(function () { btn.disabled = false; btn.textContent = t.btn; });
   });
 
-  /* ---------- Footerlink (altijd beschikbaar) ---------- */
-  var fnav = document.querySelector('.site-footer nav[aria-label="Footer"]');
-  if (fnav) {
+  /* ---------- Footerlink (altijd beschikbaar), in de kolom "¿Nos sigue?" ---------- */
+  var ffol = document.querySelector(".site-footer .footer-follow");
+  if (ffol) {
+    var np = document.createElement("p");
+    np.className = "footer-nl";
     var a = document.createElement("a");
-    a.href = "#boletin"; a.textContent = t.footer;
+    a.href = "#boletin"; a.textContent = t.footerA || t.footer;
     a.addEventListener("click", function (e) { e.preventDefault(); open(true); });
-    fnav.appendChild(a);
+    np.appendChild(a);
+    np.appendChild(document.createTextNode(t.footerB || ""));
+    ffol.appendChild(np);
   }
   if (location.hash === "#boletin" || location.hash === "#newsletter") open(true);
 
