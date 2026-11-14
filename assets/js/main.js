@@ -793,4 +793,17 @@
     vb.addEventListener("click", function () { vbox.classList.add("playing"); vv.setAttribute("controls", ""); vv.play(); });
     vv.addEventListener("play", function () { vbox.classList.add("playing"); });
   }
+
+  // Contactformulier: Bella-video pas laden als hij echt zichtbaar is (verborgen op kleine schermen), stil bij 'minder beweging'
+  var bcv = document.querySelector("video.bg-contact[data-src]");
+  if (bcv && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window) {
+    var bco = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting || !bcv.offsetParent) { if (bcv.src) bcv.pause(); return; }
+        if (!bcv.src) bcv.src = bcv.getAttribute("data-src");
+        var pr = bcv.play(); if (pr && pr.catch) pr.catch(function () {});
+      });
+    }, { rootMargin: "200px" });
+    bco.observe(bcv);
+  }
 })();
