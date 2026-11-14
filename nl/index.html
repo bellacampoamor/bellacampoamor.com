@@ -717,7 +717,11 @@
           </ul>
         </div>
         <form class="form contact-card" id="contact-form" novalidate>
-          <img class="bg-contact" src="../assets/img/team/bella-wijst-rechts.webp" srcset="../assets/img/team/bella-wijst-rechts-sm.webp 422w, ../assets/img/team/bella-wijst-rechts.webp 773w" sizes="(max-width: 599px) 0px, (max-width: 1199px) and (min-width: 861px) 0px, 240px" width="773" height="1100" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <!-- Bella wijst naar het formulier: lichaam en onderarm zijn losse lagen, zodat de wijzende arm kan bewegen (zie styles.css) -->
+          <div class="bg-contact" aria-hidden="true">
+            <img class="bc-body" src="../assets/img/team/bella-wijst-rechts-body.webp" srcset="../assets/img/team/bella-wijst-rechts-body-sm.webp 422w, ../assets/img/team/bella-wijst-rechts-body.webp 773w" sizes="(max-width: 599px) 0px, (max-width: 1199px) and (min-width: 861px) 0px, 240px" width="773" height="1100" alt="" loading="lazy" decoding="async">
+            <img class="bc-arm" src="../assets/img/team/bella-wijst-rechts-arm.webp" srcset="../assets/img/team/bella-wijst-rechts-arm-sm.webp 422w, ../assets/img/team/bella-wijst-rechts-arm.webp 773w" sizes="(max-width: 599px) 0px, (max-width: 1199px) and (min-width: 861px) 0px, 240px" width="773" height="1100" alt="" loading="lazy" decoding="async">
+          </div>
           <div class="form-row">
             <label><span data-i18n="form.name">Naam</span><input name="name" required autocomplete="name"></label>
             <label><span data-i18n="form.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
