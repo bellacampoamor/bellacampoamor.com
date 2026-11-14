@@ -1037,7 +1037,7 @@ html.lb-lock { overflow: hidden; }
 #contacto h2 { margin-bottom: .8rem; }
 #contacto .prose { margin: 0; }
 #contacto .contact-list { margin-top: 1.2rem; }
-.contact-card { position: relative; overflow: hidden; gap: .75rem; padding-left: calc(clamp(1.4rem, 3vw, 2.2rem) + 215px); }
+.contact-card { position: relative; overflow: hidden; isolation: isolate; gap: .75rem; padding-left: calc(clamp(1.4rem, 3vw, 2.2rem) + 290px); }
 .contact-card label { gap: .25rem; }
 .contact-card input, .contact-card textarea { padding: .6rem .85rem; }
 .contact-card textarea { min-height: 5.5rem; resize: vertical; }
@@ -1045,26 +1045,13 @@ html.lb-lock { overflow: hidden; }
 .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
 .form-row input { width: 100%; min-width: 0; box-sizing: border-box; }
 .contact-card .form-status:empty { display: none; }
-.bg-contact { position: absolute; left: 0; bottom: 0; height: min(92%, 380px); aspect-ratio: 773 / 1100; pointer-events: none; user-select: none; filter: drop-shadow(0 10px 16px rgba(60,20,10,.18)); }
-.bg-contact img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
-/* Bella wijst het formulier aan: drie keer een 'tik' richting de velden, dan rust; herhaalt elke 7 s.
-   Het hele figuur leunt mee naar rechts, de onderarm draait om de elleboog (66,6% / 46,8%). */
-.bg-contact { animation: bc-lean 7s ease-in-out infinite; transform-origin: 40% 100%; }
-.bc-arm { transform-origin: 66.6% 46.8%; animation: bc-point 7s ease-in-out infinite; }
-@keyframes bc-lean {
-  0%, 100%  { transform: none; }
-  6%, 18%, 30% { transform: translateX(9px) rotate(1.2deg); }
-  12%, 24%, 36% { transform: translateX(0) rotate(0); }
-}
-@keyframes bc-point {
-  0%, 100%  { transform: rotate(0); }
-  6%, 18%, 30% { transform: rotate(4deg); }
-  12%, 24%  { transform: rotate(-5deg); }
-  36%       { transform: rotate(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bg-contact, .bc-arm { animation: none; }
-}
+/* Bella (video) linksonder in de kaart; haar vingertop beweegt tot net tegen de velden.
+   Video heeft de kaartkleur als achtergrond; boven/links/rechts zacht weglopen zodat er geen kader zichtbaar is. */
+.bg-contact { position: absolute; z-index: -1; left: 0; bottom: 0; height: min(92%, 340px); width: auto; aspect-ratio: 710 / 720; max-width: none; pointer-events: none; user-select: none; object-fit: cover;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 5%), linear-gradient(to right, transparent 0, #000 4%, #000 98.5%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 5%), linear-gradient(to right, transparent 0, #000 4%, #000 98.5%, transparent 100%);
+  mask-composite: intersect; }
 @media (max-width: 1199px) and (min-width: 861px) {
   .contact-card { padding-left: clamp(1.4rem, 3vw, 2.2rem); }
   .bg-contact { display: none; }

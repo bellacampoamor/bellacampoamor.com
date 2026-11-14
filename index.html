@@ -258,7 +258,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
   <link rel="preload" as="image" href="assets/img/gevel.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261112e">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261114a">
 
 </head>
 <body>
@@ -717,11 +717,8 @@
           </ul>
         </div>
         <form class="form contact-card" id="contact-form" novalidate>
-          <!-- Bella wijst naar het formulier: lichaam en onderarm zijn losse lagen, zodat de wijzende arm kan bewegen (zie styles.css) -->
-          <div class="bg-contact" aria-hidden="true">
-            <img class="bc-body" src="assets/img/team/bella-wijst-rechts-body.webp" srcset="assets/img/team/bella-wijst-rechts-body-sm.webp 422w, assets/img/team/bella-wijst-rechts-body.webp 773w" sizes="(max-width: 599px) 0px, (max-width: 1199px) and (min-width: 861px) 0px, 240px" width="773" height="1100" alt="" loading="lazy" decoding="async">
-            <img class="bc-arm" src="assets/img/team/bella-wijst-rechts-arm.webp" srcset="assets/img/team/bella-wijst-rechts-arm-sm.webp 422w, assets/img/team/bella-wijst-rechts-arm.webp 773w" sizes="(max-width: 599px) 0px, (max-width: 1199px) and (min-width: 861px) 0px, 240px" width="773" height="1100" alt="" loading="lazy" decoding="async">
-          </div>
+          <!-- Bella wijst naar het formulier (video, heen-en-terug geloopt, achtergrond in --bg). src wordt pas gezet als hij zichtbaar is (main.js) -->
+          <video class="bg-contact" data-src="/assets/img/team/bella-wijst-video.mp4" poster="assets/img/team/bella-wijst-video.webp" width="710" height="720" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"></video>
           <div class="form-row">
             <label><span data-i18n="form.name">Nombre</span><input name="name" required autocomplete="name"></label>
             <label><span data-i18n="form.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
@@ -863,7 +860,7 @@
     // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
-  <script src="assets/js/main.js?v=20261112c" defer></script>
+  <script src="assets/js/main.js?v=20261114a" defer></script>
   <script src="assets/js/hdb.js?v=20261111a" defer></script>
   <script src="assets/js/reviews.js?v=20261111a" defer></script>
   <script src="assets/js/extras.js?v=20261111a" defer></script>
