@@ -131,19 +131,38 @@ p { margin: 0 0 1em; }
 h1 > .eyebrow { display: block; font-family: var(--font-body); font-stretch: 100%; font-size: .8rem; line-height: 1.4; margin-bottom: .8rem; text-wrap: wrap; }
 .hero-visual { position: relative; justify-self: end; width: 100%; max-width: 440px; }
 .hero-photo { width: 100%; }
-/* Folder-waaier: bescheiden, ligt schuin over de linkerbovenhoek van de gevelfoto */
+/* Folder-waaier: vier folders over de linkerbovenhoek van de gevelfoto.
+   Ze liggen eerst op een stapel, waaieren open en sluiten/openen elke minuut opnieuw. */
 .hero-flyers {
   position: absolute; z-index: 2; pointer-events: none;
-  width: 54%; left: -20%; top: -7%;
-  transform: rotate(-4deg);
+  width: 54%; aspect-ratio: 720 / 574; left: -20%; top: -7%;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.18));
 }
-.hero-flyers img { display: block; width: 100%; height: auto; }
+.hero-flyers img {
+  position: absolute; left: 34%; top: 2%; width: 48%; height: auto;
+  border: 1px solid #f4f1ec; border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.22);
+  transform-origin: 50% 150%;
+  /* dicht: alle vier op elkaar; open: elk met eigen hoek */
+  --closed: rotate(-6deg);
+  --open: rotate(calc(-33deg + var(--i) * 11deg));
+  transform: var(--closed);
+  animation: flyer-fan 60s cubic-bezier(.3,.7,.3,1) infinite;
+  animation-delay: calc(var(--i) * 90ms);
+}
+@keyframes flyer-fan {
+  0%, 1.5%   { transform: var(--closed); }
+  5.5%, 93%  { transform: var(--open); }
+  97%, 100%  { transform: var(--closed); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-flyers img { animation: none; transform: var(--open); }
+}
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-text { padding-right: 0; }
   .hero-visual { justify-self: stretch; max-width: none; }
-  .hero-flyers { width: 46%; left: -.4rem; top: -1.6rem; }
+  .hero-flyers { width: 46%; left: 1.2rem; top: -1.6rem; }
 }
 
 /* Photo card with name + address */
