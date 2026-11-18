@@ -61,10 +61,12 @@
     var igBtn = sec.querySelector("[data-so=ig]"), fbBtn = sec.querySelector("[data-so=fb]");
     if (ig.url) igBtn.href = ig.url;
     if (fb.url) fbBtn.href = fb.url;
-    igBtn.querySelector("[data-so-sub]").textContent = ig.followers >= MIN_FOLLOWERS ? fmt(ig.followers) + " " + tx("followers") : "@" + (ig.handle || "bellacampoamor.official");
-    fbBtn.querySelector("[data-so-sub]").textContent = fb.followers >= MIN_FOLLOWERS ? fmt(fb.followers) + " " + tx("followers") : tx("page");
+    // Beide knoppen altijd in hetzelfde formaat: allebei volgers, of allebei de accountnaam
+    var showCount = ig.followers >= MIN_FOLLOWERS && fb.followers >= MIN_FOLLOWERS;
+    igBtn.querySelector("[data-so-sub]").textContent = showCount ? fmt(ig.followers) + " " + tx("followers") : "@" + (ig.handle || "bellacampoamor.official");
+    fbBtn.querySelector("[data-so-sub]").textContent = showCount ? fmt(fb.followers) + " " + tx("followers") : "@" + (fb.handle || ig.handle || "bellacampoamor.official");
     igBtn.setAttribute("aria-label", "Instagram – @" + (ig.handle || "bellacampoamor.official"));
-    fbBtn.setAttribute("aria-label", "Facebook – " + (fb.name || "BellaCampoamor"));
+    fbBtn.setAttribute("aria-label", "Facebook – @" + (fb.handle || ig.handle || "bellacampoamor.official"));
 
     strip.textContent = "";
     data.posts.forEach(function (p, i) {

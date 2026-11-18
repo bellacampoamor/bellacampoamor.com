@@ -24,43 +24,44 @@ const SITE = "https://bellacampoamor.com";
 const LANGS = ["es", "en", "nl"];
 const LOCALE = { es: "es_ES", en: "en_GB", nl: "nl_NL" };
 const PAGES = ["index.html", "bali.html", "cita.html", "bella-group.html", "exposicion-interior.html", "exposicion-exterior.html"];
+const SAME_AS = ["https://www.instagram.com/bellacampoamor.official/", "https://www.facebook.com/bellacampoamor.official"];
 const PLACE_URL = "https://www.google.com/maps/search/?api=1&query=Bella+Furniture+%26+Outdoor&query_place_id=ChIJzQiJHhgGYw0RzR8puSEgpAQ";
 
 /* ---------- Titels en omschrijvingen per pagina en taal ---------- */
 const META = {
   "index.html": {
     es: {
-      title: "Bella Furniture & Outdoor Campoamor | Muebles de jardín e interior",
-      desc: "Bella Outdoor & Furniture en Dehesa de Campoamor, Orihuela Costa, cerca de Torrevieja: muebles de jardín e interior de Life Outdoor Living y SUNS. Exposición de 2.000 m².",
+      title: "Bella Furniture & Outdoor Campoamor | Muebles de jardín",
+      desc: "Bella en Dehesa de Campoamor (Orihuela Costa), junto a Torrevieja: muebles de jardín e interior de Life Outdoor Living y SUNS. Exposición de 2.000 m².",
       og: "Muebles de exterior e interior en Dehesa de Campoamor, Orihuela Costa. Exposición de 2.000 m² en dos plantas.",
     },
     en: {
-      title: "Bella Furniture & Outdoor Campoamor | Garden & Home Furniture",
-      desc: "Bella Outdoor & Furniture in Dehesa de Campoamor, Orihuela Costa, near Torrevieja: garden and indoor furniture by Life Outdoor Living and SUNS. 2,000 m² showroom.",
+      title: "Bella Furniture & Outdoor Campoamor | Garden Furniture",
+      desc: "Bella in Dehesa de Campoamor, Orihuela Costa, near Torrevieja: garden and indoor furniture by Life Outdoor Living and SUNS. A 2,000 m² showroom.",
       og: "Outdoor and indoor furniture in Dehesa de Campoamor, Orihuela Costa. A 2,000 m² showroom on two floors.",
     },
     nl: {
-      title: "Bella Furniture & Outdoor Campoamor | Tuinmeubels & binnenmeubels",
-      desc: "Bella tuinmeubels en binnenmeubels in Dehesa de Campoamor, Orihuela Costa, vlak bij Torrevieja: Life Outdoor Living en SUNS. Showroom van 2.000 m², Nederlandstalige service.",
+      title: "Bella Furniture & Outdoor Campoamor | Tuinmeubels",
+      desc: "Bella tuinmeubels en binnenmeubels in Dehesa de Campoamor, bij Torrevieja: Life Outdoor Living en SUNS. Showroom van 2.000 m², Nederlandstalige service.",
       og: "Buiten- en binnenmeubelen in Dehesa de Campoamor, Orihuela Costa. Showroom van 2.000 m² op twee verdiepingen.",
     },
   },
   "bali.html": {
     es: {
-      title: "Colección Bali: decoración y muebles artesanales | Bella Campoamor",
-      desc: "Colección Bali de HomeDecoBali en Bella Furniture & Outdoor, Dehesa de Campoamor: decoración, iluminación y muebles hechos a mano en Bali. Consúltenos o visite la tienda.",
+      title: "Colección Bali: decoración y muebles artesanales | Bella",
+      desc: "Colección Bali de HomeDecoBali en Bella, Dehesa de Campoamor: decoración, iluminación y muebles hechos a mano en Bali. Consúltenos o visite la tienda.",
       og: "Decoración, iluminación y muebles hechos a mano en Bali, en Dehesa de Campoamor.",
       crumb: "Colección Bali",
     },
     en: {
-      title: "Bali Collection: handmade décor & furniture | Bella Campoamor",
+      title: "Bali Collection: handmade décor & furniture | Bella",
       desc: "The HomeDecoBali Bali collection at Bella Furniture & Outdoor, Dehesa de Campoamor: décor, lighting and furniture handmade in Bali. Ask us or visit the store.",
       og: "Décor, lighting and furniture handmade in Bali, in Dehesa de Campoamor.",
       crumb: "Bali collection",
     },
     nl: {
-      title: "Bali-collectie: handgemaakte decoratie & meubels | Bella Campoamor",
-      desc: "De Bali-collectie van HomeDecoBali bij Bella Furniture & Outdoor, Dehesa de Campoamor: decoratie, verlichting en meubels, handgemaakt op Bali. Vraag ons of kom langs.",
+      title: "Bali-collectie: handgemaakte decoratie & meubels | Bella",
+      desc: "De Bali-collectie van HomeDecoBali bij Bella in Dehesa de Campoamor: decoratie, verlichting en meubels, handgemaakt op Bali. Vraag ons of kom langs.",
       og: "Decoratie, verlichting en meubels, handgemaakt op Bali, in Dehesa de Campoamor.",
       crumb: "Bali-collectie",
     },
@@ -73,33 +74,33 @@ const META = {
       crumb: "Pida cita",
     },
     en: {
-      title: "Book a visit: personal furnishing advice in Campoamor | Bella",
-      desc: "Furnishing your home on the Costa Blanca? Book a personal appointment at Bella Furniture & Outdoor, Dehesa de Campoamor: our full attention, with a coffee and no rush.",
+      title: "Personal furnishing advice in Campoamor | Bella",
+      desc: "Furnishing your home on the Costa Blanca? Book a personal appointment at Bella in Dehesa de Campoamor: our full attention, with a coffee and no rush.",
       og: "A personal appointment to furnish your home: our full attention, with a coffee and no rush.",
       crumb: "Book a visit",
     },
     nl: {
-      title: "Afspraak maken: persoonlijk inrichtingsadvies in Campoamor | Bella",
-      desc: "Uw huis aan de Costa Blanca inrichten? Maak een persoonlijke afspraak bij Bella Furniture & Outdoor in Dehesa de Campoamor: alle aandacht, met koffie en zonder haast.",
+      title: "Persoonlijk inrichtingsadvies in Campoamor | Bella",
+      desc: "Uw huis aan de Costa Blanca inrichten? Maak een persoonlijke afspraak bij Bella in Dehesa de Campoamor: alle aandacht, met koffie en zonder haast.",
       og: "Een persoonlijke afspraak om uw huis in te richten: alle aandacht, met koffie en zonder haast.",
       crumb: "Afspraak maken",
     },
   },
   "bella-group.html": {
     es: {
-      title: "Bella Group: Bella Furniture, Bella Outdoor y Bella Kitchens | Altea, Rojales, Campoamor",
+      title: "Bella Group | Bella Furniture, Outdoor y Kitchens",
       desc: "Qué es Bella Group: Bella Furniture, Bella Outdoor (Life, SUNS) y Bella Kitchens, con exposiciones en Altea, Rojales y Dehesa de Campoamor, en la Costa Blanca.",
       og: "Bella Furniture, Bella Outdoor y Bella Kitchens en Altea, Rojales y Campoamor.",
       crumb: "Bella Group",
     },
     en: {
-      title: "Bella Group: Bella Furniture, Bella Outdoor & Bella Kitchens | Altea, Rojales, Campoamor",
-      desc: "What is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) and Bella Kitchens, with showrooms in Altea, Rojales and Dehesa de Campoamor on the Costa Blanca.",
+      title: "Bella Group | Bella Furniture, Outdoor & Kitchens",
+      desc: "What is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) and Bella Kitchens, with showrooms in Altea, Rojales and Dehesa de Campoamor, Costa Blanca.",
       og: "Bella Furniture, Bella Outdoor and Bella Kitchens in Altea, Rojales and Campoamor.",
       crumb: "Bella Group",
     },
     nl: {
-      title: "Bella Group: Bella Furniture, Bella Outdoor & Bella Kitchens | Altea, Rojales, Campoamor",
+      title: "Bella Group | Bella Furniture, Outdoor & Kitchens",
       desc: "Wat is Bella Group? Bella Furniture, Bella Outdoor (Life, SUNS) en Bella Kitchens, met showrooms in Altea, Rojales en Dehesa de Campoamor aan de Costa Blanca.",
       og: "Bella Furniture, Bella Outdoor en Bella Kitchens in Altea, Rojales en Campoamor.",
       crumb: "Bella Group",
@@ -108,39 +109,39 @@ const META = {
   "exposicion-interior.html": {
     es: {
       title: "Exposición de muebles de interior en Campoamor | Bella",
-      desc: "Fotos de la exposición de muebles de interior de Bella en Dehesa de Campoamor, Orihuela Costa: salones, comedores y dormitorios montados. Visítenos o pida cita.",
+      desc: "Fotos de la exposición de muebles de interior de Bella en Dehesa de Campoamor: salones, comedores y dormitorios montados. Visítenos o pida cita.",
       og: "Salones, comedores y dormitorios montados en nuestra exposición de Dehesa de Campoamor.",
       crumb: "Exposición de interior",
     },
     en: {
       title: "Indoor furniture showroom in Campoamor | Bella",
-      desc: "Photos of Bella's indoor furniture showroom in Dehesa de Campoamor, Orihuela Costa: fully furnished living rooms, dining rooms and bedrooms. Visit us or book a visit.",
+      desc: "Photos of Bella's indoor furniture showroom in Dehesa de Campoamor, Orihuela Costa: furnished living rooms, dining rooms and bedrooms. Visit us or book.",
       og: "Fully furnished living rooms, dining rooms and bedrooms in our Dehesa de Campoamor showroom.",
       crumb: "Indoor showroom",
     },
     nl: {
       title: "Showroom binnenmeubelen in Campoamor | Bella",
-      desc: "Foto's van de showroom met binnenmeubelen van Bella in Dehesa de Campoamor, Orihuela Costa: ingerichte woonkamers, eetkamers en slaapkamers. Kom langs of maak een afspraak.",
+      desc: "Foto's van Bella's showroom met binnenmeubelen in Dehesa de Campoamor: ingerichte woonkamers, eetkamers en slaapkamers. Kom langs of maak een afspraak.",
       og: "Ingerichte woonkamers, eetkamers en slaapkamers in onze showroom in Dehesa de Campoamor.",
       crumb: "Binnenshowroom",
     },
   },
   "exposicion-exterior.html": {
     es: {
-      title: "Exposición de muebles de jardín en Campoamor | Life y SUNS | Bella",
-      desc: "Fotos de la exposición de muebles de jardín y exterior de Bella en Dehesa de Campoamor, cerca de Torrevieja: conjuntos lounge, comedores, tumbonas y daybeds de Life y SUNS.",
+      title: "Muebles de jardín en Campoamor: Life y SUNS | Bella",
+      desc: "Exposición de muebles de jardín de Bella en Dehesa de Campoamor, junto a Torrevieja: conjuntos lounge, comedores, tumbonas y daybeds de Life y SUNS.",
       og: "Conjuntos lounge, comedores de exterior, tumbonas y daybeds de Life Outdoor Living y SUNS en Dehesa de Campoamor.",
       crumb: "Exposición de jardín",
     },
     en: {
-      title: "Garden furniture showroom in Campoamor | Life & SUNS | Bella",
-      desc: "Photos of Bella's garden and outdoor furniture showroom in Dehesa de Campoamor, near Torrevieja: lounge sets, dining sets, sunloungers and daybeds by Life and SUNS.",
+      title: "Garden furniture in Campoamor: Life & SUNS | Bella",
+      desc: "Bella's garden furniture showroom in Dehesa de Campoamor, near Torrevieja: lounge sets, dining sets, sunloungers and daybeds by Life and SUNS.",
       og: "Lounge sets, outdoor dining sets, sunloungers and daybeds by Life Outdoor Living and SUNS in Dehesa de Campoamor.",
       crumb: "Garden showroom",
     },
     nl: {
-      title: "Showroom tuinmeubelen in Campoamor | Life & SUNS | Bella",
-      desc: "Foto's van de tuinmeubelshowroom van Bella in Dehesa de Campoamor, vlak bij Torrevieja: loungesets, tuinsets, ligbedden en daybeds van Life en SUNS. Nederlandstalige service.",
+      title: "Tuinmeubelen in Campoamor: Life & SUNS | Bella",
+      desc: "Bella's tuinmeubelshowroom in Dehesa de Campoamor, bij Torrevieja: loungesets, tuinsets, ligbedden en daybeds van Life en SUNS. Nederlandstalige service.",
       og: "Loungesets, tuinsets, ligbedden en daybeds van Life Outdoor Living en SUNS in Dehesa de Campoamor.",
       crumb: "Tuinmeubelshowroom",
     },
@@ -224,6 +225,7 @@ function store(lang) {
     },
     geo: { "@type": "GeoCoordinates", latitude: 37.9113721, longitude: -0.7436499 },
     hasMap: PLACE_URL,
+    sameAs: SAME_AS,
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "18:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "14:00" },
@@ -272,6 +274,7 @@ function headBlock(page, lang, esHtml) {
   L.push(`<link rel="canonical" href="${url}">`);
   for (const l of LANGS) L.push(`<link rel="alternate" hreflang="${l}" href="${pageUrl(l, page)}">`);
   L.push(`<link rel="alternate" hreflang="x-default" href="${pageUrl("es", page)}">`);
+  L.push(`<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">`);
   L.push(`<meta name="theme-color" content="#D57054">`);
   L.push(`<meta property="og:type" content="website">`);
   L.push(`<meta property="og:site_name" content="Bella Furniture &amp; Outdoor">`);
@@ -367,12 +370,22 @@ function rebase(html) {
 
 /* ---------- Bouwen ---------- */
 const missing = new Set();
+// lastmod per URL alleen verversen als de inhoud verandert (anders negeert Google lastmod)
+const today = new Date().toISOString().slice(0, 10);
+const oldSitemap = fs.existsSync(path.join(ROOT, "sitemap.xml")) ? fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8") : "";
+const LASTMOD = {};
+for (const m of oldSitemap.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) LASTMOD[m[1]] = m[2];
+function writePage(file, url, html) {
+  const old = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+  if (old !== html || !LASTMOD[url]) LASTMOD[url] = today;
+  fs.writeFileSync(file, html);
+}
 for (const page of PAGES) {
   const file = path.join(ROOT, page);
   let es = fs.readFileSync(file, "utf8");
   es = es.replace(/href="index\.html(#|")/g, (_, c) => `href="./${c === '"' ? '"' : c}`);
   const esOut = langSwitch(insertHead(es, headBlock(page, "es", es)), page, "es");
-  fs.writeFileSync(file, esOut);
+  writePage(file, pageUrl("es", page), esOut);
 
   for (const lang of ["en", "nl"]) {
     let h = translateBody(esOut, lang, missing);
@@ -380,18 +393,17 @@ for (const page of PAGES) {
     h = langSwitch(h, page, lang);
     h = rebase(h);
     fs.mkdirSync(path.join(ROOT, lang), { recursive: true });
-    fs.writeFileSync(path.join(ROOT, lang, page), h);
+    writePage(path.join(ROOT, lang, page), pageUrl(lang, page), h);
   }
 }
 
 /* ---------- sitemap.xml ---------- */
-const today = new Date().toISOString().slice(0, 10);
 const urls = [];
 for (const page of PAGES) {
   for (const lang of LANGS) {
     const alts = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(l, page)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl("es", page)}"/>`).join("\n");
-    urls.push(`  <url>\n    <loc>${pageUrl(lang, page)}</loc>\n    <lastmod>${today}</lastmod>\n${alts}\n  </url>`);
+    urls.push(`  <url>\n    <loc>${pageUrl(lang, page)}</loc>\n    <lastmod>${LASTMOD[pageUrl(lang, page)]}</lastmod>\n${alts}\n  </url>`);
   }
 }
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"),
