@@ -61,9 +61,9 @@
     var igBtn = sec.querySelector("[data-so=ig]"), fbBtn = sec.querySelector("[data-so=fb]");
     if (ig.url) igBtn.href = ig.url;
     if (fb.url) fbBtn.href = fb.url;
-    igBtn.querySelector("[data-so-sub]").textContent = ig.followers >= MIN_FOLLOWERS ? fmt(ig.followers) + " " + tx("followers") : "@" + (ig.handle || "bellacampoamor_official");
+    igBtn.querySelector("[data-so-sub]").textContent = ig.followers >= MIN_FOLLOWERS ? fmt(ig.followers) + " " + tx("followers") : "@" + (ig.handle || "bellacampoamor.official");
     fbBtn.querySelector("[data-so-sub]").textContent = fb.followers >= MIN_FOLLOWERS ? fmt(fb.followers) + " " + tx("followers") : tx("page");
-    igBtn.setAttribute("aria-label", "Instagram – @" + (ig.handle || "bellacampoamor_official"));
+    igBtn.setAttribute("aria-label", "Instagram – @" + (ig.handle || "bellacampoamor.official"));
     fbBtn.setAttribute("aria-label", "Facebook – " + (fb.name || "BellaCampoamor"));
 
     strip.textContent = "";
@@ -100,10 +100,10 @@
     // Laatste tegel: naar het profiel
     var li = el("li", "so-item so-item-more");
     var a = el("a", "so-card so-more");
-    a.href = ig.url || "https://www.instagram.com/bellacampoamor_official/"; a.target = "_blank"; a.rel = "noopener";
+    a.href = ig.url || "https://www.instagram.com/bellacampoamor.official/"; a.target = "_blank"; a.rel = "noopener";
     var ic = el("span", "so-more-ic"); ic.innerHTML = ICON_IG; a.appendChild(ic);
     a.appendChild(el("span", "so-more-t", tx("more")));
-    a.appendChild(el("span", "so-more-h", "@" + (ig.handle || "bellacampoamor_official")));
+    a.appendChild(el("span", "so-more-h", "@" + (ig.handle || "bellacampoamor.official")));
     var ar = el("span", "so-more-ar"); ar.innerHTML = ICON_ARROW; a.appendChild(ar);
     li.appendChild(a);
     strip.appendChild(li);

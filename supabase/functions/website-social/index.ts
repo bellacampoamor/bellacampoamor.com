@@ -45,13 +45,13 @@ Deno.serve(async (req) => {
   const num = (v: unknown) => (typeof v === "number" && isFinite(v) ? v : null);
   return json({
     instagram: {
-      handle: p.instagram?.handle || "bellacampoamor_official",
-      url: p.instagram?.url || "https://www.instagram.com/bellacampoamor_official/",
+      handle: p.instagram?.handle || "bellacampoamor.official",
+      url: p.instagram?.url || "https://www.instagram.com/bellacampoamor.official/",
       followers: num(p.instagram?.followers),
     },
     facebook: {
       name: p.facebook?.name || "BellaCampoamor",
-      url: p.facebook?.url || "https://www.facebook.com/1512834005237951",
+      url: p.facebook?.url || "https://www.facebook.com/bellacampoamor.official",
       followers: num(p.facebook?.followers),
     },
     posts,

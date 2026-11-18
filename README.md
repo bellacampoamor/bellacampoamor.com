@@ -108,6 +108,6 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
 
 ## Footer (alle pagina's behalve de juridische)
 - Bovenaan een terracotta band "Servicio y contacto": winkeladres + openingstijden en telefoon/e-mail.
-- Vier kolommen: **Atención al cliente**, **Sobre Bella**, **Colecciones**, **¿Nos sigue?** (Facebook- en Instagram-knop in Bella-terracotta naar `bellacampoamor`, plus de nieuwsbrieflink die `newsletter.js` invoegt).
+- Vier kolommen: **Atención al cliente**, **Sobre Bella**, **Colecciones**, **¿Nos sigue?** (Facebook- en Instagram-knop in Bella-terracotta naar `bellacampoamor.official`, plus de nieuwsbrieflink die `newsletter.js` invoegt).
 - Daaronder de vestigingen Altea/Rojales (links naar `bella-group.html`), een onderbalk met © en Aviso legal/Privacidad, en "Powered by Bellaflow.es".
 - De footer staat in elke Spaanse pagina; na een wijziging `node tools/build-lang.mjs` draaien. Teksten: sleutels `footer.*` in `main.js`.
