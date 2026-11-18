@@ -100,6 +100,12 @@ Klik op een product opent een quick view met fotogalerij (max. 6 foto's), omschr
   `https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-subscribe?unsubscribe=<unsubscribe_token>` (zet status op `unsubscribed`).
 - Exporteren: `select email, language, created_at from website_subscribers where status = 'active' order by created_at;`
 
+## Social-lint "Síganos" (`#siganos`, `assets/js/social.js`)
+- Op de homepage (alle talen), tussen Contacto en de footer: kop + knoppen Instagram/Facebook en een horizontale strook met de laatste 12 Instagram-posts (klik = post op Instagram), afgesloten met een terra-tegel "Ver más en Instagram". Pijlknoppen op desktop, swipen op mobiel.
+- Data: n8n-workflow **"BellaCampoamor.com: Instagram feed → website"** (elk uur om :17) leest via de Meta Graph API de posts en volgers (Instagram + Facebook-pagina BellaCampoamor), kopieert elke postfoto één keer naar Cloudinary (map **Website Instagram**, `bella-ig-<id>`) en slaat alles op in Supabase-tabel `website_social_feed` via RPC `apply_website_social_feed`. Edge function `website-social` (code in `supabase/functions/website-social/`) serveert dat aan de site (10 min cache).
+- Volgers worden pas getoond vanaf 100 (`MIN_FOLLOWERS` in `social.js`); daaronder staat de accountnaam. Geen posts of een fout = sectie blijft verborgen. Geeft Instagram niets terug, dan blijft de vorige feed staan.
+- Teksten kop: `social.*` in `main.js`; dynamische teksten (volgers, "hace 2 días") in `social.js`.
+
 ## Footer (alle pagina's behalve de juridische)
 - Bovenaan een terracotta band "Servicio y contacto": winkeladres + openingstijden en telefoon/e-mail.
 - Vier kolommen: **Atención al cliente**, **Sobre Bella**, **Colecciones**, **¿Nos sigue?** (Facebook- en Instagram-knop in Bella-terracotta naar `bellacampoamor`, plus de nieuwsbrieflink die `newsletter.js` invoegt).

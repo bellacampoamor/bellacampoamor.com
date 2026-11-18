@@ -258,7 +258,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
   <link rel="preload" as="image" href="../assets/img/gevel.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20261114a">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261118a">
 
 </head>
 <body>
@@ -733,6 +733,34 @@
         </form>
       </div>
     </section>
+
+    <!-- SOCIAL-LINT: laatste Instagram-posts (feed: edge function website-social, gevuld door n8n). Verborgen zolang er geen posts zijn -->
+    <section id="siganos" class="section-social" aria-labelledby="so-title" hidden>
+      <div class="wrap">
+        <div class="so-head">
+          <div class="so-intro">
+            <p class="eyebrow" data-i18n="social.eyebrow">Volg ons</p>
+            <h2 id="so-title" data-i18n="social.title">Bella, elke dag</h2>
+            <p class="prose" data-i18n="social.p">Nieuwe opstellingen, net binnengekomen stukken en een kijkje achter de schermen van onze showroom, het eerst op Instagram en Facebook.</p>
+          </div>
+          <div class="so-follow">
+            <a class="so-btn so-ig" href="https://www.instagram.com/bellacampoamor_official/" target="_blank" rel="noopener" data-so="ig">
+              <span class="so-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="3.7" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="16.9" cy="7.1" r="1.15" fill="currentColor"/></svg></span>
+              <span class="so-txt"><strong>Instagram</strong><small data-so-sub>@bellacampoamor_official</small></span>
+            </a>
+            <a class="so-btn so-fb" href="https://www.facebook.com/1512834005237951" target="_blank" rel="noopener" data-so="fb">
+              <span class="so-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3h2.6V21h3.1Z" fill="currentColor"/></svg></span>
+              <span class="so-txt"><strong>Facebook</strong><small data-so-sub>BellaCampoamor</small></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="so-rail">
+        <button type="button" class="so-nav so-prev" data-i18n-aria="social.prev" aria-label="Vorige posts" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="so-strip" id="so-strip" data-i18n-aria="social.list" aria-label="Laatste Instagram-posts"></ul>
+        <button type="button" class="so-nav so-next" data-i18n-aria="social.next" aria-label="Volgende posts" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </section>
   </main>
 
   <!-- Productaanvraag (HDB): geen online verkoop, alleen vragen -->
@@ -860,10 +888,11 @@
     // Contactformulier -> Supabase edge function website-contact -> Resend -> info@bellacampoamor.com
     window.BELLA_CONFIG = { contactWebhook: "https://apmyllgfsqofjyowfbxc.supabase.co/functions/v1/website-contact", contactEmail: "info@bellacampoamor.com" };
   </script>
-  <script src="../assets/js/main.js?v=20261116a" defer></script>
+  <script src="../assets/js/main.js?v=20261118a" defer></script>
   <script src="../assets/js/hdb.js?v=20261111a" defer></script>
   <script src="../assets/js/reviews.js?v=20261111a" defer></script>
   <script src="../assets/js/extras.js?v=20261111a" defer></script>
   <script src="/assets/js/newsletter.js?v=20261111c" defer></script>
+  <script src="/assets/js/social.js?v=20261118a" defer></script>
 </body>
 </html>

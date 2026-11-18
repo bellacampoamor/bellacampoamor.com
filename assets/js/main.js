@@ -218,6 +218,12 @@
       "reviews.title": "What our customers say",
       "sticky.quote": "Request a quote",
       "sticky.call": "Call the store",
+      "social.eyebrow": "Follow us",
+      "social.title": "Bella, every day",
+      "social.p": "New room sets, fresh arrivals and a look behind the scenes of our showroom, first on Instagram and Facebook.",
+      "social.prev": "Previous posts",
+      "social.next": "Next posts",
+      "social.list": "Latest Instagram posts",
       "ask.title": "Been to our store? Tell us what you thought",
       "ask.p": "Your review helps other people on the coast find us, and helps us get better. Leaving a Google review only takes a minute.",
       "ask.cta": "Write a Google review",
@@ -524,6 +530,12 @@
       "reviews.title": "Wat onze klanten zeggen",
       "sticky.quote": "Offerte aanvragen",
       "sticky.call": "Bel de winkel",
+      "social.eyebrow": "Volg ons",
+      "social.title": "Bella, elke dag",
+      "social.p": "Nieuwe opstellingen, net binnengekomen stukken en een kijkje achter de schermen van onze showroom, het eerst op Instagram en Facebook.",
+      "social.prev": "Vorige posts",
+      "social.next": "Volgende posts",
+      "social.list": "Laatste Instagram-posts",
       "ask.title": "Al bij ons geweest? Vertel ons wat u ervan vond",
       "ask.p": "Uw review helpt andere mensen aan de kust ons te vinden, en helpt ons beter te worden. Een Google-review schrijven kost maar een minuutje.",
       "ask.cta": "Schrijf een Google-review",
@@ -629,7 +641,10 @@
       "form.error": "Rellene su nombre, un e-mail válido y un mensaje, y acepte la política de privacidad.",
       "form.fail": "Algo salió mal. Inténtelo de nuevo o contáctenos por teléfono.",
       "appt.prevWeek": "Semana anterior",
-      "appt.nextWeek": "Semana siguiente"
+      "appt.nextWeek": "Semana siguiente",
+      "social.prev": "Publicaciones anteriores",
+      "social.next": "Publicaciones siguientes",
+      "social.list": "Últimas publicaciones de Instagram"
     }
   };
 
